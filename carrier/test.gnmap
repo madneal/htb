@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Tue Mar  5 18:29:40 2019 as: nmap -sU -sV -oA test 10.10.10.105
+Host: 10.10.10.105 ()	Status: Up
+Host: 10.10.10.105 ()	Ports: 67/open|filtered/udp//dhcps///, 161/open/udp//snmp//SNMPv1 server; pysnmp SNMPv3 server (public)/, 31109/open|filtered/udp//unknown///, 51456/open|filtered/udp//unknown///	Ignored State: closed (996)
+# Nmap done at Tue Mar  5 18:48:20 2019 -- 1 IP address (1 host up) scanned in 1120.82 seconds

@@ -1,0 +1,22 @@
+# Nmap 7.70 scan initiated Tue Mar  5 18:27:30 2019 as: nmap -sC -sV -oA Carrier 10.10.10.105
+Nmap scan report for 10.10.10.105
+Host is up (0.71s latency).
+Not shown: 997 closed ports
+PORT   STATE    SERVICE VERSION
+21/tcp filtered ftp
+22/tcp open     ssh     OpenSSH 7.6p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 15:a4:28:77:ee:13:07:06:34:09:86:fd:6f:cc:4c:e2 (RSA)
+|   256 37:be:de:07:0f:10:bb:2b:b5:85:f7:9d:92:5e:83:25 (ECDSA)
+|_  256 89:5a:ee:1c:22:02:d2:13:40:f2:45:2e:70:45:b0:c4 (ED25519)
+80/tcp open     http    Apache httpd 2.4.18 ((Ubuntu))
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Login
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Mar  5 18:28:40 2019 -- 1 IP address (1 host up) scanned in 70.02 seconds

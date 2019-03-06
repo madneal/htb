@@ -1,0 +1,12 @@
+# Nmap 7.70 scan initiated Tue Mar  5 18:29:40 2019 as: nmap -sU -sV -oA test 10.10.10.105
+Nmap scan report for 10.10.10.105
+Host is up (0.41s latency).
+Not shown: 996 closed ports
+PORT      STATE         SERVICE VERSION
+67/udp    open|filtered dhcps
+161/udp   open          snmp    SNMPv1 server; pysnmp SNMPv3 server (public)
+31109/udp open|filtered unknown
+51456/udp open|filtered unknown
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Mar  5 18:48:20 2019 -- 1 IP address (1 host up) scanned in 1120.82 seconds

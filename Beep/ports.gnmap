@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat Mar  9 16:14:21 2019 as: nmap -sS -sV -sC -Pn -oA ports 10.10.10.7
+Host: 10.10.10.7 ()	Status: Up
+Host: 10.10.10.7 ()	Ports: 22/open/tcp//ssh//OpenSSH 4.3 (protocol 2.0)/, 25/open/tcp//smtp//Postfix smtpd/, 80/open/tcp//http//Apache httpd 2.2.3/, 110/open/tcp//pop3//Cyrus pop3d 2.3.7-Invoca-RPM-2.3.7-7.el5_6.4/, 111/open/tcp//rpcbind//2 (RPC #100000)/, 143/open/tcp//imap//Cyrus imapd 2.3.7-Invoca-RPM-2.3.7-7.el5_6.4/, 443/open/tcp//ssl|https?///, 993/open/tcp//ssl|imap//Cyrus imapd/, 995/open/tcp//pop3//Cyrus pop3d/, 3306/open/tcp//mysql//MySQL (unauthorized)/, 4445/open/tcp//upnotifyp?///, 10000/open/tcp//http//MiniServ 1.570 (Webmin httpd)/	Ignored State: closed (988)
+# Nmap done at Sat Mar  9 16:21:08 2019 -- 1 IP address (1 host up) scanned in 406.34 seconds

@@ -1,0 +1,41 @@
+# Nmap 7.70 scan initiated Sat Mar  9 16:14:21 2019 as: nmap -sS -sV -sC -Pn -oA ports 10.10.10.7
+Nmap scan report for 10.10.10.7
+Host is up (1.3s latency).
+Not shown: 988 closed ports
+PORT      STATE SERVICE    VERSION
+22/tcp    open  ssh        OpenSSH 4.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 ad:ee:5a:bb:69:37:fb:27:af:b8:30:72:a0:f9:6f:53 (DSA)
+|_  2048 bc:c6:73:59:13:a1:8a:4b:55:07:50:f6:65:1d:6d:0d (RSA)
+25/tcp    open  smtp       Postfix smtpd
+|_smtp-commands: beep.localdomain, PIPELINING, SIZE 10240000, VRFY, ETRN, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+80/tcp    open  http       Apache httpd 2.2.3
+|_http-server-header: Apache/2.2.3 (CentOS)
+|_http-title: Did not follow redirect to https://10.10.10.7/
+110/tcp   open  pop3       Cyrus pop3d 2.3.7-Invoca-RPM-2.3.7-7.el5_6.4
+|_pop3-capabilities: UIDL AUTH-RESP-CODE TOP IMPLEMENTATION(Cyrus POP3 server v2) APOP RESP-CODES USER PIPELINING LOGIN-DELAY(0) STLS EXPIRE(NEVER)
+111/tcp   open  rpcbind    2 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2            111/tcp  rpcbind
+|   100000  2            111/udp  rpcbind
+|   100024  1            742/udp  status
+|_  100024  1            745/tcp  status
+143/tcp   open  imap       Cyrus imapd 2.3.7-Invoca-RPM-2.3.7-7.el5_6.4
+|_imap-capabilities: ATOMIC LIST-SUBSCRIBED STARTTLS Completed THREAD=REFERENCES NAMESPACE LITERAL+ BINARY LISTEXT X-NETSCAPE IDLE RIGHTS=kxte UNSELECT CHILDREN CONDSTORE OK SORT=MODSEQ ID QUOTA IMAP4rev1 THREAD=ORDEREDSUBJECT UIDPLUS SORT URLAUTHA0001 MULTIAPPEND CATENATE ACL NO MAILBOX-REFERRALS IMAP4 RENAME ANNOTATEMORE
+443/tcp   open  ssl/https?
+|_ssl-date: 2019-03-09T07:53:33+00:00; -24m03s from scanner time.
+993/tcp   open  ssl/imap   Cyrus imapd
+|_imap-capabilities: CAPABILITY
+995/tcp   open  pop3       Cyrus pop3d
+3306/tcp  open  mysql      MySQL (unauthorized)
+4445/tcp  open  upnotifyp?
+10000/tcp open  http       MiniServ 1.570 (Webmin httpd)
+|_http-title: Site doesn't have a title (text/html; Charset=iso-8859-1).
+Service Info: Hosts:  beep.localdomain, 127.0.0.1, example.com
+
+Host script results:
+|_clock-skew: mean: -24m03s, deviation: 0s, median: -24m03s
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar  9 16:21:08 2019 -- 1 IP address (1 host up) scanned in 406.34 seconds

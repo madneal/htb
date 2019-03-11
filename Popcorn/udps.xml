@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Mon Mar 11 20:41:55 2019 as: nmap -sU -p- -&#45;min-rate 10000 -oA udps 10.10.10.6 -->
+<nmaprun scanner="nmap" args="nmap -sU -p- -&#45;min-rate 10000 -oA udps 10.10.10.6" start="1552308115" startstr="Mon Mar 11 20:41:55 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="UDP Scan" time="1552308146" percent="42.37" remaining="41" etc="1552308187"/>
+<taskprogress task="UDP Scan" time="1552308189" percent="99.92" remaining="1" etc="1552308189"/>
+<host starttime="1552308115" endtime="1552308191"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.6" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="open|filtered" count="65457">
+<extrareasons reason="no-responses" count="65457"/>
+</extraports>
+<extraports state="closed" count="78">
+<extrareasons reason="port-unreaches" count="78"/>
+</extraports>
+</ports>
+<times srtt="550217" rttvar="84285" to="887357"/>
+</host>
+<runstats><finished time="1552308191" timestr="Mon Mar 11 20:43:11 2019" elapsed="76.30" summary="Nmap done at Mon Mar 11 20:43:11 2019; 1 IP address (1 host up) scanned in 76.30 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Tue Mar 12 20:17:23 2019 as: nmap -sV -sC -Pn -p80 -oA services 10.10.10.8 -->
+<nmaprun scanner="nmap" args="nmap -sV -sC -Pn -p80 -oA services 10.10.10.8" start="1552393043" startstr="Tue Mar 12 20:17:23 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="NSE" time="1552393053" percent="93.06" remaining="1" etc="1552393053"/>
+<taskprogress task="NSE" time="1552393055" percent="93.75" remaining="1" etc="1552393055"/>
+<host starttime="1552393043" endtime="1552393072"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.8" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="HttpFileServer httpd" version="2.3" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:rejetto:httpfileserver:2.3</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="HFS 2.3"><elem>HFS 2.3</elem>
+</script><script id="http-title" output="HFS /"><elem key="title">HFS /</elem>
+</script></port>
+</ports>
+<times srtt="498368" rttvar="498368" to="2491840"/>
+</host>
+<runstats><finished time="1552393072" timestr="Tue Mar 12 20:17:52 2019" elapsed="29.75" summary="Nmap done at Tue Mar 12 20:17:52 2019; 1 IP address (1 host up) scanned in 29.75 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Tue Mar 12 20:13:16 2019 as: nmap -sT -p- -Pn -&#45;min-rate 10000 -oA tcps 10.10.10.8 -->
+<nmaprun scanner="nmap" args="nmap -sT -p- -Pn -&#45;min-rate 10000 -oA tcps 10.10.10.8" start="1552392796" startstr="Tue Mar 12 20:13:16 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="Connect Scan" time="1552392817" percent="9.28" remaining="206" etc="1552393022"/>
+<taskprogress task="Connect Scan" time="1552392889" percent="49.50" remaining="95" etc="1552392984"/>
+<taskprogress task="Connect Scan" time="1552392957" percent="92.04" remaining="14" etc="1552392971"/>
+<host starttime="1552392796" endtime="1552392971"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.8" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-responses" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+</ports>
+<times srtt="617166" rttvar="113024" to="1069262"/>
+</host>
+<runstats><finished time="1552392971" timestr="Tue Mar 12 20:16:11 2019" elapsed="174.33" summary="Nmap done at Tue Mar 12 20:16:11 2019; 1 IP address (1 host up) scanned in 174.33 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Tue Mar 12 20:17:23 2019 as: nmap -sV -sC -Pn -p80 -oA services 10.10.10.8
+Host: 10.10.10.8 ()	Status: Up
+Host: 10.10.10.8 ()	Ports: 80/open/tcp//http//HttpFileServer httpd 2.3/
+# Nmap done at Tue Mar 12 20:17:52 2019 -- 1 IP address (1 host up) scanned in 29.75 seconds

@@ -64,6 +64,8 @@ Try to access `admin.cronos.htb` in the browser, a login web page is displayed. 
 
 ![login](https://github.com/neal1991/htb/blob/master/Cronos/login.png)
 
+![pass](https://github.com/neal1991/htb/blob/master/Cronos/pass.png)
+
 Magic! We are in. It seems that it is a network tool. However, it seems that it has exposed the ability to execute command remotely. Have a test of `8888&whoami`:
 
 ![whoami](https://github.com/neal1991/htb/blob/master/Cronos/whoami.png)

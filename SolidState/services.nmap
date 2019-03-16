@@ -1,20 +1,12 @@
-# Nmap 7.70 scan initiated Fri Mar 15 21:51:42 2019 as: nmap -sC -sV -p22,25,80,110 -oA services 10.10.10.51
-Nmap scan report for 10.10.10.51
-Host is up (0.81s latency).
+# Nmap 7.70 scan initiated Sat Mar 16 14:01:25 2019 as: nmap -sC -sV -p8080 -oA services 10.10.10.95
+Nmap scan report for 10.10.10.95
+Host is up (0.98s latency).
 
-PORT    STATE SERVICE VERSION
-22/tcp  open  ssh     OpenSSH 7.4p1 Debian 10+deb9u1 (protocol 2.0)
-| ssh-hostkey: 
-|   2048 77:00:84:f5:78:b9:c7:d3:54:cf:71:2e:0d:52:6d:8b (RSA)
-|   256 78:b8:3a:f6:60:19:06:91:f5:53:92:1d:3f:48:ed:53 (ECDSA)
-|_  256 e4:45:e9:ed:07:4d:73:69:43:5a:12:70:9d:c4:af:76 (ED25519)
-25/tcp  open  smtp    JAMES smtpd 2.3.2
-|_smtp-commands: solidstate Hello nmap.scanme.org (10.10.16.44 [10.10.16.44]), 
-80/tcp  open  http    Apache httpd 2.4.25 ((Debian))
-|_http-server-header: Apache/2.4.25 (Debian)
-|_http-title: Home - Solid State Security
-110/tcp open  pop3    JAMES pop3d 2.3.2
-Service Info: Host: solidstate; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+PORT     STATE SERVICE VERSION
+8080/tcp open  http    Apache Tomcat/Coyote JSP engine 1.1
+|_http-favicon: Apache Tomcat
+|_http-server-header: Apache-Coyote/1.1
+|_http-title: Apache Tomcat/7.0.88
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Mar 15 21:52:17 2019 -- 1 IP address (1 host up) scanned in 34.65 seconds
+# Nmap done at Sat Mar 16 14:02:12 2019 -- 1 IP address (1 host up) scanned in 46.81 seconds

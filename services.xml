@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 16 15:16:19 2019 as: nmap -sC -sV -p 80 -oA services 10.10.10.93 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p 80 -oA services 10.10.10.93" start="1552720579" startstr="Sat Mar 16 15:16:19 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1552720579" endtime="1552720599"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.10.10.93" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="7.5" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:7.5</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/7.5"><elem>Microsoft-IIS/7.5</elem>
+</script><script id="http-title" output="Bounty"><elem key="title">Bounty</elem>
+</script></port>
+</ports>
+<times srtt="548608" rttvar="447521" to="2338692"/>
+</host>
+<runstats><finished time="1552720599" timestr="Sat Mar 16 15:16:39 2019" elapsed="19.58" summary="Nmap done at Sat Mar 16 15:16:39 2019; 1 IP address (1 host up) scanned in 19.58 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

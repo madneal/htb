@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri Mar 15 21:48:59 2019 as: nmap -sT -p- -&#45;min-rate 10000 -oA openports 10.10.10.51 -->
+<nmaprun scanner="nmap" args="nmap -sT -p- -&#45;min-rate 10000 -oA openports 10.10.10.51" start="1552657739" startstr="Fri Mar 15 21:48:59 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="Connect Scan" time="1552657788" percent="58.81" remaining="34" etc="1552657822"/>
+<taskprogress task="Connect Scan" time="1552657797" percent="70.03" remaining="25" etc="1552657821"/>
+<taskprogress task="Connect Scan" time="1552657811" percent="87.82" remaining="10" etc="1552657821"/>
+<host starttime="1552657739" endtime="1552657822"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.51" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="64495">
+<extrareasons reason="no-responses" count="64495"/>
+</extraports>
+<extraports state="closed" count="1036">
+<extrareasons reason="conn-refused" count="1036"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="smtp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="pop3" method="table" conf="3"/></port>
+</ports>
+<times srtt="305620" rttvar="24" to="305716"/>
+</host>
+<runstats><finished time="1552657822" timestr="Fri Mar 15 21:50:22 2019" elapsed="82.46" summary="Nmap done at Fri Mar 15 21:50:22 2019; 1 IP address (1 host up) scanned in 82.46 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

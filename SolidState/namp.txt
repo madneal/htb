@@ -1,0 +1,1 @@
+# Nmap 7.70 scan initiated Sat Mar 16 11:01:41 2019 as: nmap -n -v -Pn -p- -A --reason -oN namp.txt 10.10.10.51

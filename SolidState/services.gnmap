@@ -1,4 +1,4 @@
-# Nmap 7.70 scan initiated Fri Mar 15 21:51:42 2019 as: nmap -sC -sV -p22,25,80,110 -oA services 10.10.10.51
-Host: 10.10.10.51 ()	Status: Up
-Host: 10.10.10.51 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.4p1 Debian 10+deb9u1 (protocol 2.0)/, 25/open/tcp//smtp//JAMES smtpd 2.3.2/, 80/open/tcp//http//Apache httpd 2.4.25 ((Debian))/, 110/open/tcp//pop3//JAMES pop3d 2.3.2/
-# Nmap done at Fri Mar 15 21:52:17 2019 -- 1 IP address (1 host up) scanned in 34.65 seconds
+# Nmap 7.70 scan initiated Sat Mar 16 14:01:25 2019 as: nmap -sC -sV -p8080 -oA services 10.10.10.95
+Host: 10.10.10.95 ()	Status: Up
+Host: 10.10.10.95 ()	Ports: 8080/open/tcp//http//Apache Tomcat|Coyote JSP engine 1.1/
+# Nmap done at Sat Mar 16 14:02:12 2019 -- 1 IP address (1 host up) scanned in 46.81 seconds

@@ -25,9 +25,11 @@ nmap -sC -sV -oA services 10.10.10.75
 
 ![Ae1E90.png](https://s2.ax1x.com/2019/03/17/Ae1E90.png)
 
-Nothing special. The only clue may be the open port of `80`. To be hoest, the box with less open ports is easier in general.
+Nothing special found. The only clue may be the open port of `80`. To be honest, the box with less open ports is easier in general.
 
 ## Exploit
+
+### Http
 
 
 

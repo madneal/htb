@@ -33,13 +33,11 @@ Nothing special found. The only clue may be the open port of `80`. To be honest,
 
 Access to `http://10.10.10.75`, just a web page of `hello world`.
 
-
-
-![hello](/Users/neal/project/htb/Nibbles/hello.png)
+![Ae0qsA.png](https://s2.ax1x.com/2019/03/17/Ae0qsA.png)
 
 With the first sight, have not found anything special. Open the inspector, a comment can be found. Obviously, `nibbleblog` is quite important to us. Access to `http://10.10.10.75/nibbleblog`:
 
- ![blog](/Users/neal/project/htb/Nibbles/blog.png)
+![Ae0XZt.png](https://s2.ax1x.com/2019/03/17/Ae0XZt.png)
 
 It seems to be a blog demo. Try to access to each hyperlink in the web page, find nothing special. Try to use nikto to explore:
 

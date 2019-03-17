@@ -47,7 +47,7 @@ nikto -host http://10.10.10.75/nibbleblog/
 
 ![AeYklt.png](https://s2.ax1x.com/2019/03/17/AeYklt.png)
 
-`[nibbleblog](http://www.nibbleblog.com/)`  is an open source blog system which has been widely used. From the above screenshot, some interesting links can be found. And also try to brute force with `gobuster`:
+[`nibbleblog`](http://www.nibbleblog.com/) is an open source blog system which has been widely used. From the above screenshot, some interesting links can be found. And also try to brute force with `gobuster`:
 
 ```
 gobuster -u http://10.10.10.75/nibbleblog/ -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt

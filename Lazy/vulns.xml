@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Tue Mar 19 19:41:09 2019 as: nmap -&#45;script vuln -p80 -oA vulns 10.10.10.18 -->
+<nmaprun scanner="nmap" args="nmap -&#45;script vuln -p80 -oA vulns 10.10.10.18" start="1552995669" startstr="Tue Mar 19 19:41:09 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="broadcast-avahi-dos" output="&#xa;  Discovered hosts:&#xa;    224.0.0.251&#xa;  After NULL UDP avahi packet DoS (CVE-2011-1002).&#xa;  Hosts are all up (not vulnerable).&#xa;"/></prescript><host starttime="1552995704" endtime="1552996021"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.18" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" method="table" conf="3"/><script id="http-csrf" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.18&#xa;  Found the following possible CSRF vulnerabilities: &#xa;    &#xa;    Path: http://10.10.10.18:80/login.php&#xa;    Form id: &#xa;    Form action: /login.php&#xa;    &#xa;    Path: http://10.10.10.18:80/register.php&#xa;    Form id: &#xa;    Form action: /register.php&#xa;"/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-enum" output="&#xa;  /login.php: Possible admin folder&#xa;  /classes/: Potentially interesting directory w/ listing on &apos;apache/2.4.7 (ubuntu)&apos;&#xa;  /css/: Potentially interesting directory w/ listing on &apos;apache/2.4.7 (ubuntu)&apos;&#xa;  /images/: Potentially interesting directory w/ listing on &apos;apache/2.4.7 (ubuntu)&apos;&#xa;"/><script id="http-slowloris-check" output="&#xa;  VULNERABLE:&#xa;  Slowloris DOS attack&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  CVE:CVE-2007-6750&#xa;      Slowloris tries to keep many connections to the target web server open and hold&#xa;      them open as long as possible.  It accomplishes this by opening connections to&#xa;      the target web server and sending a partial request. By doing so, it starves&#xa;      the http server&apos;s resources causing Denial Of Service.&#xa;      &#xa;    Disclosure date: 2009-09-17&#xa;    References:&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750&#xa;      http://ha.ckers.org/slowloris/&#xa;"><table key="CVE-2007-6750">
+<elem key="title">Slowloris DOS attack</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2007-6750</elem>
+</table>
+<table key="description">
+<elem>Slowloris tries to keep many connections to the target web server open and hold&#xa;them open as long as possible.  It accomplishes this by opening connections to&#xa;the target web server and sending a partial request. By doing so, it starves&#xa;the http server&apos;s resources causing Denial Of Service.&#xa;</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="year">2009</elem>
+<elem key="day">17</elem>
+<elem key="month">09</elem>
+</table>
+</table>
+<elem key="disclosure">2009-09-17</elem>
+<table key="exploit_results">
+</table>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750</elem>
+<elem>http://ha.ckers.org/slowloris/</elem>
+</table>
+</table>
+</script><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-vuln-cve2017-1001000" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<times srtt="512022" rttvar="399505" to="2110042"/>
+</host>
+<runstats><finished time="1552996021" timestr="Tue Mar 19 19:47:01 2019" elapsed="351.79" summary="Nmap done at Tue Mar 19 19:47:01 2019; 1 IP address (1 host up) scanned in 351.79 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

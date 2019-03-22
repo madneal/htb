@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Mon Mar 18 18:35:28 2019 as: nmap -sT -p- -oA openports 10.10.10.40 -->
+<nmaprun scanner="nmap" args="nmap -sT -p- -oA openports 10.10.10.40" start="1552905328" startstr="Mon Mar 18 18:35:28 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<runstats><finished time="1552905331" timestr="Mon Mar 18 18:35:31 2019" elapsed="3.11" summary="Nmap done at Mon Mar 18 18:35:31 2019; 1 IP address (0 hosts up) scanned in 3.11 seconds" exit="success"/><hosts up="0" down="1" total="1"/>
+</runstats>
+</nmaprun>

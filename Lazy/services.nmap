@@ -1,0 +1,18 @@
+# Nmap 7.70 scan initiated Tue Mar 19 19:33:45 2019 as: nmap -sC -sV -p22,80 -oA services 10.10.10.18
+Nmap scan report for 10.10.10.18
+Host is up (0.39s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 e1:92:1b:48:f8:9b:63:96:d4:e5:7a:40:5f:a4:c8:33 (DSA)
+|   2048 af:a0:0f:26:cd:1a:b5:1f:a7:ec:40:94:ef:3c:81:5f (RSA)
+|   256 11:a3:2f:25:73:67:af:70:18:56:fe:a2:e3:54:81:e8 (ECDSA)
+|_  256 96:81:9c:f4:b7:bc:1a:73:05:ea:ba:41:35:a4:66:b7 (ED25519)
+80/tcp open  http    Apache httpd 2.4.7 ((Ubuntu))
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-title: CompanyDev
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Mar 19 19:34:08 2019 -- 1 IP address (1 host up) scanned in 23.02 seconds

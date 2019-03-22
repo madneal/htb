@@ -1,0 +1,2 @@
+# Nmap 7.70 scan initiated Mon Mar 18 18:35:28 2019 as: nmap -sT -p- -oA openports 10.10.10.40
+# Nmap done at Mon Mar 18 18:35:31 2019 -- 1 IP address (0 hosts up) scanned in 3.11 seconds

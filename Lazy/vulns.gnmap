@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Tue Mar 19 19:41:09 2019 as: nmap --script vuln -p80 -oA vulns 10.10.10.18
+Host: 10.10.10.18 ()	Status: Up
+Host: 10.10.10.18 ()	Ports: 80/open/tcp//http///
+# Nmap done at Tue Mar 19 19:47:01 2019 -- 1 IP address (1 host up) scanned in 351.79 seconds

@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Tue Mar 19 19:30:52 2019 as: nmap -sT -p- --min-rate 10000 -oA openports 10.10.10.18
+Host: 10.10.10.18 ()	Status: Up
+Host: 10.10.10.18 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///
+# Nmap done at Tue Mar 19 19:32:58 2019 -- 1 IP address (1 host up) scanned in 125.84 seconds

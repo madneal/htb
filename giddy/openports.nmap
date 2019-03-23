@@ -1,0 +1,10 @@
+# Nmap 7.70 scan initiated Sat Mar 23 09:26:07 2019 as: nmap -sT --min-rate 10000 -oA openports 10.10.10.104
+Nmap scan report for 10.10.10.104
+Host is up (0.41s latency).
+Not shown: 997 filtered ports
+PORT     STATE SERVICE
+80/tcp   open  http
+443/tcp  open  https
+3389/tcp open  ms-wbt-server
+
+# Nmap done at Sat Mar 23 09:26:11 2019 -- 1 IP address (1 host up) scanned in 3.20 seconds

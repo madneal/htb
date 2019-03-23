@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat Mar 23 09:26:54 2019 as: nmap -sC -sV -oA services 10.10.10.104
+Host: 10.10.10.104 ()	Status: Up
+Host: 10.10.10.104 ()	Ports: 80/open/tcp//http?///, 443/open/tcp//https?///, 3389/open/tcp//ms-wbt-server?///	Ignored State: filtered (997)
+# Nmap done at Sat Mar 23 09:28:19 2019 -- 1 IP address (1 host up) scanned in 85.67 seconds

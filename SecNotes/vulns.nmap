@@ -1,0 +1,40 @@
+# Nmap 7.70 scan initiated Sun Mar 24 14:37:12 2019 as: nmap --script vuln -p80,445,8808 -oA vulns 10.10.10.97
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.10.10.97
+Host is up (0.41s latency).
+
+PORT     STATE SERVICE
+80/tcp   open  http
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.97
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.10.10.97:80/
+|     Form id: 
+|     Form action: /login.php
+|     
+|     Path: http://10.10.10.97:80/login.php
+|     Form id: 
+|     Form action: /login.php
+|     
+|     Path: http://10.10.10.97:80/register.php
+|     Form id: 
+|_    Form action: /register.php
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|_  /login.php: Possible admin folder
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+445/tcp  open  microsoft-ds
+8808/tcp open  ssports-bcast
+
+Host script results:
+|_samba-vuln-cve-2012-1182: NT_STATUS_ACCESS_DENIED
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: NT_STATUS_ACCESS_DENIED
+
+# Nmap done at Sun Mar 24 14:43:43 2019 -- 1 IP address (1 host up) scanned in 390.65 seconds

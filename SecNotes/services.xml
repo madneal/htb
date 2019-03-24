@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sun Mar 24 14:27:40 2019 as: nmap -sC -sV -p80,445,8808 -oA services 10.10.10.97 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p80,445,8808 -oA services 10.10.10.97" start="1553408860" startstr="Sun Mar 24 14:27:40 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="3" services="80,445,8808"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1553408861" endtime="1553408920"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.10.10.97" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-title" output="Secure Notes - Login&#xa;Requested resource was login.php"><elem key="title">Secure Notes - Login</elem>
+<elem key="redirect_url">login.php</elem>
+</script></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Windows 10 Enterprise 17134 microsoft-ds" extrainfo="workgroup: HTB" hostname="SECNOTES" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="8808"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-title" output="IIS Windows"><elem key="title">IIS Windows</elem>
+</script></port>
+</ports>
+<hostscript><script id="clock-skew" output="mean: 2h15m49s, deviation: 4h02m45s, median: -4m20s"><elem key="stddev">14565</elem>
+<elem key="median">-260</elem>
+<elem key="mean">8149</elem>
+</script><script id="smb-os-discovery" output="&#xa;  OS: Windows 10 Enterprise 17134 (Windows 10 Enterprise 6.3)&#xa;  OS CPE: cpe:/o:microsoft:windows_10::-&#xa;  Computer name: SECNOTES&#xa;  NetBIOS computer name: SECNOTES\x00&#xa;  Workgroup: HTB\x00&#xa;  System time: 2019-03-23T23:24:03-07:00&#xa;"><elem key="os">Windows 10 Enterprise 17134</elem>
+<elem key="lanmanager">Windows 10 Enterprise 6.3</elem>
+<elem key="server">SECNOTES\x00</elem>
+<elem key="date">2019-03-23T23:24:03-07:00</elem>
+<elem key="fqdn">SECNOTES</elem>
+<elem key="domain_dns">SECNOTES</elem>
+<elem key="workgroup">HTB\x00</elem>
+<elem key="cpe">cpe:/o:microsoft:windows_10::-</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2019-03-24 14:23:58&#xa;  start_date: N/A"><elem key="date">2019-03-24 14:23:58</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="522343" rttvar="312598" to="1772735"/>
+</host>
+<runstats><finished time="1553408920" timestr="Sun Mar 24 14:28:40 2019" elapsed="59.56" summary="Nmap done at Sun Mar 24 14:28:40 2019; 1 IP address (1 host up) scanned in 59.56 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

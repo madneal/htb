@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sun Mar 24 14:37:12 2019 as: nmap -&#45;script vuln -p80,445,8808 -oA vulns 10.10.10.97 -->
+<nmaprun scanner="nmap" args="nmap -&#45;script vuln -p80,445,8808 -oA vulns 10.10.10.97" start="1553409432" startstr="Sun Mar 24 14:37:12 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="3" services="80,445,8808"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="broadcast-avahi-dos" output="&#xa;  Discovered hosts:&#xa;    224.0.0.251&#xa;  After NULL UDP avahi packet DoS (CVE-2011-1002).&#xa;  Hosts are all up (not vulnerable).&#xa;"/></prescript><host starttime="1553409466" endtime="1553409823"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.10.10.97" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" method="table" conf="3"/><script id="http-csrf" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.97&#xa;  Found the following possible CSRF vulnerabilities: &#xa;    &#xa;    Path: http://10.10.10.97:80/&#xa;    Form id: &#xa;    Form action: /login.php&#xa;    &#xa;    Path: http://10.10.10.97:80/login.php&#xa;    Form id: &#xa;    Form action: /login.php&#xa;    &#xa;    Path: http://10.10.10.97:80/register.php&#xa;    Form id: &#xa;    Form action: /register.php&#xa;"/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-enum" output="&#xa;  /login.php: Possible admin folder&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8808"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ssports-bcast" method="table" conf="3"/></port>
+</ports>
+<hostscript><script id="samba-vuln-cve-2012-1182" output="NT_STATUS_ACCESS_DENIED">false</script><script id="smb-vuln-ms10-054" output="false">false</script><script id="smb-vuln-ms10-061" output="NT_STATUS_ACCESS_DENIED">false</script></hostscript><times srtt="407795" rttvar="180847" to="1131183"/>
+</host>
+<runstats><finished time="1553409823" timestr="Sun Mar 24 14:43:43 2019" elapsed="390.65" summary="Nmap done at Sun Mar 24 14:43:43 2019; 1 IP address (1 host up) scanned in 390.65 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

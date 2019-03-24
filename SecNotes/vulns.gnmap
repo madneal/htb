@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sun Mar 24 14:37:12 2019 as: nmap --script vuln -p80,445,8808 -oA vulns 10.10.10.97
+Host: 10.10.10.97 ()	Status: Up
+Host: 10.10.10.97 ()	Ports: 80/open/tcp//http///, 445/open/tcp//microsoft-ds///, 8808/open/tcp//ssports-bcast///
+# Nmap done at Sun Mar 24 14:43:43 2019 -- 1 IP address (1 host up) scanned in 390.65 seconds

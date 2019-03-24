@@ -1,0 +1,10 @@
+# Nmap 7.70 scan initiated Sun Mar 24 14:24:48 2019 as: nmap -sT -p- --min-rate 10000 -oA openports 10.10.10.97
+Nmap scan report for 10.10.10.97
+Host is up (0.41s latency).
+Not shown: 65532 filtered ports
+PORT     STATE SERVICE
+80/tcp   open  http
+445/tcp  open  microsoft-ds
+8808/tcp open  ssports-bcast
+
+# Nmap done at Sun Mar 24 14:26:32 2019 -- 1 IP address (1 host up) scanned in 104.04 seconds

@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sun Mar 24 14:24:48 2019 as: nmap -sT -p- --min-rate 10000 -oA openports 10.10.10.97
+Host: 10.10.10.97 ()	Status: Up
+Host: 10.10.10.97 ()	Ports: 80/open/tcp//http///, 445/open/tcp//microsoft-ds///, 8808/open/tcp//ssports-bcast///	Ignored State: filtered (65532)
+# Nmap done at Sun Mar 24 14:26:32 2019 -- 1 IP address (1 host up) scanned in 104.04 seconds

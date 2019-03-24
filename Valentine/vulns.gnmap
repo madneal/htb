@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat Mar 23 21:14:46 2019 as: nmap --script vuln -oA vulns 10.10.10.79
+Host: 10.10.10.79 ()	Status: Up
+Host: 10.10.10.79 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: closed (997)
+# Nmap done at Sat Mar 23 21:16:33 2019 -- 1 IP address (1 host up) scanned in 107.08 seconds

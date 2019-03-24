@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 23 16:48:56 2019 as: nmap -sC -sV -p22,80,443 -oA services 10.10.10.79 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p22,80,443 -oA services 10.10.10.79" start="1553330936" startstr="Sat Mar 23 16:48:56 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="3" services="22,80,443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1553330936" endtime="1553330981"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.79" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="5.9p1 Debian 5ubuntu1.10" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:5.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 96:4c:51:42:3c:ba:22:49:20:4d:3e:ec:90:cc:fd:0e (DSA)&#xa;  2048 46:bf:1f:cc:92:4f:1d:a0:42:b3:d2:16:a8:58:31:33 (RSA)&#xa;  256 e6:2b:25:19:cb:7e:54:cb:0a:b9:ac:16:98:c6:7d:a9 (ECDSA)"><table>
+<elem key="type">ssh-dss</elem>
+<elem key="fingerprint">964c51423cba2249204d3eec90ccfd0e</elem>
+<elem key="key">AAAAB3NzaC1kc3MAAACBAIMeSqrDdAOhxf7P1IDtdRqun0pO9pmUi+474hX6LHkDgC9dzcvEGyMB/cuuCCjfXn6QDd1n16dSE2zeKKjYT9RVCXJqfYvz/ROm82p0JasEdg1z6QHTeAv70XX6cVQAjAMQoUUdF7WWKWjQuAknb4uowunpQ0yGvy72rbFkSTmlAAAAFQDwWVA5vTpfj5pUCUNFyvnhy3TdcQAAAIBFqVHk74mIT3PWKSpWcZvllKCGg5rGCCE5B3jRWEbRo8CPRkwyPdi/hSaoiQYhvCIkA2CWFuAeedsZE6zMFVFVSsHxeMe55aCQclfMH4iuUZWrg0y5QREuRbGFM6DATJJFkg+PXG/OsLsba/BP8UfcuPM+WGWKxjuaoJt6jeD8iQAAAIBg9rgf8NoRfGqzi+3ndUCo9/m+T18pn+ORbCKdFGq8Ecs4QLeaXPMRIpCol11n6va090EISDPetHcaMaMcYOsFqO841K0O90BV8DhyU4JYBjcpslT+A2X+ahj2QJVGqZJSlusNAQ9vplWxofFONa+IUSGl1UsGjY0QGsA5l5ohfQ==</elem>
+<elem key="bits">1024.0</elem>
+</table>
+<table>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">46bf1fcc924f1da042b3d216a8583133</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDRkMHjbGnQ7uoYx7HPJoW9Up+q0NriI5g5xAs1+0gYBVtBqPxi86gPtXbMHGSrpTiX854nsOPWA8UgfBOSZ2TgWeFvmcnRfUKJG9GR8sdIUvhKxq6ZOtUePereKr0bvFwMSl8Qtmo+KcRWvuxKS64RgUem2TVIWqStLJoPxt8iDPPM7929EoovpooSjwPfqvEhRMtq+KKlqU6PrJD6HshGdjLjABYY1ljfKakgBfWic+Y0KWKa9qdeBF09S7WlaUBWJ5SutKlNSwcRBBVbL4ZFcHijdlXCvfVwSVMkiqY7x4V4McsNpIzHyysZUADy8A6tbfSgopaeR2UN4QRgM1dX</elem>
+<elem key="bits">2048.0</elem>
+</table>
+<table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">e62b2519cb7e54cb0ab9ac1698c67da9</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJ+pCNI5Xv8P96CmyDi/EIvyL0LVZY2xAUJcA0G9rFdLJnIhjvmYuxoCQDsYl+LEiKQee5RRw9d+lgH3Fm5O9XI=</elem>
+<elem key="bits">256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.2.22" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.22</cpe></service><script id="http-server-header" output="Apache/2.2.22 (Ubuntu)"><elem>Apache/2.2.22 (Ubuntu)</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.2.22" extrainfo="(Ubuntu)" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.22</cpe></service><script id="http-server-header" output="Apache/2.2.22 (Ubuntu)"><elem>Apache/2.2.22 (Ubuntu)</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script><script id="ssl-cert" output="Subject: commonName=valentine.htb/organizationName=valentine.htb/stateOrProvinceName=FL/countryName=US&#xa;Not valid before: 2018-02-06T00:45:25&#xa;Not valid after:  2019-02-06T00:45:25"><table key="subject">
+<elem key="organizationName">valentine.htb</elem>
+<elem key="commonName">valentine.htb</elem>
+<elem key="stateOrProvinceName">FL</elem>
+<elem key="countryName">US</elem>
+</table>
+<table key="issuer">
+<elem key="organizationName">valentine.htb</elem>
+<elem key="commonName">valentine.htb</elem>
+<elem key="stateOrProvinceName">FL</elem>
+<elem key="countryName">US</elem>
+</table>
+<table key="pubkey">
+<elem key="modulus">userdata: 0x559a28f04538</elem>
+<elem key="exponent">userdata: 0x559a29af5fa8</elem>
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="value">DC:D6:5B:22:6C:72:E0:13:C8:55:B2:7C:B4:76:61:EB:F5:4F:8D:F9</elem>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+</table>
+<table>
+<elem key="value">keyid:DC:D6:5B:22:6C:72:E0:13:C8:55:B2:7C:B4:76:61:EB:F5:4F:8D:F9&#xa;</elem>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+</table>
+<table>
+<elem key="value">CA:TRUE</elem>
+<elem key="name">X509v3 Basic Constraints</elem>
+</table>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2018-02-06T00:45:25</elem>
+<elem key="notAfter">2019-02-06T00:45:25</elem>
+</table>
+<elem key="md5">a413c4f0b1452154fb54b2dec7a9809d</elem>
+<elem key="sha1">230380da60e7bde72ba676dd52143c3c6f5301b1</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDZzCCAk+gAwIBAgIJAIXsbfXFhLHyMA0GCSqGSIb3DQEBBQUAMEoxCzAJBgNV&#xa;BAYTAlVTMQswCQYDVQQIDAJGTDEWMBQGA1UECgwNdmFsZW50aW5lLmh0YjEWMBQG&#xa;A1UEAwwNdmFsZW50aW5lLmh0YjAeFw0xODAyMDYwMDQ1MjVaFw0xOTAyMDYwMDQ1&#xa;MjVaMEoxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJGTDEWMBQGA1UECgwNdmFsZW50&#xa;aW5lLmh0YjEWMBQGA1UEAwwNdmFsZW50aW5lLmh0YjCCASIwDQYJKoZIhvcNAQEB&#xa;BQADggEPADCCAQoCggEBAMMoF6z4GSpB0oo/znkcGfT7SPrTLzNrb8ic+aO/GWao&#xa;oY35ImIO4Z5FUB9ZL6y6lc+vI6pUyWRADyWoxd3LxByHDNJzEi53ds+JSPs5SuH1&#xa;PUDDtZqCaPaNjLJNP08DCcC6rXRdU2SwV2pEDx+39vsFiK6ywcrepvvFZndGKXVg&#xa;0K+R3VkwOguPhSHlXcgiHFbqei8NJ1zip9YuVUYXhyLVG2ZiJYX6CRw4bRsUnql6&#xa;4DFNQybOsJHm0JtI2M9PefmvEkTUZeT/d0dWhU076a3bTestKZf4WpqZw60XGmxz&#xa;pAQf5dWOqMemIK6K4FC48bLSSN59s4kNtuhtx6OCXpcCAwEAAaNQME4wHQYDVR0O&#xa;BBYEFNzWWyJscuATyFWyfLR2Yev1T435MB8GA1UdIwQYMBaAFNzWWyJscuATyFWy&#xa;fLR2Yev1T435MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBACc3NjB7&#xa;cHUXjTxwdeFxkY0EFYPPy3EiHftGVLpiczrEQ7NiHTLGQ6apvxdlShBBhKWRaU+N&#xa;XGhsDkvBLUWJ3DSWwWM4pG9qmWPT241OCaaiIkVT4KcjRIc+x+91GWYNQvvdnFLO&#xa;5CfrRGkFHwJT1E6vGXJejx6nhTmis88ByQ9g9D2NgcHENfQPAW1by7ONkqiXtV3S&#xa;q56X7q0yLQdSTe63dEzK8eSTN1KWUXDoNRfAYfHttJqKg2OUqUDVWkNzmUiIe4sP&#xa;csAwIHShdX+Jd8E5oty5C07FJrzVtW+Yf4h8UHKLuJ4E8BYbkxkc5vDcXnKByeJa&#xa;gRSFfyZx/VqBh9c=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2019-03-23T08:44:58+00:00; -4m19s from scanner time."><elem key="delta">-259.0</elem>
+<elem key="date">2019-03-23T08:44:58+00:00</elem>
+</script></port>
+</ports>
+<hostscript><script id="clock-skew" output="mean: -4m19s, deviation: 0s, median: -4m19s"><elem key="mean">-259</elem>
+<elem key="stddev">0</elem>
+<elem key="median">-259</elem>
+</script></hostscript><times srtt="539536" rttvar="392716" to="2110400"/>
+</host>
+<runstats><finished time="1553330981" timestr="Sat Mar 23 16:49:41 2019" elapsed="45.10" summary="Nmap done at Sat Mar 23 16:49:41 2019; 1 IP address (1 host up) scanned in 45.10 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

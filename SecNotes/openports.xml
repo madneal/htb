@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sun Mar 24 14:24:48 2019 as: nmap -sT -p- -&#45;min-rate 10000 -oA openports 10.10.10.97 -->
+<nmaprun scanner="nmap" args="nmap -sT -p- -&#45;min-rate 10000 -oA openports 10.10.10.97" start="1553408688" startstr="Sun Mar 24 14:24:48 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="Connect Scan" time="1553408748" percent="48.72" remaining="64" etc="1553408811"/>
+<host starttime="1553408688" endtime="1553408792"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.10.10.97" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65532">
+<extrareasons reason="no-responses" count="65532"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8808"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssports-bcast" method="table" conf="3"/></port>
+</ports>
+<times srtt="412733" rttvar="13415" to="466393"/>
+</host>
+<runstats><finished time="1553408792" timestr="Sun Mar 24 14:26:32 2019" elapsed="104.04" summary="Nmap done at Sun Mar 24 14:26:32 2019; 1 IP address (1 host up) scanned in 104.04 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

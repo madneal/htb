@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Mon Mar 25 20:56:41 2019 as: nmap -sC -sV -p22,445,1880,9999 -oA services 10.10.10.111 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p22,445,1880,9999 -oA services 10.10.10.111" start="1553518601" startstr="Mon Mar 25 20:56:41 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="4" services="22,445,1880,9999"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1553518602" endtime="1553518631"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.111" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.2p2 Ubuntu 4ubuntu2.4" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.2p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 87:7b:91:2a:0f:11:b6:57:1e:cb:9f:77:cf:35:e2:21 (RSA)&#xa;  256 b7:9b:06:dd:c2:5e:28:44:78:41:1e:67:7d:1e:b7:62 (ECDSA)&#xa;  256 21:cf:16:6d:82:a4:30:c3:c6:9c:d7:38:ba:b5:02:b0 (ED25519)"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQC3HUqxhCShF9I6uBmGCX6yXz56Iibv7WW2fBKsKA9yVqmoupPdDKac1U3/PIioRNHkPC03r5ZXsqfALwjIWEits7toO4K+9VSFU6d0qhmpUZW3WwiyxdcPxmTQLpU8InXZpMOwjpGJTTwqxsMIxNdPk0FP/MtqEzQI45MOr7IQOGcEAsmcJ1Cy3aRDAnp77NBWYA316l7Xb8WA/aWoHEyS/6Qf3XzeARf0yZ6YwYg4TTsaeQtfRr4HWZBDs7fLrrWUzN0ivb9izy9YgqrOJ5ZKQI4A1yn0CxZNsiweIT8gopM1KrfinPGiKbGbSNVvTX2dHYyISh6Y2bp1D5vum6SH</elem>
+<elem key="bits">2048.0</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">877b912a0f11b6571ecb9f77cf35e221</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDSjEcHeA/VoBi4PaoyxwM1Rx1vpoQofoJPYTxBuQLXRujf3gqn491cWpd2CDh2mF/3w2kEGsrWRwqD4LZmz+Sk=</elem>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">b79b06ddc25e284478411e677d1eb762</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAINVT+d0lX5zwXTOY4h4+MfU6kt/q3EmGVWIXnMsomQq5</elem>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">21cf166d82a430c3c69cd738bab502b0</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="4.3.11-Ubuntu" extrainfo="workgroup: WORKGROUP" hostname="FROLIC" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="1880"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Node.js" extrainfo="Express middleware" method="probed" conf="10"><cpe>cpe:/a:nodejs:node.js</cpe></service><script id="http-title" output="Node-RED"><elem key="title">Node-RED</elem>
+</script></port>
+<port protocol="tcp" portid="9999"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.10.3" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.10.3</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-server-header" output="nginx/1.10.3 (Ubuntu)"><elem>nginx/1.10.3 (Ubuntu)</elem>
+</script><script id="http-title" output="Welcome to nginx!"><elem key="title">Welcome to nginx!</elem>
+</script></port>
+</ports>
+<hostscript><script id="clock-skew" output="mean: -1h54m19s, deviation: 3h10m30s, median: -4m20s"><elem key="median">-260</elem>
+<elem key="stddev">11430</elem>
+<elem key="mean">-6859</elem>
+</script><script id="nbstat" output="NetBIOS name: FROLIC, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)"><elem key="server_name">FROLIC</elem>
+<elem key="user">&lt;unknown&gt;</elem>
+<table key="mac">
+<elem key="address">&lt;unknown&gt;</elem>
+<elem key="manuf">unknown</elem>
+</table>
+<table key="statistics">
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+</table>
+<table key="names">
+<table>
+<elem key="suffix">0</elem>
+<elem key="flags">1024</elem>
+<elem key="name">FROLIC</elem>
+</table>
+<table>
+<elem key="suffix">3</elem>
+<elem key="flags">1024</elem>
+<elem key="name">FROLIC</elem>
+</table>
+<table>
+<elem key="suffix">32</elem>
+<elem key="flags">1024</elem>
+<elem key="name">FROLIC</elem>
+</table>
+<table>
+<elem key="suffix">0</elem>
+<elem key="flags">33792</elem>
+<elem key="name">WORKGROUP</elem>
+</table>
+<table>
+<elem key="suffix">30</elem>
+<elem key="flags">33792</elem>
+<elem key="name">WORKGROUP</elem>
+</table>
+</table>
+</script><script id="smb-os-discovery" output="&#xa;  OS: Windows 6.1 (Samba 4.3.11-Ubuntu)&#xa;  Computer name: frolic&#xa;  NetBIOS computer name: FROLIC\x00&#xa;  Domain name: \x00&#xa;  FQDN: frolic&#xa;  System time: 2019-03-25T18:22:37+05:30&#xa;"><elem key="os">Windows 6.1</elem>
+<elem key="lanmanager">Samba 4.3.11-Ubuntu</elem>
+<elem key="server">FROLIC\x00</elem>
+<elem key="date">2019-03-25T18:22:37+05:30</elem>
+<elem key="fqdn">frolic</elem>
+<elem key="domain_dns">\x00</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2019-03-25 20:52:37&#xa;  start_date: N/A"><elem key="date">2019-03-25 20:52:37</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="421088" rttvar="211253" to="1266100"/>
+</host>
+<runstats><finished time="1553518631" timestr="Mon Mar 25 20:57:11 2019" elapsed="29.43" summary="Nmap done at Mon Mar 25 20:57:11 2019; 1 IP address (1 host up) scanned in 29.43 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

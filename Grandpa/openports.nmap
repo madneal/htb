@@ -1,0 +1,8 @@
+# Nmap 7.70 scan initiated Thu Mar 28 13:24:33 2019 as: nmap -sT -p- --min-rate 10000 -oA openports 10.10.10.14
+Nmap scan report for 10.10.10.14
+Host is up (0.21s latency).
+Not shown: 65534 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+
+# Nmap done at Thu Mar 28 13:26:31 2019 -- 1 IP address (1 host up) scanned in 118.48 seconds

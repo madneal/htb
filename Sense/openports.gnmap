@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat Mar 30 19:50:22 2019 as: nmap -sT -p- --min-rate 10000 -oA openports 10.10.10.60
+Host: 10.10.10.60 ()	Status: Up
+Host: 10.10.10.60 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (65533)
+# Nmap done at Sat Mar 30 19:51:45 2019 -- 1 IP address (1 host up) scanned in 83.05 seconds

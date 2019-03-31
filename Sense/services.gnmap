@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat Mar 30 19:52:35 2019 as: nmap -sC -sV -p80,443 -oA services 10.10.10.60
+Host: 10.10.10.60 ()	Status: Up
+Host: 10.10.10.60 ()	Ports: 80/open/tcp//http//lighttpd 1.4.35/, 443/open/tcp//ssl|https?///
+# Nmap done at Sat Mar 30 19:54:23 2019 -- 1 IP address (1 host up) scanned in 108.13 seconds

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sun Mar 31 18:50:22 2019 as: nmap -sV -sC -p80 -oA services 10.10.10.107 -->
+<nmaprun scanner="nmap" args="nmap -sV -sC -p80 -oA services 10.10.10.107" start="1554029422" startstr="Sun Mar 31 18:50:22 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1554029422" endtime="1554029540"><status state="up" reason="echo-reply" reason_ttl="254"/>
+<address addr="10.10.10.107" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="OpenBSD httpd" method="probed" conf="10"><cpe>cpe:/a:openbsd:httpd</cpe></service></port>
+</ports>
+<times srtt="1081315" rttvar="902487" to="4691263"/>
+</host>
+<runstats><finished time="1554029540" timestr="Sun Mar 31 18:52:20 2019" elapsed="118.51" summary="Nmap done at Sun Mar 31 18:52:20 2019; 1 IP address (1 host up) scanned in 118.51 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

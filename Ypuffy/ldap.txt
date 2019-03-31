@@ -1,0 +1,102 @@
+# extended LDIF
+#
+# LDAPv3
+# base <dc=hackthebox,dc=htb> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# hackthebox.htb
+dn: dc=hackthebox,dc=htb
+dc: hackthebox
+objectClass: top
+objectClass: domain
+
+# passwd, hackthebox.htb
+dn: ou=passwd,dc=hackthebox,dc=htb
+ou: passwd
+objectClass: top
+objectClass: organizationalUnit
+
+# bob8791, passwd, hackthebox.htb
+dn: uid=bob8791,ou=passwd,dc=hackthebox,dc=htb
+uid: bob8791
+cn: Bob
+objectClass: account
+objectClass: posixAccount
+objectClass: top
+userPassword:: e0JTREFVVEh9Ym9iODc5MQ==
+uidNumber: 5001
+gidNumber: 5001
+gecos: Bob
+homeDirectory: /home/bob8791
+loginShell: /bin/ksh
+
+# alice1978, passwd, hackthebox.htb
+dn: uid=alice1978,ou=passwd,dc=hackthebox,dc=htb
+uid: alice1978
+cn: Alice
+objectClass: account
+objectClass: posixAccount
+objectClass: top
+objectClass: sambaSamAccount
+userPassword:: e0JTREFVVEh9YWxpY2UxOTc4
+uidNumber: 5000
+gidNumber: 5000
+gecos: Alice
+homeDirectory: /home/alice1978
+loginShell: /bin/ksh
+sambaSID: S-1-5-21-3933741069-3307154301-3557023464-1001
+displayName: Alice
+sambaAcctFlags: [U          ]
+sambaPasswordHistory: 00000000000000000000000000000000000000000000000000000000
+sambaNTPassword: 0B186E661BBDBDCF6047784DE8B9FD8B
+sambaPwdLastSet: 1532916644
+
+# group, hackthebox.htb
+dn: ou=group,dc=hackthebox,dc=htb
+ou: group
+objectClass: top
+objectClass: organizationalUnit
+
+# bob8791, group, hackthebox.htb
+dn: cn=bob8791,ou=group,dc=hackthebox,dc=htb
+objectClass: posixGroup
+objectClass: top
+cn: bob8791
+userPassword:: e2NyeXB0fSo=
+gidNumber: 5001
+
+# alice1978, group, hackthebox.htb
+dn: cn=alice1978,ou=group,dc=hackthebox,dc=htb
+objectClass: posixGroup
+objectClass: top
+cn: alice1978
+userPassword:: e2NyeXB0fSo=
+gidNumber: 5000
+
+# ypuffy, hackthebox.htb
+dn: sambadomainname=ypuffy,dc=hackthebox,dc=htb
+sambaDomainName: YPUFFY
+sambaSID: S-1-5-21-3933741069-3307154301-3557023464
+sambaAlgorithmicRidBase: 1000
+objectclass: sambaDomain
+sambaNextUserRid: 1000
+sambaMinPwdLength: 5
+sambaPwdHistoryLength: 0
+sambaLogonToChgPwd: 0
+sambaMaxPwdAge: -1
+sambaMinPwdAge: 0
+sambaLockoutDuration: 30
+sambaLockoutObservationWindow: 30
+sambaLockoutThreshold: 0
+sambaForceLogoff: -1
+sambaRefuseMachinePwdChange: 0
+sambaNextRid: 1001
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 9
+# numEntries: 8

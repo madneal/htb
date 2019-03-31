@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sun Mar 31 18:50:22 2019 as: nmap -sV -sC -p80 -oA services 10.10.10.107
+Host: 10.10.10.107 ()	Status: Up
+Host: 10.10.10.107 ()	Ports: 80/open/tcp//http//OpenBSD httpd/
+# Nmap done at Sun Mar 31 18:52:20 2019 -- 1 IP address (1 host up) scanned in 118.51 seconds

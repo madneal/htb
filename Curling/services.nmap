@@ -1,0 +1,18 @@
+# Nmap 7.70 scan initiated Sun Mar 31 10:01:20 2019 as: nmap -sC -sV -p22,80 -oA services 10.10.10.150
+Nmap scan report for 10.10.10.150
+Host is up (0.64s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 8a:d1:69:b4:90:20:3e:a7:b6:54:01:eb:68:30:3a:ca (RSA)
+|   256 9f:0b:c2:b2:0b:ad:8f:a1:4e:0b:f6:33:79:ef:fb:43 (ECDSA)
+|_  256 c1:2a:35:44:30:0c:5b:56:6a:3f:a5:cc:64:66:d9:a9 (ED25519)
+80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
+|_http-generator: Joomla! - Open Source Content Management
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Home
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Mar 31 10:01:49 2019 -- 1 IP address (1 host up) scanned in 28.55 seconds

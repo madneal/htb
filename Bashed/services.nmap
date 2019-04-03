@@ -1,0 +1,11 @@
+# Nmap 7.70 scan initiated Wed Apr  3 20:55:27 2019 as: nmap -sC -sV -p 80 -oA services 10.10.10.68
+Nmap scan report for 10.10.10.68
+Host is up (0.35s latency).
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Arrexel's Development Site
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Apr  3 20:55:47 2019 -- 1 IP address (1 host up) scanned in 19.89 seconds

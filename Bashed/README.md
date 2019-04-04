@@ -37,7 +37,7 @@ PORT   STATE SERVICE VERSION
 |_http-title: Arrexel's Development Site
 ```
 
-Nothing special. Then access the http serve and find more.
+Nothing special. Then access the http service and find more.
 
 ## Exploit
 

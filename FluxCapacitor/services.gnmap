@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Thu Apr  4 22:47:54 2019 as: nmap -sC -sV -p 80 -oA services 10.10.10.69
+Host: 10.10.10.69 ()	Status: Up
+Host: 10.10.10.69 ()	Ports: 80/open/tcp//http//SuperWAF/
+# Nmap done at Thu Apr  4 22:48:59 2019 -- 1 IP address (1 host up) scanned in 65.45 seconds

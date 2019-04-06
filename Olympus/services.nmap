@@ -1,0 +1,24 @@
+# Nmap 7.70 scan initiated Sat Apr  6 08:06:41 2019 as: nmap -sC -sV -p80,53 -oA services 10.10.10.83
+Nmap scan report for olympus.htb (10.10.10.83)
+Host is up (0.42s latency).
+
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  (unknown banner: Bind)
+| dns-nsid: 
+|_  bind.version: Bind
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|     bind
+|_    Bind
+80/tcp open  http    Apache httpd
+|_http-server-header: Apache
+|_http-title: Crete island - Olympus HTB
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.70%I=7%D=4/6%Time=5CA7ED9E%P=x86_64-pc-linux-gnu%r(DNSVe
+SF:rsionBindReqTCP,3F,"\0=\0\x06\x85\0\0\x01\0\x01\0\x01\0\0\x07version\x0
+SF:4bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x05\x04Bind\xc0\x0c\0
+SF:\x02\0\x03\0\0\0\0\0\x02\xc0\x0c");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Apr  6 08:07:10 2019 -- 1 IP address (1 host up) scanned in 29.39 seconds

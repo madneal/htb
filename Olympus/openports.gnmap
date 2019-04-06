@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat Apr  6 08:21:14 2019 as: nmap -sT -p- --min-rate 10000 -oA openports 10.10.10.83
+Host: 10.10.10.83 (olympus.htb)	Status: Up
+Host: 10.10.10.83 (olympus.htb)	Ports: 53/open/tcp//domain///, 80/open/tcp//http///
+# Nmap done at Sat Apr  6 08:25:00 2019 -- 1 IP address (1 host up) scanned in 225.89 seconds

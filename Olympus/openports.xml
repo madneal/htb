@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Apr  6 08:21:14 2019 as: nmap -sT -p- -&#45;min-rate 10000 -oA openports 10.10.10.83 -->
+<nmaprun scanner="nmap" args="nmap -sT -p- -&#45;min-rate 10000 -oA openports 10.10.10.83" start="1554510074" startstr="Sat Apr  6 08:21:14 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1554510074" endtime="1554510300"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.83" addrtype="ipv4"/>
+<hostnames>
+<hostname name="olympus.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="61301">
+<extrareasons reason="no-responses" count="61301"/>
+</extraports>
+<extraports state="closed" count="4232">
+<extrareasons reason="conn-refused" count="4232"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+</ports>
+<times srtt="324493" rttvar="272" to="325581"/>
+</host>
+<runstats><finished time="1554510300" timestr="Sat Apr  6 08:25:00 2019" elapsed="225.89" summary="Nmap done at Sat Apr  6 08:25:00 2019; 1 IP address (1 host up) scanned in 225.89 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

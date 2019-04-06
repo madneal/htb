@@ -1,0 +1,10 @@
+# Nmap 7.70 scan initiated Sat Apr  6 08:21:14 2019 as: nmap -sT -p- --min-rate 10000 -oA openports 10.10.10.83
+Warning: 10.10.10.83 giving up on port because retransmission cap hit (10).
+Nmap scan report for olympus.htb (10.10.10.83)
+Host is up (0.32s latency).
+Not shown: 61301 filtered ports, 4232 closed ports
+PORT   STATE SERVICE
+53/tcp open  domain
+80/tcp open  http
+
+# Nmap done at Sat Apr  6 08:25:00 2019 -- 1 IP address (1 host up) scanned in 225.89 seconds

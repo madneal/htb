@@ -1,0 +1,81 @@
+# Nmap 7.70 scan initiated Sun Apr  7 18:27:09 2019 as: nmap -sC -sV -oA services 10.10.10.77
+Nmap scan report for 10.10.10.77
+Host is up (0.51s latency).
+Not shown: 997 filtered ports
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     Microsoft ftpd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_05-29-18  12:19AM       <DIR>          documents
+| ftp-syst: 
+|_  SYST: Windows_NT
+22/tcp open  ssh     OpenSSH 7.6 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 82:20:c3:bd:16:cb:a2:9c:88:87:1d:6c:15:59:ed:ed (RSA)
+|   256 23:2b:b8:0a:8c:1c:f4:4d:8d:7e:5e:64:58:80:33:45 (ECDSA)
+|_  256 ac:8b:de:25:1d:b7:d8:38:38:9b:9c:16:bf:f6:3f:ed (ED25519)
+25/tcp open  smtp?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Kerberos, LDAPBindReq, LDAPSearchReq, LPDString, NULL, RPCCheck, SMBProgNeg, SSLSessionReq, TLSSessionReq, X11Probe: 
+|     220 Mail Service ready
+|   FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, RTSPRequest: 
+|     220 Mail Service ready
+|     sequence of commands
+|     sequence of commands
+|   Hello: 
+|     220 Mail Service ready
+|     EHLO Invalid domain address.
+|   Help: 
+|     220 Mail Service ready
+|     DATA HELO EHLO MAIL NOOP QUIT RCPT RSET SAML TURN VRFY
+|   SIPOptions: 
+|     220 Mail Service ready
+|     sequence of commands
+|     sequence of commands
+|     sequence of commands
+|     sequence of commands
+|     sequence of commands
+|     sequence of commands
+|     sequence of commands
+|     sequence of commands
+|     sequence of commands
+|     sequence of commands
+|_    sequence of commands
+| smtp-commands: REEL, SIZE 20480000, AUTH LOGIN PLAIN, HELP, 
+|_ 211 DATA HELO EHLO MAIL NOOP QUIT RCPT RSET SAML TURN VRFY 
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port25-TCP:V=7.70%I=7%D=4/7%Time=5CA9D09F%P=x86_64-pc-linux-gnu%r(NULL,
+SF:18,"220\x20Mail\x20Service\x20ready\r\n")%r(Hello,3A,"220\x20Mail\x20Se
+SF:rvice\x20ready\r\n501\x20EHLO\x20Invalid\x20domain\x20address\.\r\n")%r
+SF:(Help,54,"220\x20Mail\x20Service\x20ready\r\n211\x20DATA\x20HELO\x20EHL
+SF:O\x20MAIL\x20NOOP\x20QUIT\x20RCPT\x20RSET\x20SAML\x20TURN\x20VRFY\r\n")
+SF:%r(GenericLines,54,"220\x20Mail\x20Service\x20ready\r\n503\x20Bad\x20se
+SF:quence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\
+SF:n")%r(GetRequest,54,"220\x20Mail\x20Service\x20ready\r\n503\x20Bad\x20s
+SF:equence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r
+SF:\n")%r(HTTPOptions,54,"220\x20Mail\x20Service\x20ready\r\n503\x20Bad\x2
+SF:0sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands
+SF:\r\n")%r(RTSPRequest,54,"220\x20Mail\x20Service\x20ready\r\n503\x20Bad\
+SF:x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20comman
+SF:ds\r\n")%r(RPCCheck,18,"220\x20Mail\x20Service\x20ready\r\n")%r(DNSVers
+SF:ionBindReqTCP,18,"220\x20Mail\x20Service\x20ready\r\n")%r(DNSStatusRequ
+SF:estTCP,18,"220\x20Mail\x20Service\x20ready\r\n")%r(SSLSessionReq,18,"22
+SF:0\x20Mail\x20Service\x20ready\r\n")%r(TLSSessionReq,18,"220\x20Mail\x20
+SF:Service\x20ready\r\n")%r(Kerberos,18,"220\x20Mail\x20Service\x20ready\r
+SF:\n")%r(SMBProgNeg,18,"220\x20Mail\x20Service\x20ready\r\n")%r(X11Probe,
+SF:18,"220\x20Mail\x20Service\x20ready\r\n")%r(FourOhFourRequest,54,"220\x
+SF:20Mail\x20Service\x20ready\r\n503\x20Bad\x20sequence\x20of\x20commands\
+SF:r\n503\x20Bad\x20sequence\x20of\x20commands\r\n")%r(LPDString,18,"220\x
+SF:20Mail\x20Service\x20ready\r\n")%r(LDAPSearchReq,18,"220\x20Mail\x20Ser
+SF:vice\x20ready\r\n")%r(LDAPBindReq,18,"220\x20Mail\x20Service\x20ready\r
+SF:\n")%r(SIPOptions,162,"220\x20Mail\x20Service\x20ready\r\n503\x20Bad\x2
+SF:0sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands
+SF:\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\
+SF:x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x2
+SF:0Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20c
+SF:ommands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n503\x20Bad\x20se
+SF:quence\x20of\x20commands\r\n503\x20Bad\x20sequence\x20of\x20commands\r\
+SF:n503\x20Bad\x20sequence\x20of\x20commands\r\n");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Apr  7 18:31:05 2019 -- 1 IP address (1 host up) scanned in 236.53 seconds

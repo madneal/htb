@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sun Apr  7 18:27:09 2019 as: nmap -sC -sV -oA services 10.10.10.77
+Host: 10.10.10.77 ()	Status: Up
+Host: 10.10.10.77 ()	Ports: 21/open/tcp//ftp//Microsoft ftpd/, 22/open/tcp//ssh//OpenSSH 7.6 (protocol 2.0)/, 25/open/tcp//smtp?///	Ignored State: filtered (997)
+# Nmap done at Sun Apr  7 18:31:05 2019 -- 1 IP address (1 host up) scanned in 236.53 seconds

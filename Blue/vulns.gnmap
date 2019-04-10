@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Mon Apr  8 19:46:38 2019 as: nmap --script vuln -p135,139,445 -oA vulns 10.10.10.40
+Host: 10.10.10.40 ()	Status: Up
+Host: 10.10.10.40 ()	Ports: 135/open/tcp//msrpc///, 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///
+# Nmap done at Mon Apr  8 19:47:32 2019 -- 1 IP address (1 host up) scanned in 54.15 seconds

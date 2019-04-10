@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Mon Apr  8 19:46:38 2019 as: nmap -&#45;script vuln -p135,139,445 -oA vulns 10.10.10.40 -->
+<nmaprun scanner="nmap" args="nmap -&#45;script vuln -p135,139,445 -oA vulns 10.10.10.40" start="1554723998" startstr="Mon Apr  8 19:46:38 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="3" services="135,139,445"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="broadcast-avahi-dos" output="&#xa;  Discovered hosts:&#xa;    224.0.0.251&#xa;  After NULL UDP avahi packet DoS (CVE-2011-1002).&#xa;  Hosts are all up (not vulnerable).&#xa;"/></prescript><host starttime="1554724033" endtime="1554724052"><status state="up" reason="reset" reason_ttl="127"/>
+<address addr="10.10.10.40" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<hostscript><script id="smb-vuln-ms10-054" output="false">false</script><script id="smb-vuln-ms10-061" output="NT_STATUS_OBJECT_NAME_NOT_FOUND">false</script><script id="smb-vuln-ms17-010" output="&#xa;  VULNERABLE:&#xa;  Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)&#xa;    State: VULNERABLE&#xa;    IDs:  CVE:CVE-2017-0143&#xa;    Risk factor: HIGH&#xa;      A critical remote code execution vulnerability exists in Microsoft SMBv1&#xa;       servers (ms17-010).&#xa;          &#xa;    Disclosure date: 2017-03-14&#xa;    References:&#xa;      https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/&#xa;      https://technet.microsoft.com/en-us/library/security/ms17-010.aspx&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143&#xa;"><table key="CVE-2017-0143">
+<elem key="title">Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2017-0143</elem>
+</table>
+<table key="description">
+<elem>A critical remote code execution vulnerability exists in Microsoft SMBv1&#xa; servers (ms17-010).&#xa;    </elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="year">2017</elem>
+<elem key="month">03</elem>
+<elem key="day">14</elem>
+</table>
+</table>
+<elem key="disclosure">2017-03-14</elem>
+<table key="refs">
+<elem>https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/</elem>
+<elem>https://technet.microsoft.com/en-us/library/security/ms17-010.aspx</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143</elem>
+</table>
+</table>
+</script></hostscript><times srtt="345959" rttvar="151242" to="950927"/>
+</host>
+<runstats><finished time="1554724052" timestr="Mon Apr  8 19:47:32 2019" elapsed="54.15" summary="Nmap done at Mon Apr  8 19:47:32 2019; 1 IP address (1 host up) scanned in 54.15 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

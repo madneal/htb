@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Tue Apr  9 20:57:44 2019 as: nmap -sC -sV -oA services 10.10.10.109
+Host: 10.10.10.109 ()	Status: Up
+Host: 10.10.10.109 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.4 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.18 ((Ubuntu))/
+# Nmap done at Tue Apr  9 20:58:16 2019 -- 1 IP address (1 host up) scanned in 31.71 seconds

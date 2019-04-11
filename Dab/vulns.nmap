@@ -1,0 +1,24 @@
+# Nmap 7.70 scan initiated Thu Apr 11 18:53:48 2019 as: nmap --script vuln -p80,8080 -oA vulns 10.10.10.86
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.10.10.86
+Host is up (0.70s latency).
+
+PORT     STATE SERVICE
+80/tcp   open  http
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.86
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.10.10.86:80/login
+|     Form id: 
+|_    Form action: 
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+8080/tcp open  http-proxy
+
+# Nmap done at Thu Apr 11 19:13:56 2019 -- 1 IP address (1 host up) scanned in 1208.47 seconds

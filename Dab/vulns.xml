@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Thu Apr 11 18:53:48 2019 as: nmap -&#45;script vuln -p80,8080 -oA vulns 10.10.10.86 -->
+<nmaprun scanner="nmap" args="nmap -&#45;script vuln -p80,8080 -oA vulns 10.10.10.86" start="1554980028" startstr="Thu Apr 11 18:53:48 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="80,8080"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="broadcast-avahi-dos" output="&#xa;  Discovered hosts:&#xa;    224.0.0.251&#xa;  After NULL UDP avahi packet DoS (CVE-2011-1002).&#xa;  Hosts are all up (not vulnerable).&#xa;"/></prescript><host starttime="1554980062" endtime="1554981236"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.86" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" method="table" conf="3"/><script id="http-csrf" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.86&#xa;  Found the following possible CSRF vulnerabilities: &#xa;    &#xa;    Path: http://10.10.10.86:80/login&#xa;    Form id: &#xa;    Form action: &#xa;"/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http-proxy" method="table" conf="3"/></port>
+</ports>
+<times srtt="695433" rttvar="426676" to="2402137"/>
+</host>
+<runstats><finished time="1554981236" timestr="Thu Apr 11 19:13:56 2019" elapsed="1208.47" summary="Nmap done at Thu Apr 11 19:13:56 2019; 1 IP address (1 host up) scanned in 1208.47 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

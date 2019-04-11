@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Thu Apr 11 18:37:15 2019 as: nmap -sC -sV -oA services 10.10.10.86
+Host: 10.10.10.86 ()	Status: Up
+Host: 10.10.10.86 ()	Ports: 21/open/tcp//ftp//vsftpd 3.0.3/, 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.4 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//nginx 1.10.3 (Ubuntu)/, 8080/open/tcp//http//nginx 1.10.3 (Ubuntu)/	Ignored State: closed (996)
+# Nmap done at Thu Apr 11 18:37:37 2019 -- 1 IP address (1 host up) scanned in 22.23 seconds

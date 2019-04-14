@@ -1,0 +1,14 @@
+# Nmap 7.70 scan initiated Sun Apr 14 11:13:26 2019 as: nmap -sC -sV -oA services 10.10.10.67
+Nmap scan report for 10.10.10.67
+Host is up (0.33s latency).
+Not shown: 998 filtered ports
+PORT     STATE SERVICE    VERSION
+80/tcp   open  http       Apache httpd 2.4.18 ((Ubuntu))
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Inception
+3128/tcp open  http-proxy Squid http proxy 3.5.12
+|_http-server-header: squid/3.5.12
+|_http-title: ERROR: The requested URL could not be retrieved
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Apr 14 11:14:30 2019 -- 1 IP address (1 host up) scanned in 64.98 seconds

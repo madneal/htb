@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sun Apr 14 11:13:26 2019 as: nmap -sC -sV -oA services 10.10.10.67
+Host: 10.10.10.67 ()	Status: Up
+Host: 10.10.10.67 ()	Ports: 80/open/tcp//http//Apache httpd 2.4.18 ((Ubuntu))/, 3128/open/tcp//http-proxy//Squid http proxy 3.5.12/	Ignored State: filtered (998)
+# Nmap done at Sun Apr 14 11:14:30 2019 -- 1 IP address (1 host up) scanned in 64.98 seconds

@@ -1,0 +1,13 @@
+# Nmap 7.70 scan initiated Tue Apr 16 22:46:12 2019 as: nmap --script vuln -p80 -oA vulns 10.10.10.15
+Nmap scan report for 10.10.10.15
+Host is up (0.38s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+
+# Nmap done at Tue Apr 16 22:49:53 2019 -- 1 IP address (1 host up) scanned in 221.74 seconds

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sun Mar 10 21:30:10 2019 as: nmap -sT -p- -&#45;min-rate 10000 -Pn -oA lame 10.10.10.3 -->
+<nmaprun scanner="nmap" args="nmap -sT -p- -&#45;min-rate 10000 -Pn -oA lame 10.10.10.3" start="1552267810" startstr="Sun Mar 10 21:30:10 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="Connect Scan" time="1552267853" percent="33.27" remaining="87" etc="1552267939"/>
+<taskprogress task="Connect Scan" time="1552267903" percent="72.72" remaining="35" etc="1552267938"/>
+<host starttime="1552267810" endtime="1552267931"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.3" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-responses" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="3632"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="distccd" method="table" conf="3"/></port>
+</ports>
+<times srtt="245990" rttvar="35654" to="388606"/>
+</host>
+<runstats><finished time="1552267931" timestr="Sun Mar 10 21:32:11 2019" elapsed="121.06" summary="Nmap done at Sun Mar 10 21:32:11 2019; 1 IP address (1 host up) scanned in 121.06 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sun Mar 10 21:30:10 2019 as: nmap -sT -p- --min-rate 10000 -Pn -oA lame 10.10.10.3
+Host: 10.10.10.3 ()	Status: Up
+Host: 10.10.10.3 ()	Ports: 3632/open/tcp//distccd///	Ignored State: filtered (65534)
+# Nmap done at Sun Mar 10 21:32:11 2019 -- 1 IP address (1 host up) scanned in 121.06 seconds

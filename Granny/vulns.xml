@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Tue Apr 16 22:46:12 2019 as: nmap -&#45;script vuln -p80 -oA vulns 10.10.10.15 -->
+<nmaprun scanner="nmap" args="nmap -&#45;script vuln -p80 -oA vulns 10.10.10.15" start="1555469172" startstr="Tue Apr 16 22:46:12 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="NSE" time="1555469330" percent="85.32" remaining="26" etc="1555469355"/>
+<taskprogress task="NSE" time="1555469348" percent="87.16" remaining="25" etc="1555469372"/>
+<taskprogress task="NSE" time="1555469359" percent="88.99" remaining="22" etc="1555469381"/>
+<host starttime="1555469182" endtime="1555469393"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.10.10.15" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" method="table" conf="3"/><script id="http-aspnet-debug" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-vuln-cve2014-3704" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<times srtt="375970" rttvar="362313" to="1825222"/>
+</host>
+<runstats><finished time="1555469393" timestr="Tue Apr 16 22:49:53 2019" elapsed="221.74" summary="Nmap done at Tue Apr 16 22:49:53 2019; 1 IP address (1 host up) scanned in 221.74 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

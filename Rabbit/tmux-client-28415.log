@@ -1,0 +1,69 @@
+1555500524.218923 client started (28415): version 2.8, socket /tmp/tmux-0/default, protocol 8
+1555500524.218952 on Linux 4.19.0-kali3-amd64 #1 SMP Debian 4.19.20-1kali1 (2019-02-14); libevent 2.1.8-stable (poll)
+1555500524.218967 socket is /tmp/tmux-0/default
+1555500524.218978 trying connect
+1555500524.218994 connect failed: Connection refused
+1555500524.219002 lock file is /tmp/tmux-0/default.lock
+1555500524.219028 flock succeeded
+1555500524.219031 got lock (6)
+1555500524.219036 trying connect
+1555500524.219041 connect failed: Connection refused
+1555500524.219241 add peer 0x5640493b1250: 7 ((nil))
+1555500524.219364 sending message 100 to peer 0x5640493b1250 (4 bytes)
+1555500524.219372 sending message 101 to peer 0x5640493b1250 (15 bytes)
+1555500524.219376 sending message 102 to peer 0x5640493b1250 (11 bytes)
+1555500524.219379 sending message 108 to peer 0x5640493b1250 (17 bytes)
+1555500524.219382 sending message 104 to peer 0x5640493b1250 (0 bytes)
+1555500524.219386 sending message 107 to peer 0x5640493b1250 (4 bytes)
+1555500524.219393 sending message 105 to peer 0x5640493b1250 (16 bytes)
+1555500524.219398 sending message 105 to peer 0x5640493b1250 (78 bytes)
+1555500524.219401 sending message 105 to peer 0x5640493b1250 (19 bytes)
+1555500524.219404 sending message 105 to peer 0x5640493b1250 (20 bytes)
+1555500524.219407 sending message 105 to peer 0x5640493b1250 (23 bytes)
+1555500524.219410 sending message 105 to peer 0x5640493b1250 (44 bytes)
+1555500524.219425 sending message 105 to peer 0x5640493b1250 (38 bytes)
+1555500524.219429 sending message 105 to peer 0x5640493b1250 (22 bytes)
+1555500524.219432 sending message 105 to peer 0x5640493b1250 (19 bytes)
+1555500524.219435 sending message 105 to peer 0x5640493b1250 (28 bytes)
+1555500524.219437 sending message 105 to peer 0x5640493b1250 (15 bytes)
+1555500524.219440 sending message 105 to peer 0x5640493b1250 (21 bytes)
+1555500524.219443 sending message 105 to peer 0x5640493b1250 (26 bytes)
+1555500524.219446 sending message 105 to peer 0x5640493b1250 (13 bytes)
+1555500524.219448 sending message 105 to peer 0x5640493b1250 (21 bytes)
+1555500524.219451 sending message 105 to peer 0x5640493b1250 (49 bytes)
+1555500524.219454 sending message 105 to peer 0x5640493b1250 (38 bytes)
+1555500524.219459 sending message 105 to peer 0x5640493b1250 (33 bytes)
+1555500524.219463 sending message 105 to peer 0x5640493b1250 (13 bytes)
+1555500524.219465 sending message 105 to peer 0x5640493b1250 (21 bytes)
+1555500524.219468 sending message 105 to peer 0x5640493b1250 (11 bytes)
+1555500524.219471 sending message 105 to peer 0x5640493b1250 (14 bytes)
+1555500524.219474 sending message 105 to peer 0x5640493b1250 (17 bytes)
+1555500524.219477 sending message 105 to peer 0x5640493b1250 (1506 bytes)
+1555500524.219486 sending message 105 to peer 0x5640493b1250 (26 bytes)
+1555500524.219490 sending message 105 to peer 0x5640493b1250 (17 bytes)
+1555500524.219493 sending message 105 to peer 0x5640493b1250 (86 bytes)
+1555500524.219496 sending message 105 to peer 0x5640493b1250 (24 bytes)
+1555500524.219499 sending message 105 to peer 0x5640493b1250 (23 bytes)
+1555500524.219502 sending message 105 to peer 0x5640493b1250 (20 bytes)
+1555500524.219505 sending message 105 to peer 0x5640493b1250 (10 bytes)
+1555500524.219508 sending message 105 to peer 0x5640493b1250 (29 bytes)
+1555500524.219510 sending message 105 to peer 0x5640493b1250 (11 bytes)
+1555500524.219513 sending message 105 to peer 0x5640493b1250 (8 bytes)
+1555500524.219516 sending message 105 to peer 0x5640493b1250 (11 bytes)
+1555500524.219519 sending message 105 to peer 0x5640493b1250 (17 bytes)
+1555500524.219522 sending message 105 to peer 0x5640493b1250 (28 bytes)
+1555500524.219525 sending message 105 to peer 0x5640493b1250 (61 bytes)
+1555500524.219528 sending message 105 to peer 0x5640493b1250 (84 bytes)
+1555500524.219531 sending message 105 to peer 0x5640493b1250 (17 bytes)
+1555500524.219534 sending message 105 to peer 0x5640493b1250 (51 bytes)
+1555500524.219537 sending message 105 to peer 0x5640493b1250 (16 bytes)
+1555500524.219539 sending message 105 to peer 0x5640493b1250 (17 bytes)
+1555500524.219549 sending message 106 to peer 0x5640493b1250 (0 bytes)
+1555500524.219552 sending message 200 to peer 0x5640493b1250 (4 bytes)
+1555500524.219555 client loop enter
+1555500524.233118 peer 0x5640493b1250 message 207
+1555500524.233131 sending message 208 to peer 0x5640493b1250 (0 bytes)
+1555500527.225402 peer 0x5640493b1250 message 203
+1555500527.225412 sending message 205 to peer 0x5640493b1250 (0 bytes)
+1555500527.225636 peer 0x5640493b1250 message 204
+1555500527.225643 client loop exit

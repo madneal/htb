@@ -59,4 +59,12 @@ In the above, we can see `HelpDeskZ` in the web page. It may be a knid of produc
 
 ![EF0rkt.png](https://s2.ax1x.com/2019/04/21/EF0rkt.png)
 
-There two exploits about `HelpDeskZ`. `Arbitrary File Upload` is interesting, it seems that it can be exploited with valid credentials.
+There two exploits about `HelpDeskZ`. `Arbitrary File Upload` is interesting, it seems that it can be exploited with valid credentials. The payload can be seen [here](https://www.exploit-db.com/exploits/40300). It's really significant to understand the root cause of the exploit. So know the details of the payload will be benificial.
+
+The step of exploitation is:
+
+1. Access to `http://10.10.10.121/support/?v=submit_ticket&action=displayForm`
+2. Fill out all the fields in the web page, and sumit the ticket.
+3. Then run the script to exploit.
+
+

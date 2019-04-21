@@ -5,6 +5,7 @@
 ## Introduction
 
 Target: 10.10.10.121(Linux)
+
 Kali: 10.10.16.28
 
 To be honest, Help is not a difficult box. But there are some rabbit holes in the box. And in some case you may come across a very strange situation. May you should step back, find is there something wrong. For the priesc of root, never give up trying the most basic method.
@@ -118,7 +119,11 @@ if (!move_uploaded_file($_FILES['attachment']['tmp_name'], $uploadedfile)) {
 		$error_msg = $LANG['INVALID_FILE_EXTENSION'];
 ```
 
-Firstly, submit a ticket with the attachment of `php-reverse-shell.php` and will get error information `File is not allowed`. However, the script has been uploaded actually. Then, try to run the script:
+Firstly, submit a ticket with the attachment of `php-reverse-shell.php` and will get error information `File is not allowed`. However, the script has been uploaded actually. 
+
+![EFhf2j.png](https://s2.ax1x.com/2019/04/21/EFhf2j.png)
+
+Then, try to run the script:
 
 ```
 python exploit.py http://10.10.10.121/support/ a.php

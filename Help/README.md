@@ -103,7 +103,7 @@ if(!isset($error_msg) && $settings['ticket_attachment']==1){
 }	
 ```
 
-The most important code: `$filename = md5($_FILES['attachment']['name'].time()).".".$ext;`. We can found the rule of the name of the uploaded file. So it will be possile to find the uploaded attachment. And there is another stuff, when submited a reverse shell php file, you will get a hint: `File not allowed`. However, the attachment has been uploaded. Because it will upload the attachment firstly. And then just give the hint.
+The most important code: `$filename = md5($_FILES['attachment']['name'].time()).".".$ext;`. We can found the rule of the name of the uploaded file. So it will be possile to find the uploaded attachment. And there is another stuff, when submited a reverse shell php file, you will get a hint: `File is not allowed`. However, the attachment has been uploaded. Because it will upload the attachment firstly. And then just give the error information.
 
 ![EFrlwj.png](https://s2.ax1x.com/2019/04/21/EFrlwj.png)
 
@@ -184,8 +184,13 @@ Remember to set nc listen to port in the begining. After some time, the shell is
 
 ## Priv Esc
 
+In contrast to the user shell, the root shell is extremely simple. Obtain root shell by kernel exploit is uncommon recently. But it never be insignificant to have a try. Obtain the kernel of the linux by `uname a`:
+
 `Linux help 4.4.0-116-generic #140-Ubuntu SMP Mon Feb 12 21:23:04 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux`
 
-https://github.com/SecWiki/linux-kernel-exploits/tree/master/2017/CVE-2017-16995
+Google for `linux kernel 4.4.0--116`. Congratulations! Find the [payload](https://github.com/SecWiki/linux-kernel-exploits/tree/master/2017/CVE-2017-16995). Just download the payload and compile. After execution, the root shell is obtained.
+
+![EF4Ezd.png](https://s2.ax1x.com/2019/04/21/EF4Ezd.png)
+
 
 

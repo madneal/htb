@@ -184,7 +184,7 @@ Remember to set nc listen to port in the begining. After some time, the shell is
 
 ## Priv Esc
 
-In contrast to the user shell, the root shell is extremely simple. Obtain root shell by kernel exploit is uncommon recently. But it never be insignificant to have a try. Obtain the kernel of the linux by `uname a`:
+In contrast to the user shell, the root shell is extremely simple. But the basic method might be overlooked sometimes. Obtain root shell by kernel exploit is uncommon recently. But it never be insignificant to have a try. Obtain the kernel of the linux by `uname a`:
 
 `Linux help 4.4.0-116-generic #140-Ubuntu SMP Mon Feb 12 21:23:04 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux`
 

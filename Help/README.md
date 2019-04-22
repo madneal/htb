@@ -8,7 +8,7 @@ Target: 10.10.10.121(Linux)
 
 Kali: 10.10.16.28
 
-To be honest, Help is not a difficult box. But there are some rabbit holes in the box. And in some case you may come across a very strange situation. May you should step back, find is there something wrong. For the priesc of root, never give up trying the most basic method.
+To be honest, Help is not a difficult box. But there are some rabbit holes in the box. And in some case you may come across some very strange cituations. May you should step back, find is there something wrong. For the priesc of root, never give up trying the most basic method.
 
 ## Infomation Enumeration
 

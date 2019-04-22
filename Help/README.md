@@ -119,7 +119,7 @@ if (!move_uploaded_file($_FILES['attachment']['tmp_name'], $uploadedfile)) {
         $error_msg = $LANG['INVALID_FILE_EXTENSION'];
 ```
 
-Firstly, submit a ticket with the attachment of `php-reverse-shell.php` and will get error information `File is not allowed`. However, the script has been uploaded actually. 
+Firstly, submit a ticket with the attachment of `a.php(php-reverse-shell.php` and will get error information `File is not allowed`. However, the script has been uploaded actually. 
 
 ![EFhf2j.png](https://s2.ax1x.com/2019/04/21/EFhf2j.png)
 

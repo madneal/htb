@@ -72,12 +72,12 @@ The script can be exploited, but should take care of some case. I have learned a
 
 The reason of the exploit is: when submit a ticket, the attachment will be uploaded. And the uploaded file will be named as `md5(filename+filename_time)`. The source code is as [following](https://github.com/evolutionscript/HelpDeskZ-1.0/blob/006662bb856e126a38f2bb76df44a2e4e3d37350/controllers/submit_ticket_controller.php#L140):
 
-```php
+<pre>
 if(!isset($error_msg) && $settings['ticket_attachment']==1){
     $uploaddir = UPLOAD_DIR.'tickets/';        
     if($_FILES['attachment']['error'] == 0){
         $ext = pathinfo($_FILES['attachment']['name'], PATHINFO_EXTENSION);
-        $filename = md5($_FILES['attachment']['name'].time()).".".$ext;
+        <b>$filename = md5($_FILES['attachment']['name'].time()).".".$ext;</b>
         $fileuploaded[] = array('name' => $_FILES['attachment']['name'], 'enc' => $filename, 'size' => formatBytes($_FILES['attachment']['size']), 'filetype' => $_FILES['attachment']['type']);
         $uploadedfile = $uploaddir.$filename;
         if (!move_uploaded_file($_FILES['attachment']['tmp_name'], $uploadedfile)) {
@@ -101,23 +101,23 @@ if(!isset($error_msg) && $settings['ticket_attachment']==1){
             }
         }
 }    
-```
+</pre>
 
 The most important code: `$filename = md5($_FILES['attachment']['name'].time()).".".$ext;`. We can find the rule of the name of the uploaded file. So it will be possible to find the uploaded attachment. And there is another stuff when submitted a reverse shell php file, you will get a hint: `File is not allowed`. However, the attachment has been uploaded. Because it will upload the attachment firstly. And then just give the error information.
 
 ![EFrlwj.png](https://s2.ax1x.com/2019/04/21/EFrlwj.png)
 
-```php
-if (!move_uploaded_file($_FILES['attachment']['tmp_name'], $uploadedfile)) {
+<pre>
+<b>if (!move_uploaded_file($_FILES['attachment']['tmp_name'], $uploadedfile)) {</b>
     $show_step2 = true;
     $error_msg = $LANG['ERROR_UPLOADING_A_FILE'];
 }else{
     $fileverification = verifyAttachment($_FILES['attachment']);
-    switch($fileverification['msg_code']){
+    <b>switch($fileverification['msg_code']){</b>
         case '1':
         $show_step2 = true;
-        $error_msg = $LANG['INVALID_FILE_EXTENSION'];
-```
+        <b>$error_msg = $LANG['INVALID_FILE_EXTENSION'];</b>
+</pre>
 
 Firstly, submit a ticket with the attachment of `a.php(php-reverse-shell.php` and will get error information `File is not allowed`. However, the script has been uploaded actually. 
 

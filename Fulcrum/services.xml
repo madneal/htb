@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Apr 27 21:54:21 2019 as: nmap -sC -sV -p- -oA services 10.10.10.62 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p- -oA services 10.10.10.62" start="1556402061" startstr="Sat Apr 27 21:54:21 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="SYN Stealth Scan" time="1556402065" percent="6.76" remaining="42" etc="1556402106"/>
+<taskprogress task="SYN Stealth Scan" time="1556402157" percent="12.06" remaining="693" etc="1556402850"/>
+<taskprogress task="SYN Stealth Scan" time="1556402414" percent="31.77" remaining="756" etc="1556403170"/>
+<taskprogress task="SYN Stealth Scan" time="1556403184" percent="61.60" remaining="700" etc="1556403883"/>
+<taskprogress task="SYN Stealth Scan" time="1556403186" percent="61.68" remaining="699" etc="1556403884"/>
+<taskprogress task="SYN Stealth Scan" time="1556403458" percent="72.09" remaining="541" etc="1556403998"/>
+<taskprogress task="SYN Stealth Scan" time="1556403459" percent="72.14" remaining="540" etc="1556403999"/>
+<taskprogress task="SYN Stealth Scan" time="1556403459" percent="72.14" remaining="540" etc="1556403998"/>
+<taskprogress task="SYN Stealth Scan" time="1556403460" percent="72.16" remaining="540" etc="1556403999"/>
+<taskprogress task="SYN Stealth Scan" time="1556403708" percent="81.99" remaining="362" etc="1556404070"/>
+<taskprogress task="SYN Stealth Scan" time="1556403843" percent="87.30" remaining="259" etc="1556404102"/>
+<taskprogress task="SYN Stealth Scan" time="1556403922" percent="89.88" remaining="210" etc="1556404131"/>
+<taskprogress task="SYN Stealth Scan" time="1556403923" percent="89.89" remaining="210" etc="1556404132"/>
+<taskprogress task="SYN Stealth Scan" time="1556403923" percent="89.90" remaining="210" etc="1556404132"/>
+<host starttime="1556402061" endtime="1556404285"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.62" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65529">
+<extrareasons reason="resets" count="65529"/>
+</extraports>
+<port protocol="tcp" portid="4"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.10.3" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.10.3</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-server-header" output="nginx/1.10.3 (Ubuntu)"><elem>nginx/1.10.3 (Ubuntu)</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=UTF-8)."></script></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.2p2 Ubuntu 4ubuntu2.2" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.2p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 a8:28:6e:d0:af:ab:46:de:c5:09:3d:76:ad:5a:44:e0 (RSA)&#xa;  256 c1:5c:1d:ea:99:ec:e0:a1:dc:04:c5:5a:ad:50:36:f6 (ECDSA)&#xa;  256 a5:2f:44:e6:e3:10:cf:f7:db:15:d1:3f:49:21:3a:7b (ED25519)"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQCjA17i8/+a29cJqnozmIiWO07+rt9SwqgiM9WBTGDerDoZAzkEkEhS+tUMj8aAWiUTU/kzjjP74b8YXaY7o5/YsNEOEONBByQJaUU+BY33ME1xGAsVcbSi6XgXJMGiNvoOIey8prLdln3CgH7xucVqm+KaFdUdRYiHR4M3ggcvUwNcyOvIoLt+gEEHuKDIeYEV6A0P7nueC9eFUGhZJwF9wjqt0a0XsEJB0b3KXidqJZLBvaI0Jq9/bGLWP4suWBPSLzieHBTPN5ztFFBdkRdcMklOmkgXVVSIJyY2Mp0TkuVW7BBpyB5U2ogwLz1RAwhKwG0Xg6ogB5XW+rttmvDB</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">2048.0</elem>
+<elem key="fingerprint">a8286ed0afab46dec5093d76ad5a44e0</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJ7Ab4ktlS8u23Q/o33Xf9ac37qphSuSVV4d3K+k4bmPPCyEXHVD1HIPP5DK3tdH9mJJJFYRbRGTla4Kka4giKA=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">c15c1dea99ece0a1dc04c55aad5036f6</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIFCVpG2jU7D7TlNfggHZFt7Y+H8Y7V+dlcVuVVedsUzs</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">a52f44e6e310cff7db15d13f49213a7b</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.10.3" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.10.3</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="nginx/1.10.3 (Ubuntu)"><elem>nginx/1.10.3 (Ubuntu)</elem>
+</script><script id="http-title" output="Input string was not in a correct format."><elem key="title">Input string was not in a correct format.</elem>
+</script></port>
+<port protocol="tcp" portid="88"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.10.3" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.10.3</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-robots.txt" output="1 disallowed entry &#xa;/"/><script id="http-server-header" output="nginx/1.10.3 (Ubuntu)"><elem>nginx/1.10.3 (Ubuntu)</elem>
+</script><script id="http-title" output="phpMyAdmin"><elem key="title">phpMyAdmin</elem>
+</script></port>
+<port protocol="tcp" portid="9999"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.10.3" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.10.3</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-server-header" output="nginx/1.10.3 (Ubuntu)"><elem>nginx/1.10.3 (Ubuntu)</elem>
+</script><script id="http-title" output="Login"><elem key="title">Login</elem>
+</script></port>
+<port protocol="tcp" portid="56423"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.10.3" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.10.3</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-server-header" output="Fulcrum-API Beta"><elem>Fulcrum-API Beta</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (application/json;charset=utf-8)."></script></port>
+</ports>
+<times srtt="541680" rttvar="34912" to="681328"/>
+</host>
+<runstats><finished time="1556404285" timestr="Sat Apr 27 22:31:25 2019" elapsed="2224.45" summary="Nmap done at Sat Apr 27 22:31:25 2019; 1 IP address (1 host up) scanned in 2224.45 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,33 @@
+# Nmap 7.70 scan initiated Sat Apr 27 21:54:21 2019 as: nmap -sC -sV -p- -oA services 10.10.10.62
+Nmap scan report for 10.10.10.62
+Host is up (0.54s latency).
+Not shown: 65529 closed ports
+PORT      STATE SERVICE VERSION
+4/tcp     open  http    nginx 1.10.3 (Ubuntu)
+|_http-server-header: nginx/1.10.3 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+22/tcp    open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 a8:28:6e:d0:af:ab:46:de:c5:09:3d:76:ad:5a:44:e0 (RSA)
+|   256 c1:5c:1d:ea:99:ec:e0:a1:dc:04:c5:5a:ad:50:36:f6 (ECDSA)
+|_  256 a5:2f:44:e6:e3:10:cf:f7:db:15:d1:3f:49:21:3a:7b (ED25519)
+80/tcp    open  http    nginx 1.10.3 (Ubuntu)
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: nginx/1.10.3 (Ubuntu)
+|_http-title: Input string was not in a correct format.
+88/tcp    open  http    nginx 1.10.3 (Ubuntu)
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: nginx/1.10.3 (Ubuntu)
+|_http-title: phpMyAdmin
+9999/tcp  open  http    nginx 1.10.3 (Ubuntu)
+|_http-server-header: nginx/1.10.3 (Ubuntu)
+|_http-title: Login
+56423/tcp open  http    nginx 1.10.3 (Ubuntu)
+|_http-server-header: Fulcrum-API Beta
+|_http-title: Site doesn't have a title (application/json;charset=utf-8).
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Apr 27 22:31:25 2019 -- 1 IP address (1 host up) scanned in 2224.45 seconds

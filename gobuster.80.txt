@@ -1,8 +1,0 @@
-/images (Status: 301)
-/css (Status: 301)
-/manual (Status: 301)
-/js (Status: 301)
-/javascript (Status: 301)
-/fonts (Status: 301)
-/phpmyadmin (Status: 403)
-/moodle (Status: 301)

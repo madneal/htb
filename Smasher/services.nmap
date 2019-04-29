@@ -1,0 +1,53 @@
+# Nmap 7.70 scan initiated Sun Apr 28 11:57:41 2019 as: nmap -sC -sV -p22,1111 -oA services 10.10.10.89
+Nmap scan report for 10.10.10.89
+Host is up (0.41s latency).
+
+PORT     STATE SERVICE         VERSION
+22/tcp   open  ssh             OpenSSH 7.2p2 Ubuntu 4ubuntu2.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 a6:23:c5:7b:f1:1f:df:68:25:dd:3a:2b:c5:74:00:46 (RSA)
+|   256 57:81:a5:46:11:33:27:53:2b:99:29:9a:a8:f3:8e:de (ECDSA)
+|_  256 c5:23:c1:7a:96:d6:5b:c0:c4:a5:f8:37:2e:5d:ce:a0 (ED25519)
+1111/tcp open  lmsocialserver?
+| fingerprint-strings: 
+|   FourOhFourRequest, GenericLines, SIPOptions: 
+|     HTTP/1.1 404 Not found
+|     Server: shenfeng tiny-web-server
+|     Content-length: 14
+|     File not found
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 200 OK
+|     Server: shenfeng tiny-web-server
+|     Content-Type: text/html
+|     <html><head><style>body{font-family: monospace; font-size: 13px;}td {padding: 1.5px 6px;}</style></head><body><table>
+|     <tr><td><a href="index.html">index.html</a></td><td>2018-03-31 00:57</td><td>2.1K</td></tr>
+|_    </table></body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port1111-TCP:V=7.70%I=7%D=4/28%Time=5CC59546%P=x86_64-pc-linux-gnu%r(Ge
+SF:nericLines,5E,"HTTP/1\.1\x20404\x20Not\x20found\r\nServer:\x20shenfeng\
+SF:x20tiny-web-server\r\nContent-length:\x2014\r\n\r\nFile\x20not\x20found
+SF:")%r(GetRequest,136,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20shenfeng\x20t
+SF:iny-web-server\r\nContent-Type:\x20text/html\r\n\r\n<html><head><style>
+SF:body{font-family:\x20monospace;\x20font-size:\x2013px;}td\x20{padding:\
+SF:x201\.5px\x206px;}</style></head><body><table>\n<tr><td><a\x20href=\"in
+SF:dex\.html\">index\.html</a></td><td>2018-03-31\x2000:57</td><td>2\.1K</
+SF:td></tr>\n</table></body></html>")%r(HTTPOptions,136,"HTTP/1\.1\x20200\
+SF:x20OK\r\nServer:\x20shenfeng\x20tiny-web-server\r\nContent-Type:\x20tex
+SF:t/html\r\n\r\n<html><head><style>body{font-family:\x20monospace;\x20fon
+SF:t-size:\x2013px;}td\x20{padding:\x201\.5px\x206px;}</style></head><body
+SF:><table>\n<tr><td><a\x20href=\"index\.html\">index\.html</a></td><td>20
+SF:18-03-31\x2000:57</td><td>2\.1K</td></tr>\n</table></body></html>")%r(R
+SF:TSPRequest,136,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20shenfeng\x20tiny-w
+SF:eb-server\r\nContent-Type:\x20text/html\r\n\r\n<html><head><style>body{
+SF:font-family:\x20monospace;\x20font-size:\x2013px;}td\x20{padding:\x201\
+SF:.5px\x206px;}</style></head><body><table>\n<tr><td><a\x20href=\"index\.
+SF:html\">index\.html</a></td><td>2018-03-31\x2000:57</td><td>2\.1K</td></
+SF:tr>\n</table></body></html>")%r(FourOhFourRequest,5E,"HTTP/1\.1\x20404\
+SF:x20Not\x20found\r\nServer:\x20shenfeng\x20tiny-web-server\r\nContent-le
+SF:ngth:\x2014\r\n\r\nFile\x20not\x20found")%r(SIPOptions,5E,"HTTP/1\.1\x2
+SF:0404\x20Not\x20found\r\nServer:\x20shenfeng\x20tiny-web-server\r\nConte
+SF:nt-length:\x2014\r\n\r\nFile\x20not\x20found");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Apr 28 12:00:12 2019 -- 1 IP address (1 host up) scanned in 151.25 seconds

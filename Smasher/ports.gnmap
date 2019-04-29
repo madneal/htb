@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sun Apr 28 11:54:55 2019 as: nmap -sT -p- --min-rate 10000 -oA ports 10.10.10.89
+Host: 10.10.10.89 ()	Status: Up
+Host: 10.10.10.89 ()	Ports: 22/open/tcp//ssh///, 1111/open/tcp//lmsocialserver///
+# Nmap done at Sun Apr 28 11:57:13 2019 -- 1 IP address (1 host up) scanned in 137.57 seconds

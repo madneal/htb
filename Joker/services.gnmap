@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Mon Apr 29 11:58:28 2019 as: nmap -sC -sV -p22,3128 -oA services 10.10.10.21
+Host: 10.10.10.21 ()	Status: Up
+Host: 10.10.10.21 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.3p1 Ubuntu 1ubuntu0.1 (Ubuntu Linux; protocol 2.0)/, 3128/open/tcp//http-proxy//Squid http proxy 3.5.12/
+# Nmap done at Mon Apr 29 11:58:56 2019 -- 1 IP address (1 host up) scanned in 27.73 seconds

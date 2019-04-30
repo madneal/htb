@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Mon Apr 29 11:53:03 2019 as: nmap -sT -p- -&#45;min-rate 10000 -oA ports 10.10.10.21 -->
+<nmaprun scanner="nmap" args="nmap -sT -p- -&#45;min-rate 10000 -oA ports 10.10.10.21" start="1556538783" startstr="Mon Apr 29 11:53:03 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1556538783" endtime="1556538876"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.21" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-responses" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3128"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="squid-http" method="table" conf="3"/></port>
+</ports>
+<times srtt="376843" rttvar="58061" to="609087"/>
+</host>
+<runstats><finished time="1556538876" timestr="Mon Apr 29 11:54:36 2019" elapsed="93.44" summary="Nmap done at Mon Apr 29 11:54:36 2019; 1 IP address (1 host up) scanned in 93.44 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

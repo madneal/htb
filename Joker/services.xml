@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Mon Apr 29 11:58:28 2019 as: nmap -sC -sV -p22,3128 -oA services 10.10.10.21 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p22,3128 -oA services 10.10.10.21" start="1556539108" startstr="Mon Apr 29 11:58:28 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="22,3128"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1556539108" endtime="1556539136"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.21" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.3p1 Ubuntu 1ubuntu0.1" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.3p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 88:24:e3:57:10:9f:1b:17:3d:7a:f3:26:3d:b6:33:4e (RSA)&#xa;  256 76:b6:f6:08:00:bd:68:ce:97:cb:08:e7:77:69:3d:8a (ECDSA)&#xa;  256 dc:91:e4:8d:d0:16:ce:cf:3d:91:82:09:23:a7:dc:86 (ED25519)"><table>
+<elem key="type">ssh-rsa</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDSF43c4+2T8wvIChFBroKwvO52vc9j6UIFY1neTYtPLs/XwN+duCl6Ncxb4uzw8/tN6AH/VNBkKqVecm6oqVdj9q/qZgGIm739suj+nKMoEY8w+B3UnZTriFBnoDof3N/EPfAYbQqcMge17F1IX8HencfyVzsh8tTkmDYHnPqbuwiO4dkhCjs7zr38uHdDoYao7NbLM+EOOxECwbu8+hmUahx9hpBmvkO0lVvuLdhfOggRaQR7nOjd26SnClq+SUoGqv3eIr+jbGvngjyh1PJcoIkxuvPZWko2D3+Uem3tjZEU7IFylX7wFnsmb7kfs+m2aYIV1g89KDP7RrWAJUHD</elem>
+<elem key="fingerprint">8824e357109f1b173d7af3263db6334e</elem>
+<elem key="bits">2048.0</elem>
+</table>
+<table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLrlLfBGlkNls7ttTNUwr7+qTJaN7Nqlj2Eyo4e9NBTlwIGP2QLgNPTUF3u1XfQThwQEbQ4SrwvfQxZqdQNNygE=</elem>
+<elem key="fingerprint">76b6f60800bd68ce97cb08e777693d8a</elem>
+<elem key="bits">256</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIGI19rwyGSLg0kosaUbhH+G7JSebxhso8m559KQxqBOI</elem>
+<elem key="fingerprint">dc91e48dd016cecf3d91820923a7dc86</elem>
+<elem key="bits">256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="3128"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http-proxy" product="Squid http proxy" version="3.5.12" method="probed" conf="10"><cpe>cpe:/a:squid-cache:squid:3.5.12</cpe></service><script id="http-server-header" output="squid/3.5.12"><elem>squid/3.5.12</elem>
+</script><script id="http-title" output="ERROR: The requested URL could not be retrieved"><elem key="title">ERROR: The requested URL could not be retrieved</elem>
+</script></port>
+</ports>
+<times srtt="449345" rttvar="265227" to="1510253"/>
+</host>
+<runstats><finished time="1556539136" timestr="Mon Apr 29 11:58:56 2019" elapsed="27.73" summary="Nmap done at Mon Apr 29 11:58:56 2019; 1 IP address (1 host up) scanned in 27.73 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

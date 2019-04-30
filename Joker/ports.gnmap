@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Mon Apr 29 11:53:03 2019 as: nmap -sT -p- --min-rate 10000 -oA ports 10.10.10.21
+Host: 10.10.10.21 ()	Status: Up
+Host: 10.10.10.21 ()	Ports: 22/open/tcp//ssh///, 3128/open/tcp//squid-http///	Ignored State: filtered (65533)
+# Nmap done at Mon Apr 29 11:54:36 2019 -- 1 IP address (1 host up) scanned in 93.44 seconds

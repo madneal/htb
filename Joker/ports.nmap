@@ -1,0 +1,9 @@
+# Nmap 7.70 scan initiated Mon Apr 29 11:53:03 2019 as: nmap -sT -p- --min-rate 10000 -oA ports 10.10.10.21
+Nmap scan report for 10.10.10.21
+Host is up (0.38s latency).
+Not shown: 65533 filtered ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+3128/tcp open  squid-http
+
+# Nmap done at Mon Apr 29 11:54:36 2019 -- 1 IP address (1 host up) scanned in 93.44 seconds

@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Thu May  2 02:55:11 2019 as: nmap -sC -sV -p62696 -oA services 10.10.10.57
+Host: 10.10.10.57 ()	Status: Up
+Host: 10.10.10.57 ()	Ports: 62696/open/tcp//http//Microsoft IIS httpd 8.5/
+# Nmap done at Thu May  2 02:55:32 2019 -- 1 IP address (1 host up) scanned in 21.18 seconds

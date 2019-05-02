@@ -1,0 +1,16 @@
+# Nmap 7.70 scan initiated Thu May  2 02:55:11 2019 as: nmap -sC -sV -p62696 -oA services 10.10.10.57
+Nmap scan report for 10.10.10.57
+Host is up (0.39s latency).
+
+PORT      STATE SERVICE VERSION
+62696/tcp open  http    Microsoft IIS httpd 8.5
+| http-methods: 
+|_  Potentially risky methods: TRACE
+| http-robots.txt: 1 disallowed entry 
+|_/backend
+|_http-server-header: Microsoft-IIS/8.5
+|_http-title: Site doesn't have a title (text/html).
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu May  2 02:55:32 2019 -- 1 IP address (1 host up) scanned in 21.18 seconds

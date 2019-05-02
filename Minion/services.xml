@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Thu May  2 02:55:11 2019 as: nmap -sC -sV -p62696 -oA services 10.10.10.57 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p62696 -oA services 10.10.10.57" start="1556765711" startstr="Thu May  2 02:55:11 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="62696"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1556765711" endtime="1556765732"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.10.10.57" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="62696"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="8.5" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:8.5</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-robots.txt" output="1 disallowed entry &#xa;/backend"/><script id="http-server-header" output="Microsoft-IIS/8.5"><elem>Microsoft-IIS/8.5</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+</ports>
+<times srtt="393165" rttvar="316455" to="1658985"/>
+</host>
+<runstats><finished time="1556765732" timestr="Thu May  2 02:55:32 2019" elapsed="21.18" summary="Nmap done at Thu May  2 02:55:32 2019; 1 IP address (1 host up) scanned in 21.18 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

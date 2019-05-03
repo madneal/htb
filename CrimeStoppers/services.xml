@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Thu May  2 07:01:27 2019 as: nmap -sC -sV -p80 -oA services 10.10.10.80 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p80 -oA services 10.10.10.80" start="1556780487" startstr="Thu May  2 07:01:27 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1556780488" endtime="1556780511"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.80" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.25" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.25</cpe></service><script id="http-server-header" output="Apache/2.4.25 (Ubuntu)"><elem>Apache/2.4.25 (Ubuntu)</elem>
+</script><script id="http-title" output="FBIs Most Wanted: FSociety"><elem key="title">FBIs Most Wanted: FSociety</elem>
+</script></port>
+</ports>
+<times srtt="656103" rttvar="620919" to="3139779"/>
+</host>
+<runstats><finished time="1556780511" timestr="Thu May  2 07:01:51 2019" elapsed="24.22" summary="Nmap done at Thu May  2 07:01:51 2019; 1 IP address (1 host up) scanned in 24.22 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

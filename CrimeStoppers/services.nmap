@@ -1,0 +1,11 @@
+# Nmap 7.70 scan initiated Thu May  2 07:01:27 2019 as: nmap -sC -sV -p80 -oA services 10.10.10.80
+Nmap scan report for 10.10.10.80
+Host is up (0.66s latency).
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.25 ((Ubuntu))
+|_http-server-header: Apache/2.4.25 (Ubuntu)
+|_http-title: FBIs Most Wanted: FSociety
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu May  2 07:01:51 2019 -- 1 IP address (1 host up) scanned in 24.22 seconds

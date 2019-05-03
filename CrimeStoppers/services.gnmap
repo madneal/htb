@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Thu May  2 07:01:27 2019 as: nmap -sC -sV -p80 -oA services 10.10.10.80
+Host: 10.10.10.80 ()	Status: Up
+Host: 10.10.10.80 ()	Ports: 80/open/tcp//http//Apache httpd 2.4.25 ((Ubuntu))/
+# Nmap done at Thu May  2 07:01:51 2019 -- 1 IP address (1 host up) scanned in 24.22 seconds

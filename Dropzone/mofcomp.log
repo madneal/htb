@@ -1,0 +1,137 @@
+(Wed May 09 17:20:50 2018.709625) : Parsing MOF file: C:\WINDOWS\system32\WBEM\cimwin32.mof
+(Wed May 09 17:20:52 2018.711625) : Finished compiling file:C:\WINDOWS\system32\WBEM\cimwin32.mof
+(Wed May 09 17:20:52 2018.711640) : Parsing MOF file: C:\WINDOWS\system32\WBEM\cimwin32.mfl
+(Wed May 09 17:20:53 2018.712562) : Finished compiling file:C:\WINDOWS\system32\WBEM\cimwin32.mfl
+(Wed May 09 17:20:53 2018.712578) : Parsing MOF file: C:\WINDOWS\system32\WBEM\system.mof
+(Wed May 09 17:20:53 2018.712765) : Finished compiling file:C:\WINDOWS\system32\WBEM\system.mof
+(Wed May 09 17:20:53 2018.712765) : Parsing MOF file: C:\WINDOWS\system32\WBEM\wmipcima.mof
+(Wed May 09 17:20:54 2018.712828) : Finished compiling file:C:\WINDOWS\system32\WBEM\wmipcima.mof
+(Wed May 09 17:20:54 2018.712828) : Parsing MOF file: C:\WINDOWS\system32\WBEM\wmipcima.mfl
+(Wed May 09 17:20:54 2018.712859) : Finished compiling file:C:\WINDOWS\system32\WBEM\wmipcima.mfl
+(Wed May 09 17:20:54 2018.712859) : Parsing MOF file: C:\WINDOWS\system32\WBEM\regevent.mof
+(Wed May 09 17:20:54 2018.712921) : Finished compiling file:C:\WINDOWS\system32\WBEM\regevent.mof
+(Wed May 09 17:20:54 2018.712921) : Parsing MOF file: C:\WINDOWS\system32\WBEM\regevent.mfl
+(Wed May 09 17:20:54 2018.712953) : Finished compiling file:C:\WINDOWS\system32\WBEM\regevent.mfl
+(Wed May 09 17:20:54 2018.712953) : Parsing MOF file: C:\WINDOWS\system32\WBEM\ntevt.mof
+(Wed May 09 17:20:54 2018.713000) : Finished compiling file:C:\WINDOWS\system32\WBEM\ntevt.mof
+(Wed May 09 17:20:54 2018.713000) : Parsing MOF file: C:\WINDOWS\system32\WBEM\ntevt.mfl
+(Wed May 09 17:20:54 2018.713015) : Finished compiling file:C:\WINDOWS\system32\WBEM\ntevt.mfl
+(Wed May 09 17:20:54 2018.713015) : Parsing MOF file: C:\WINDOWS\system32\WBEM\secrcw32.mof
+(Wed May 09 17:20:54 2018.713093) : Finished compiling file:C:\WINDOWS\system32\WBEM\secrcw32.mof
+(Wed May 09 17:20:54 2018.713093) : Parsing MOF file: C:\WINDOWS\system32\WBEM\secrcw32.mfl
+(Wed May 09 17:20:54 2018.713125) : Finished compiling file:C:\WINDOWS\system32\WBEM\secrcw32.mfl
+(Wed May 09 17:20:54 2018.713125) : Parsing MOF file: C:\WINDOWS\system32\WBEM\dsprov.mof
+(Wed May 09 17:20:54 2018.713171) : Finished compiling file:C:\WINDOWS\system32\WBEM\dsprov.mof
+(Wed May 09 17:20:54 2018.713171) : Parsing MOF file: C:\WINDOWS\system32\WBEM\dsprov.mfl
+(Wed May 09 17:20:54 2018.713187) : Finished compiling file:C:\WINDOWS\system32\WBEM\dsprov.mfl
+(Wed May 09 17:20:54 2018.713203) : Parsing MOF file: C:\WINDOWS\system32\WBEM\msi.mof
+(Wed May 09 17:20:54 2018.713390) : Finished compiling file:C:\WINDOWS\system32\WBEM\msi.mof
+(Wed May 09 17:20:54 2018.713390) : Parsing MOF file: C:\WINDOWS\system32\WBEM\msi.mfl
+(Wed May 09 17:20:54 2018.713453) : Finished compiling file:C:\WINDOWS\system32\WBEM\msi.mfl
+(Wed May 09 17:20:54 2018.713453) : Parsing MOF file: C:\WINDOWS\system32\WBEM\policman.mof
+(Wed May 09 17:20:54 2018.713500) : Finished compiling file:C:\WINDOWS\system32\WBEM\policman.mof
+(Wed May 09 17:20:54 2018.713500) : Parsing MOF file: C:\WINDOWS\system32\WBEM\policman.mfl
+(Wed May 09 17:20:54 2018.713515) : Finished compiling file:C:\WINDOWS\system32\WBEM\policman.mfl
+(Wed May 09 17:20:54 2018.713515) : Parsing MOF file: C:\WINDOWS\system32\WBEM\subscrpt.mof
+(Wed May 09 17:20:54 2018.713734) : Finished compiling file:C:\WINDOWS\system32\WBEM\subscrpt.mof
+(Wed May 09 17:20:54 2018.713734) : Parsing MOF file: C:\WINDOWS\system32\WBEM\wmi.mof
+(Wed May 09 17:20:54 2018.713781) : Finished compiling file:C:\WINDOWS\system32\WBEM\wmi.mof
+(Wed May 09 17:20:54 2018.713781) : Parsing MOF file: C:\WINDOWS\system32\WBEM\wmi.mfl
+(Wed May 09 17:20:54 2018.713796) : Finished compiling file:C:\WINDOWS\system32\WBEM\wmi.mfl
+(Wed May 09 17:20:54 2018.713796) : Parsing MOF file: C:\WINDOWS\system32\WBEM\scm.mof
+(Wed May 09 17:20:55 2018.713843) : Finished compiling file:C:\WINDOWS\system32\WBEM\scm.mof
+(Wed May 09 17:20:55 2018.713843) : Parsing MOF file: C:\WINDOWS\system32\WBEM\fevprov.mof
+(Wed May 09 17:20:55 2018.713859) : Finished compiling file:C:\WINDOWS\system32\WBEM\fevprov.mof
+(Wed May 09 17:20:55 2018.713859) : Parsing MOF file: C:\WINDOWS\system32\WBEM\fevprov.mfl
+(Wed May 09 17:20:55 2018.713875) : Finished compiling file:C:\WINDOWS\system32\WBEM\fevprov.mfl
+(Wed May 09 17:20:55 2018.713875) : Parsing MOF file: C:\WINDOWS\system32\WBEM\wmitimep.mof
+(Wed May 09 17:20:55 2018.713890) : Finished compiling file:C:\WINDOWS\system32\WBEM\wmitimep.mof
+(Wed May 09 17:20:55 2018.713890) : Parsing MOF file: C:\WINDOWS\system32\WBEM\wmitimep.mfl
+(Wed May 09 17:20:55 2018.713906) : Finished compiling file:C:\WINDOWS\system32\WBEM\wmitimep.mfl
+(Wed May 09 17:20:55 2018.713906) : Parsing MOF file: C:\WINDOWS\system32\WBEM\wmipdskq.mof
+(Wed May 09 17:20:55 2018.713937) : Finished compiling file:C:\WINDOWS\system32\WBEM\wmipdskq.mof
+(Wed May 09 17:20:55 2018.713937) : Parsing MOF file: C:\WINDOWS\system32\WBEM\wmipdskq.mfl
+(Wed May 09 17:20:55 2018.713953) : Finished compiling file:C:\WINDOWS\system32\WBEM\wmipdskq.mfl
+(Wed May 09 17:20:55 2018.713953) : Parsing MOF file: C:\WINDOWS\system32\WBEM\wmipicmp.mof
+(Wed May 09 17:20:55 2018.713984) : Finished compiling file:C:\WINDOWS\system32\WBEM\wmipicmp.mof
+(Wed May 09 17:20:55 2018.713984) : Parsing MOF file: C:\WINDOWS\system32\WBEM\wmipicmp.mfl
+(Wed May 09 17:20:55 2018.714015) : Finished compiling file:C:\WINDOWS\system32\WBEM\wmipicmp.mfl
+(Wed May 09 17:20:55 2018.714015) : Parsing MOF file: C:\WINDOWS\system32\WBEM\wmipiprt.mof
+(Wed May 09 17:20:55 2018.714046) : Finished compiling file:C:\WINDOWS\system32\WBEM\wmipiprt.mof
+(Wed May 09 17:20:55 2018.714046) : Parsing MOF file: C:\WINDOWS\system32\WBEM\wmipiprt.mfl
+(Wed May 09 17:20:55 2018.714062) : Finished compiling file:C:\WINDOWS\system32\WBEM\wmipiprt.mfl
+(Wed May 09 17:20:55 2018.714062) : Parsing MOF file: C:\WINDOWS\system32\WBEM\wmipjobj.mof
+(Wed May 09 17:20:55 2018.714125) : Finished compiling file:C:\WINDOWS\system32\WBEM\wmipjobj.mof
+(Wed May 09 17:20:55 2018.714125) : Parsing MOF file: C:\WINDOWS\system32\WBEM\wmipjobj.mfl
+(Wed May 09 17:20:55 2018.714156) : Finished compiling file:C:\WINDOWS\system32\WBEM\wmipjobj.mfl
+(Wed May 09 17:20:55 2018.714156) : Parsing MOF file: C:\WINDOWS\system32\WBEM\wmipsess.mof
+(Wed May 09 17:20:55 2018.714187) : Finished compiling file:C:\WINDOWS\system32\WBEM\wmipsess.mof
+(Wed May 09 17:20:55 2018.714187) : Parsing MOF file: C:\WINDOWS\system32\WBEM\wmipsess.mfl
+(Wed May 09 17:20:55 2018.714203) : Finished compiling file:C:\WINDOWS\system32\WBEM\wmipsess.mfl
+(Wed May 09 17:20:55 2018.714203) : Parsing MOF file: C:\WINDOWS\system32\WBEM\krnlprov.mof
+(Wed May 09 17:20:55 2018.714234) : Finished compiling file:C:\WINDOWS\system32\WBEM\krnlprov.mof
+(Wed May 09 17:20:55 2018.714234) : Parsing MOF file: C:\WINDOWS\system32\WBEM\krnlprov.mfl
+(Wed May 09 17:20:55 2018.714250) : Finished compiling file:C:\WINDOWS\system32\WBEM\krnlprov.mfl
+(Wed May 09 17:20:55 2018.714250) : Parsing MOF file: C:\WINDOWS\system32\WBEM\cli.mof
+(Wed May 09 17:20:55 2018.714265) : Finished compiling file:C:\WINDOWS\system32\WBEM\cli.mof
+(Wed May 09 17:20:55 2018.714265) : Parsing MOF file: C:\WINDOWS\system32\WBEM\tscfgwmi.mof
+(Wed May 09 17:20:55 2018.714531) : Finished compiling file:C:\WINDOWS\system32\WBEM\tscfgwmi.mof
+(Wed May 09 17:20:55 2018.714531) : Parsing MOF file: C:\WINDOWS\system32\WBEM\tscfgwmi.mfl
+(Wed May 09 17:20:55 2018.714593) : Finished compiling file:C:\WINDOWS\system32\WBEM\tscfgwmi.mfl
+(Wed May 09 17:20:55 2018.714593) : Parsing MOF file: C:\WINDOWS\system32\WBEM\licwmi.mof
+(Wed May 09 17:20:55 2018.714656) : Finished compiling file:C:\WINDOWS\system32\WBEM\licwmi.mof
+(Wed May 09 17:20:55 2018.714656) : Parsing MOF file: C:\WINDOWS\system32\WBEM\licwmi.mfl
+(Wed May 09 17:20:55 2018.714671) : Finished compiling file:C:\WINDOWS\system32\WBEM\licwmi.mfl
+(Wed May 09 17:20:55 2018.714671) : Parsing MOF file: C:\WINDOWS\system32\WBEM\evntrprv.mof
+(Wed May 09 17:20:55 2018.714703) : Finished compiling file:C:\WINDOWS\system32\WBEM\evntrprv.mof
+(Wed May 09 17:20:55 2018.714703) : Parsing MOF file: C:\WINDOWS\system32\WBEM\hnetcfg.mof
+(Wed May 09 17:20:55 2018.714734) : Finished compiling file:C:\WINDOWS\system32\WBEM\hnetcfg.mof
+(Wed May 09 17:20:55 2018.714734) : Parsing MOF file: C:\WINDOWS\system32\WBEM\sr.mof
+(Wed May 09 17:20:55 2018.714750) : Finished compiling file:C:\WINDOWS\system32\WBEM\sr.mof
+(Wed May 09 17:20:55 2018.714765) : Parsing MOF file: C:\WINDOWS\system32\WBEM\CmdEvTgProv.mof
+(Wed May 09 17:20:55 2018.714781) : Finished compiling file:C:\WINDOWS\system32\WBEM\CmdEvTgProv.mof
+(Wed May 09 17:20:55 2018.714781) : Parsing MOF file: C:\WINDOWS\system32\WBEM\dgnet.mof
+(Wed May 09 17:20:55 2018.714796) : Finished compiling file:C:\WINDOWS\system32\WBEM\dgnet.mof
+(Wed May 09 17:20:55 2018.714796) : Parsing MOF file: C:\WINDOWS\system32\WBEM\whqlprov.mof
+(Wed May 09 17:20:56 2018.714828) : Finished compiling file:C:\WINDOWS\system32\WBEM\whqlprov.mof
+(Wed May 09 17:20:56 2018.714828) : Parsing MOF file: C:\WINDOWS\system32\WBEM\ieinfo5.mof
+(Wed May 09 17:20:56 2018.714890) : Finished compiling file:C:\WINDOWS\system32\WBEM\ieinfo5.mof
+(Wed May 09 17:20:56 2018.714890) : Parsing MOF file: C:\WINDOWS\system32\WBEM\rsop.mof
+(Wed May 09 17:20:56 2018.715000) : Finished compiling file:C:\WINDOWS\system32\WBEM\rsop.mof
+(Wed May 09 17:20:56 2018.715000) : Parsing MOF file: C:\WINDOWS\system32\WBEM\rsop.mfl
+(Wed May 09 17:20:56 2018.715156) : Finished compiling file:C:\WINDOWS\system32\WBEM\rsop.mfl
+(Wed May 09 17:20:56 2018.715156) : Parsing MOF file: C:\WINDOWS\system32\WBEM\wscenter.mof
+(Wed May 09 17:20:56 2018.715171) : Finished compiling file:C:\WINDOWS\system32\WBEM\wscenter.mof
+(Wed May 09 17:20:56 2018.715171) : Parsing MOF file: C:\WINDOWS\system32\WBEM\napclientprov.mof
+(Wed May 09 17:20:56 2018.715187) : Finished compiling file:C:\WINDOWS\system32\WBEM\napclientprov.mof
+(Wed May 09 17:20:56 2018.715187) : Parsing MOF file: C:\WINDOWS\system32\WBEM\napclientschema.mof
+(Wed May 09 17:20:56 2018.715203) : Finished compiling file:C:\WINDOWS\system32\WBEM\napclientschema.mof
+(Wed May 09 17:22:02 2018.781484) : Parsing MOF file: C:\WINDOWS\system32\Wbem\RSoP.mof
+(Wed May 09 17:22:02 2018.781625) : Finished compiling file:C:\WINDOWS\system32\Wbem\RSoP.mof
+(Wed May 09 17:22:02 2018.781625) : Parsing MOF file: C:\WINDOWS\system32\Wbem\RSoP.mfl
+(Wed May 09 17:22:02 2018.781796) : Finished compiling file:C:\WINDOWS\system32\Wbem\RSoP.mfl
+(Wed May 09 17:22:03 2018.781859) : Parsing MOF file: C:\WINDOWS\system32\Wbem\SceRsop.mof
+(Wed May 09 17:22:03 2018.781890) : Finished compiling file:C:\WINDOWS\system32\Wbem\SceRsop.mof
+(Wed May 09 17:22:09 2018.788343) : Parsing MOF file: C:\WINDOWS\system32\wbem\wscenter.mof
+(Wed May 09 17:22:09 2018.788359) : Finished compiling file:C:\WINDOWS\system32\wbem\wscenter.mof
+(Wed May 09 17:22:09 2018.788359) : Done!
+(Wed May 09 17:31:06 2018.412140) : Parsing MOF file: C:\WINDOWS\system32\wbem\vmstatsprovider.mof
+(Wed May 09 17:31:06 2018.412234) : Finished compiling file:C:\WINDOWS\system32\wbem\vmstatsprovider.mof
+(Wed May 09 22:39:08 2018.2122421) : Parsing MOF file: c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\CLR.mof
+(Wed May 09 22:39:09 2018.2122718) : Finished compiling file:c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\CLR.mof
+(Wed May 09 22:39:09 2018.2122718) : Done!
+(Wed May 09 22:39:17 2018.2130671) : Parsing MOF file: c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet.mof
+(Wed May 09 22:39:17 2018.2130921) : Finished compiling file:c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet.mof
+(Wed May 09 22:39:17 2018.2130921) : Done!
+(Wed May 09 22:40:02 2018.2176546) : Parsing MOF file: c:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof
+(Wed May 09 22:40:03 2018.2176765) : Finished compiling file:c:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof
+(Wed May 09 22:40:03 2018.2176765) : Done!
+(Wed May 09 22:40:30 2018.2204421) : Parsing MOF file: C:\WINDOWS\Microsoft.NET\Framework\v3.5\MOF\ServiceModel35.mof
+(Wed May 09 22:40:30 2018.2204468) : Finished compiling file:C:\WINDOWS\Microsoft.NET\Framework\v3.5\MOF\ServiceModel35.mof
+(Wed May 09 22:40:30 2018.2204468) : Done!
+(Fri May 03 11:54:55 2019.10012375) : Parsing MOF file: C:\WINDOWS\system32\wbem\mof\a.mof
+(Fri May 03 11:54:55 2019.10012375) : C:\WINDOWS\system32\wbem\mof\a.mof (35): error SYNTAX 0X80044002: Expected semicolon or '='
+
+(Sat May 04 04:14:34 2019.68791531) : Parsing MOF file: C:\WINDOWS\system32\wbem\mof\a.mof
+(Sat May 04 04:14:34 2019.68791531) : C:\WINDOWS\system32\wbem\mof\a.mof (35): error SYNTAX 0X80044002: Expected semicolon or '='
+

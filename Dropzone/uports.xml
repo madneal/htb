@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri May  3 00:39:42 2019 as: nmap -sU -p- -&#45;min-rate 10000 -oA uports 10.10.10.90 -->
+<nmaprun scanner="nmap" args="nmap -sU -p- -&#45;min-rate 10000 -oA uports 10.10.10.90" start="1556843982" startstr="Fri May  3 00:39:42 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1556843982" endtime="1556843997"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.10.10.90" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="open|filtered" count="65534">
+<extrareasons reason="no-responses" count="65534"/>
+</extraports>
+<port protocol="udp" portid="69"><state state="open" reason="udp-response" reason_ttl="127"/><service name="tftp" method="table" conf="3"/></port>
+</ports>
+<times srtt="281728" rttvar="164870" to="941208"/>
+</host>
+<runstats><finished time="1556843997" timestr="Fri May  3 00:39:57 2019" elapsed="14.75" summary="Nmap done at Fri May  3 00:39:57 2019; 1 IP address (1 host up) scanned in 14.75 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,6 @@
+# Nmap 7.70 scan initiated Fri May  3 00:26:07 2019 as: nmap -sT -p- --min-rate 10000 -oA ports 10.10.10.90
+Nmap scan report for 10.10.10.90
+Host is up (0.34s latency).
+All 65535 scanned ports on 10.10.10.90 are filtered
+
+# Nmap done at Fri May  3 00:29:50 2019 -- 1 IP address (1 host up) scanned in 223.07 seconds

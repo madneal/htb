@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Fri May  3 00:39:42 2019 as: nmap -sU -p- --min-rate 10000 -oA uports 10.10.10.90
+Host: 10.10.10.90 ()	Status: Up
+Host: 10.10.10.90 ()	Ports: 69/open/udp//tftp///	Ignored State: open|filtered (65534)
+# Nmap done at Fri May  3 00:39:57 2019 -- 1 IP address (1 host up) scanned in 14.75 seconds

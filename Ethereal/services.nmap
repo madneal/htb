@@ -1,0 +1,22 @@
+# Nmap 7.70 scan initiated Sat May  4 04:26:49 2019 as: nmap -sC -sV -p80,8080,21 -oA services 10.10.10.106
+Nmap scan report for 10.10.10.106
+Host is up (0.84s latency).
+
+PORT     STATE SERVICE VERSION
+21/tcp   open  ftp     Microsoft ftpd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: PASV IP 172.16.249.135 is not the same as 10.10.10.106
+| ftp-syst: 
+|_  SYST: Windows_NT
+80/tcp   open  http    Microsoft IIS httpd 10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: Ethereal
+8080/tcp open  http    Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Bad Request
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat May  4 04:27:16 2019 -- 1 IP address (1 host up) scanned in 27.52 seconds

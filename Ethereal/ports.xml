@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat May  4 04:08:06 2019 as: nmap -sT -p- -&#45;min-rate 10000 -oA ports 10.10.10.106 -->
+<nmaprun scanner="nmap" args="nmap -sT -p- -&#45;min-rate 10000 -oA ports 10.10.10.106" start="1556942886" startstr="Sat May  4 04:08:06 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="Connect Scan" time="1556943023" percent="75.03" remaining="46" etc="1556943069"/>
+<host starttime="1556942886" endtime="1556943048"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.10.10.106" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65532">
+<extrareasons reason="no-responses" count="65532"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+</ports>
+<times srtt="352955" rttvar="49884" to="552491"/>
+</host>
+<runstats><finished time="1556943048" timestr="Sat May  4 04:10:48 2019" elapsed="162.24" summary="Nmap done at Sat May  4 04:10:48 2019; 1 IP address (1 host up) scanned in 162.24 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

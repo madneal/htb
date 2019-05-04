@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat May  4 04:26:49 2019 as: nmap -sC -sV -p80,8080,21 -oA services 10.10.10.106
+Host: 10.10.10.106 ()	Status: Up
+Host: 10.10.10.106 ()	Ports: 21/open/tcp//ftp//Microsoft ftpd/, 80/open/tcp//http//Microsoft IIS httpd 10.0/, 8080/open/tcp//http//Microsoft HTTPAPI httpd 2.0 (SSDP|UPnP)/
+# Nmap done at Sat May  4 04:27:16 2019 -- 1 IP address (1 host up) scanned in 27.52 seconds

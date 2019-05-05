@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat May  4 08:23:32 2019 as: nmap -sC -sV -p135,139,445,49669 -oA services 10.10.10.152 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p135,139,445,49669 -oA services 10.10.10.152" start="1556958212" startstr="Sat May  4 08:23:32 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="4" services="135,139,445,49669"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1556958212" endtime="1556958287"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.10.10.152" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Microsoft Windows Server 2008 R2 - 2012 microsoft-ds" ostype="Windows Server 2008 R2 - 2012" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49669"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="clock-skew" output="mean: -3m14s, deviation: 0s, median: -3m15s"><elem key="stddev">0</elem>
+<elem key="mean">-194</elem>
+<elem key="median">-195</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: &lt;blank&gt;&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">&lt;blank&gt;</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2019-05-04 08:21:24&#xa;  start_date: 2019-05-04 08:15:03"><elem key="date">2019-05-04 08:21:24</elem>
+<elem key="start_date">2019-05-04 08:15:03</elem>
+</script></hostscript><times srtt="412492" rttvar="307513" to="1642544"/>
+</host>
+<runstats><finished time="1556958287" timestr="Sat May  4 08:24:47 2019" elapsed="75.53" summary="Nmap done at Sat May  4 08:24:47 2019; 1 IP address (1 host up) scanned in 75.53 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

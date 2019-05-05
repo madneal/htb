@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat May  4 09:00:35 2019 as: nmap -sT -p- --min-rate 10000 -oA ports 10.10.10.152
+Host: 10.10.10.152 ()	Status: Up
+Host: 10.10.10.152 ()	Ports: 21/open/tcp//ftp///, 80/open/tcp//http///, 135/open/tcp//msrpc///, 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///
+# Nmap done at Sat May  4 09:02:45 2019 -- 1 IP address (1 host up) scanned in 130.81 seconds

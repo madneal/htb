@@ -1,0 +1,22 @@
+# Nmap 7.70 scan initiated Sat May  4 08:29:03 2019 as: nmap --script vuln -p135,139,445,49669 -oA vulns 10.10.10.152
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.10.10.152
+Host is up (0.70s latency).
+
+PORT      STATE SERVICE
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+49669/tcp open  unknown
+
+Host script results:
+|_samba-vuln-cve-2012-1182: No accounts left to try
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: No accounts left to try
+
+# Nmap done at Sat May  4 08:29:54 2019 -- 1 IP address (1 host up) scanned in 50.58 seconds

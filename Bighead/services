@@ -1,0 +1,11 @@
+# Nmap 7.70 scan initiated Sun May  5 11:12:37 2019 as: nmap -sC -sV -p80 -oN services 10.10.10.112
+Nmap scan report for 10.10.10.112
+Host is up (0.43s latency).
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http    nginx 1.14.0
+|_http-server-header: nginx/1.14.0
+|_http-title: PiperNet Comes
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun May  5 11:12:55 2019 -- 1 IP address (1 host up) scanned in 18.13 seconds

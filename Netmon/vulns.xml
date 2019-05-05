@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat May  4 08:29:03 2019 as: nmap -&#45;script vuln -p135,139,445,49669 -oA vulns 10.10.10.152 -->
+<nmaprun scanner="nmap" args="nmap -&#45;script vuln -p135,139,445,49669 -oA vulns 10.10.10.152" start="1556958543" startstr="Sat May  4 08:29:03 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="4" services="135,139,445,49669"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="broadcast-avahi-dos" output="&#xa;  Discovered hosts:&#xa;    224.0.0.251&#xa;  After NULL UDP avahi packet DoS (CVE-2011-1002).&#xa;  Hosts are all up (not vulnerable).&#xa;"/></prescript><host starttime="1556958578" endtime="1556958594"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.10.10.152" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49669"><state state="open" reason="syn-ack" reason_ttl="127"/></port>
+</ports>
+<hostscript><script id="samba-vuln-cve-2012-1182" output="No accounts left to try">false</script><script id="smb-vuln-ms10-054" output="false">false</script><script id="smb-vuln-ms10-061" output="No accounts left to try">false</script></hostscript><times srtt="696214" rttvar="603750" to="3111214"/>
+</host>
+<runstats><finished time="1556958594" timestr="Sat May  4 08:29:54 2019" elapsed="50.58" summary="Nmap done at Sat May  4 08:29:54 2019; 1 IP address (1 host up) scanned in 50.58 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

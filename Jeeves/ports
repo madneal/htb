@@ -1,0 +1,11 @@
+# Nmap 7.70 scan initiated Sun May  5 20:37:46 2019 as: nmap -sT -p- --min-rate 10000 -oN ports 10.10.10.63
+Nmap scan report for 10.10.10.63
+Host is up (0.30s latency).
+Not shown: 65531 filtered ports
+PORT      STATE SERVICE
+80/tcp    open  http
+135/tcp   open  msrpc
+445/tcp   open  microsoft-ds
+50000/tcp open  ibm-db2
+
+# Nmap done at Sun May  5 20:38:54 2019 -- 1 IP address (1 host up) scanned in 68.42 seconds

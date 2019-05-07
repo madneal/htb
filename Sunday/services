@@ -1,0 +1,17 @@
+# Nmap 7.70 scan initiated Mon May  6 11:15:24 2019 as: nmap -sC -sV -p79,111,22022,41606 -oN services 10.10.10.76
+Nmap scan report for 10.10.10.76
+Host is up (0.53s latency).
+
+PORT      STATE SERVICE   VERSION
+79/tcp    open  finger    Sun Solaris fingerd
+|_finger: No one logged on\x0D
+111/tcp   open  rpcbind   2-4 (RPC #100000)
+22022/tcp open  ssh       SunSSH 1.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 d2:e5:cb:bd:33:c7:01:31:0b:3c:63:d9:82:d9:f1:4e (DSA)
+|_  1024 e4:2c:80:62:cf:15:17:79:ff:72:9d:df:8b:a6:c9:ac (RSA)
+41606/tcp open  smserverd 1 (RPC #100155)
+Service Info: OS: Solaris; CPE: cpe:/o:sun:sunos
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon May  6 11:16:38 2019 -- 1 IP address (1 host up) scanned in 73.69 seconds

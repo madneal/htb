@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat May  4 08:23:32 2019 as: nmap -sC -sV -p135,139,445,49669 -oA services 10.10.10.152
+Host: 10.10.10.152 ()	Status: Up
+Host: 10.10.10.152 ()	Ports: 135/open/tcp//msrpc//Microsoft Windows RPC/, 139/open/tcp//netbios-ssn//Microsoft Windows netbios-ssn/, 445/open/tcp//microsoft-ds//Microsoft Windows Server 2008 R2 - 2012 microsoft-ds/, 49669/open/tcp//msrpc//Microsoft Windows RPC/
+# Nmap done at Sat May  4 08:24:47 2019 -- 1 IP address (1 host up) scanned in 75.53 seconds

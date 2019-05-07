@@ -1,0 +1,3 @@
+# Nmap 7.70 scan initiated Sun May  5 11:12:24 2019 as: nmap -sC -sV -p80 -oN 10.10.10.112
+WARNING: No targets were specified, so 0 hosts scanned.
+# Nmap done at Sun May  5 11:12:25 2019 -- 0 IP addresses (0 hosts up) scanned in 0.73 seconds

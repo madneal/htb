@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat May  4 09:00:35 2019 as: nmap -sT -p- -&#45;min-rate 10000 -oA ports 10.10.10.152 -->
+<nmaprun scanner="nmap" args="nmap -sT -p- -&#45;min-rate 10000 -oA ports 10.10.10.152" start="1556960435" startstr="Sat May  4 09:00:35 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1556960435" endtime="1556960565"><status state="up" reason="reset" reason_ttl="127"/>
+<address addr="10.10.10.152" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65498">
+<extrareasons reason="no-responses" count="65498"/>
+</extraports>
+<extraports state="closed" count="32">
+<extrareasons reason="conn-refused" count="32"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="826156" rttvar="42620" to="996636"/>
+</host>
+<runstats><finished time="1556960565" timestr="Sat May  4 09:02:45 2019" elapsed="130.81" summary="Nmap done at Sat May  4 09:02:45 2019; 1 IP address (1 host up) scanned in 130.81 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

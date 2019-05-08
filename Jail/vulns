@@ -1,0 +1,24 @@
+# Nmap 7.70 scan initiated Wed May  8 12:15:31 2019 as: nmap --script vuln -p80,111,2049,7411,20048 -oN vulns 10.10.10.34
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.10.10.34
+Host is up (0.53s latency).
+
+PORT      STATE SERVICE
+80/tcp    open  http
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|_  /icons/: Potentially interesting folder w/ directory listing
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-trace: TRACE is enabled
+111/tcp   open  rpcbind
+2049/tcp  open  nfs
+7411/tcp  open  daqstream
+20048/tcp open  mountd
+
+# Nmap done at Wed May  8 12:17:07 2019 -- 1 IP address (1 host up) scanned in 96.81 seconds

@@ -1,0 +1,68 @@
+# Nmap 7.70 scan initiated Wed May  8 11:51:36 2019 as: nmap -sC -sV -p22,80,111,2049,7411,20048 -oN services 10.10.10.34
+Nmap scan report for 10.10.10.34
+Host is up (0.41s latency).
+
+PORT      STATE SERVICE    VERSION
+22/tcp    open  ssh        OpenSSH 6.6.1 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 cd:ec:19:7c:da:dc:16:e2:a3:9d:42:f3:18:4b:e6:4d (RSA)
+|   256 af:94:9f:2f:21:d0:e0:1d:ae:8e:7f:1d:7b:d7:42:ef (ECDSA)
+|_  256 6b:f8:dc:27:4f:1c:89:67:a4:67:c5:ed:07:53:af:97 (ED25519)
+80/tcp    open  http       Apache httpd 2.4.6 ((CentOS))
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.6 (CentOS)
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+111/tcp   open  rpcbind    2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100003  3,4         2049/tcp  nfs
+|   100003  3,4         2049/udp  nfs
+|   100005  1,2,3      20048/tcp  mountd
+|   100005  1,2,3      20048/udp  mountd
+|   100021  1,3,4      37904/tcp  nlockmgr
+|   100021  1,3,4      56795/udp  nlockmgr
+|   100024  1          38643/tcp  status
+|   100024  1          58941/udp  status
+|   100227  3           2049/tcp  nfs_acl
+|_  100227  3           2049/udp  nfs_acl
+2049/tcp  open  nfs_acl    3 (RPC #100227)
+7411/tcp  open  daqstream?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, JavaRMI, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NCP, NULL, NotesRPC, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, WMSRequest, X11Probe, afp, giop, ms-sql-s, oracle-tns: 
+|_    OK Ready. Send USER command.
+20048/tcp open  mountd     1-3 (RPC #100005)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port7411-TCP:V=7.70%I=7%D=5/8%Time=5CD2C2D0%P=x86_64-pc-linux-gnu%r(NUL
+SF:L,1D,"OK\x20Ready\.\x20Send\x20USER\x20command\.\n")%r(GenericLines,1D,
+SF:"OK\x20Ready\.\x20Send\x20USER\x20command\.\n")%r(GetRequest,1D,"OK\x20
+SF:Ready\.\x20Send\x20USER\x20command\.\n")%r(HTTPOptions,1D,"OK\x20Ready\
+SF:.\x20Send\x20USER\x20command\.\n")%r(RTSPRequest,1D,"OK\x20Ready\.\x20S
+SF:end\x20USER\x20command\.\n")%r(RPCCheck,1D,"OK\x20Ready\.\x20Send\x20US
+SF:ER\x20command\.\n")%r(DNSVersionBindReqTCP,1D,"OK\x20Ready\.\x20Send\x2
+SF:0USER\x20command\.\n")%r(DNSStatusRequestTCP,1D,"OK\x20Ready\.\x20Send\
+SF:x20USER\x20command\.\n")%r(Help,1D,"OK\x20Ready\.\x20Send\x20USER\x20co
+SF:mmand\.\n")%r(SSLSessionReq,1D,"OK\x20Ready\.\x20Send\x20USER\x20comman
+SF:d\.\n")%r(TLSSessionReq,1D,"OK\x20Ready\.\x20Send\x20USER\x20command\.\
+SF:n")%r(Kerberos,1D,"OK\x20Ready\.\x20Send\x20USER\x20command\.\n")%r(SMB
+SF:ProgNeg,1D,"OK\x20Ready\.\x20Send\x20USER\x20command\.\n")%r(X11Probe,1
+SF:D,"OK\x20Ready\.\x20Send\x20USER\x20command\.\n")%r(FourOhFourRequest,1
+SF:D,"OK\x20Ready\.\x20Send\x20USER\x20command\.\n")%r(LPDString,1D,"OK\x2
+SF:0Ready\.\x20Send\x20USER\x20command\.\n")%r(LDAPSearchReq,1D,"OK\x20Rea
+SF:dy\.\x20Send\x20USER\x20command\.\n")%r(LDAPBindReq,1D,"OK\x20Ready\.\x
+SF:20Send\x20USER\x20command\.\n")%r(SIPOptions,1D,"OK\x20Ready\.\x20Send\
+SF:x20USER\x20command\.\n")%r(LANDesk-RC,1D,"OK\x20Ready\.\x20Send\x20USER
+SF:\x20command\.\n")%r(TerminalServer,1D,"OK\x20Ready\.\x20Send\x20USER\x2
+SF:0command\.\n")%r(NCP,1D,"OK\x20Ready\.\x20Send\x20USER\x20command\.\n")
+SF:%r(NotesRPC,1D,"OK\x20Ready\.\x20Send\x20USER\x20command\.\n")%r(JavaRM
+SF:I,1D,"OK\x20Ready\.\x20Send\x20USER\x20command\.\n")%r(WMSRequest,1D,"O
+SF:K\x20Ready\.\x20Send\x20USER\x20command\.\n")%r(oracle-tns,1D,"OK\x20Re
+SF:ady\.\x20Send\x20USER\x20command\.\n")%r(ms-sql-s,1D,"OK\x20Ready\.\x20
+SF:Send\x20USER\x20command\.\n")%r(afp,1D,"OK\x20Ready\.\x20Send\x20USER\x
+SF:20command\.\n")%r(giop,1D,"OK\x20Ready\.\x20Send\x20USER\x20command\.\n
+SF:");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed May  8 11:54:48 2019 -- 1 IP address (1 host up) scanned in 192.34 seconds

@@ -1,0 +1,89 @@
+2019-02-22 14:01:41,907 [1] INFO  - mRemoteNG 1.76.11.40527 starting.
+2019-02-22 14:01:41,923 [1] INFO  - Command Line: C:\Program Files (x86)\mRemoteNG\mRemoteNG.exe
+2019-02-22 14:01:43,095 [1] INFO  - Microsoft Windows Server 2016 Standard  64-bit
+2019-02-22 14:01:43,095 [1] INFO  - Microsoft .NET CLR 4.0.30319.42000
+2019-02-22 14:01:43,095 [1] INFO  - System Culture: en-US/English (United States)
+2019-02-22 14:01:43,095 [1] INFO  - Checking FIPS Policy...
+2019-02-22 14:01:43,095 [1] INFO  - Checking Lenovo AutoScroll Utility...
+2019-02-22 14:01:43,189 [1] WARN  - Loading External Apps failed: Could not FIND file!
+2019-02-22 14:01:43,532 [1] INFO  - Saving connections...
+2019-02-22 14:01:43,579 [1] INFO  - Successfully saved connections
+2019-02-22 14:01:43,767 [1] WARN  - PuttySessions.Watcher.StartWatching() failed.
+Not found 
+2019-02-22 14:01:43,767 [1] WARN  - XmingPortablePuttySessions.Watcher.StartWatching() failed: 'sessions' does not exist.
+2019-02-22 14:01:48,079 [11] INFO  - Saving connections...
+2019-02-22 14:01:48,126 [11] INFO  - Successfully saved connections
+2019-02-22 14:01:52,438 [13] INFO  - Saving connections...
+2019-02-22 14:01:52,454 [13] INFO  - Successfully saved connections
+2019-02-22 14:01:54,393 [16] INFO  - Saving connections...
+2019-02-22 14:01:54,423 [16] INFO  - Successfully saved connections
+2019-02-22 14:02:00,235 [18] INFO  - Saving connections...
+2019-02-22 14:02:00,251 [18] INFO  - Successfully saved connections
+2019-02-22 14:02:10,751 [22] INFO  - Saving connections...
+2019-02-22 14:02:10,751 [22] INFO  - Successfully saved connections
+2019-02-22 14:02:16,141 [23] INFO  - Saving connections...
+2019-02-22 14:02:16,157 [23] INFO  - Successfully saved connections
+2019-02-22 14:02:27,735 [22] INFO  - Saving connections...
+2019-02-22 14:02:27,750 [22] INFO  - Successfully saved connections
+2019-02-22 14:02:33,907 [18] INFO  - Saving connections...
+2019-02-22 14:02:33,922 [18] INFO  - Successfully saved connections
+2019-02-22 14:02:37,922 [16] INFO  - Saving connections...
+2019-02-22 14:02:37,938 [16] INFO  - Successfully saved connections
+2019-02-22 14:03:07,048 [5] INFO  - Saving connections...
+2019-02-22 14:03:07,080 [5] INFO  - Successfully saved connections
+2019-02-22 14:03:09,783 [1] INFO  - Setting Console switch for RDC 10.0.14393.
+2019-02-22 14:03:09,783 [1] INFO  - RD Gateway is supported.
+2019-02-22 14:03:10,033 [15] INFO  - Saving connections...
+2019-02-22 14:03:10,064 [15] INFO  - Successfully saved connections
+2019-02-22 14:03:21,987 [13] INFO  - Saving connections...
+2019-02-22 14:03:22,017 [13] INFO  - Successfully saved connections
+2019-02-22 14:03:26,097 [1] INFO  - Protocol Event Disconnected.
+Message:
+516
+Remote Desktop can’t connect to the remote computer for one of these reasons:
+
+1) Remote access to the server is not enabled
+2) The remote computer is turned off
+3) The remote computer is not available on the network
+
+Make sure the remote computer is turned on and connected to the network, and that remote access is enabled.
+2019-02-22 14:03:26,097 [1] WARN  - RDP disconnected!
+516 Remote Desktop can’t connect to the remote computer for one of these reasons:
+
+1) Remote access to the server is not enabled
+2) The remote computer is turned off
+3) The remote computer is not available on the network
+
+Make sure the remote computer is turned on and connected to the network, and that remote access is enabled.
+2019-02-22 14:03:26,111 [14] INFO  - Connection Event Closed
+2019-02-22 14:03:26,111 [14] INFO  - Connection to 127.0.0.1 via RDP closed by user L4mpje.
+2019-02-22 14:03:26,111 [15] INFO  - Saving connections...
+2019-02-22 14:03:26,126 [15] INFO  - Successfully saved connections
+2019-02-22 14:03:27,267 [1] INFO  - Setting Console switch for RDC 10.0.14393.
+2019-02-22 14:03:27,267 [1] INFO  - RD Gateway is supported.
+2019-02-22 14:03:27,283 [15] INFO  - Saving connections...
+2019-02-22 14:03:27,298 [15] INFO  - Successfully saved connections
+2019-02-22 14:03:43,314 [1] INFO  - Protocol Event Disconnected.
+Message:
+516
+Remote Desktop can’t connect to the remote computer for one of these reasons:
+
+1) Remote access to the server is not enabled
+2) The remote computer is turned off
+3) The remote computer is not available on the network
+
+Make sure the remote computer is turned on and connected to the network, and that remote access is enabled.
+2019-02-22 14:03:43,314 [1] WARN  - RDP disconnected!
+516 Remote Desktop can’t connect to the remote computer for one of these reasons:
+
+1) Remote access to the server is not enabled
+2) The remote computer is turned off
+3) The remote computer is not available on the network
+
+Make sure the remote computer is turned on and connected to the network, and that remote access is enabled.
+2019-02-22 14:03:43,314 [15] INFO  - Connection Event Closed
+2019-02-22 14:03:43,314 [15] INFO  - Connection to 127.0.0.1 via RDP closed by user L4mpje.
+2019-02-22 14:03:43,314 [5] INFO  - Saving connections...
+2019-02-22 14:03:43,345 [5] INFO  - Successfully saved connections
+2019-02-22 14:03:48,658 [1] INFO  - Saving connections...
+2019-02-22 14:03:48,673 [1] INFO  - Successfully saved connections

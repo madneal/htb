@@ -91,6 +91,20 @@ HOP RTT       ADDRESS
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Sun May  5 12:30:42 2019 -- 1 IP address (1 host up) scanned in 56.60 seconds
 ```
+
+## Exploitation
+
+There seem to be nothing special. For normal box, http service will be the starting. For this box, we should try smb service for port 445. For smb service exploitation in kali, we choose to use smbmap, smbclient, enum4linux, etc. Let's try smbclient:
+
+```
+smbclient -L 10.10.10.134
+```
+
+![E4k8CF.png](https://s2.ax1x.com/2019/05/12/E4k8CF.png)
+
+With smcclient we can see the smb shares of this box without any password. Try to access the share by `smbclient //10.10.10.134/sharename`. But the three shares cannot be accessed except `Backups`.
+
+![E4kygH.png](https://s2.ax1x.com/2019/05/12/E4kygH.png)
 guestmount --add //10.10.10.134/backups/WindowsImageBackup/L4mpje-PC/Backup 2019-02-22 124351/9b9cfbc4-369e-11e9-a17c-806e6f6e6963.vhd --inspector --ro /root/htb/Bastion/VHD
 
 mount -t cifs //10.10.10.134/Backups -o user=guest,password= /mnt/backups

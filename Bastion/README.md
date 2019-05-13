@@ -105,6 +105,11 @@ smbclient -L 10.10.10.134
 With smcclient we can see the smb shares of this box without any password. Try to access the share by `smbclient //10.10.10.134/sharename`. But the three shares cannot be accessed except `Backups`.
 
 ![E4kygH.png](https://s2.ax1x.com/2019/05/12/E4kygH.png)
+
+Access to the share of `Backups`: `smbclient //10.10.10.134/Backups`:
+
+
+
 guestmount --add //10.10.10.134/backups/WindowsImageBackup/L4mpje-PC/Backup 2019-02-22 124351/9b9cfbc4-369e-11e9-a17c-806e6f6e6963.vhd --inspector --ro /root/htb/Bastion/VHD
 
 mount -t cifs //10.10.10.134/Backups -o user=guest,password= /mnt/backups

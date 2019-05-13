@@ -1,12 +1,14 @@
 # Bastion -- Hack the box
 
+![E4RxRs.png](https://s2.ax1x.com/2019/05/13/E4RxRs.png)
+
 ## Intrdouction
 
 Target: 10.10.10.134 (Windows)
 
 Kali: 10.10.16.65
 
-In conclusion, Bastion is not a medium box. But it would be easier to solve this box with windows vm. Command vm may be a good choice. But it can be finished by kali.
+In conclusion, Bastion is not a medium box. But it would be easier to solve this box with windows VM. Command VM may be a good choice. But it can be finished by kali.
 
 ## Information enumeration
 
@@ -94,7 +96,7 @@ OS and Service detection performed. Please report any incorrect results at https
 
 ## Exploitation
 
-There seem to be nothing special. For normal box, http service will be the starting. For this box, we should try smb service for port 445. For smb service exploitation in kali, we choose to use smbmap, smbclient, enum4linux, etc. Let's try smbclient:
+There seem to be nothing special. For a normal box, http service will be the starting. For this box, we should try smb service for port 445. For smb service exploitation in kali, we choose to use smbmap, smbclient, enum4linux, etc. Let's try smbclient:
 
 ```
 smbclient -L 10.10.10.134
@@ -102,7 +104,7 @@ smbclient -L 10.10.10.134
 
 ![E4k8CF.png](https://s2.ax1x.com/2019/05/12/E4k8CF.png)
 
-With smcclient we can see the smb shares of this box without any password. Try to access the share by `smbclient //10.10.10.134/sharename`. But the three shares cannot be accessed except `Backups`.
+With smbclient, we can see the smb shares of this box without any password. Try to access the share by `smbclient //10.10.10.134/sharename`. But the three shares cannot be accessed except `Backups`.
 
 ![E4kygH.png](https://s2.ax1x.com/2019/05/12/E4kygH.png)
 
@@ -116,7 +118,7 @@ There is a note.txt in the share:
 Sysadmins: please don't transfer the entire backup file locally, the VPN to the subsidiary office is too slow.
 ```
 
-It does is a hint for something useful in the exploitation. It is inconvinient to access files by smbclient, as you cannot browse the file directly. So try to mount the share folder to kali:
+It does is a hint for something useful in the exploitation. It is inconvenient to access files by smbclient, as you cannot browse the file directly. So try to mount the shared folder to kali:
 
 ```
 mount -t cifs //10.10.10.134/Backups -o user=guest,password= /mnt/backups
@@ -124,23 +126,23 @@ mount -t cifs //10.10.10.134/Backups -o user=guest,password= /mnt/backups
 
 ![E40VT1.png](https://s2.ax1x.com/2019/05/13/E40VT1.png)
 
-Here, we are enable to access the files directly. It may be a backup folder. After some exploration, we have found some interesting files.
+Here, we can access the files directly. It may be a backup folder. After some exploration, we have found some interesting files.
 
 ![E40w6g.png](https://s2.ax1x.com/2019/05/13/E40w6g.png)
 
-VHD(virtual hard disk) files seem to be very interesting. According to wiki, `VHD is a file format which represents a virtual hard disk drive (HDD). It may contain what is found on a physical HDD, such as disk partitions and a file system, which in turn can contain files and folders. It is typically used as the hard disk of a virtual machine`. So we may find more interesting contents in the VHD files. There are two vhd files, one is 37M, and the other is 5.1 G. The larger one seem to be attractive to us. But it will be inconvinient to download the whole vhd file. According to the discussions in the forum, the author has said that you don't have to download the vhd file. Try to mount the vhd file to kai:
+VHD(virtual hard disk) files seem to be very interesting. According to the wiki, `VHD is a file format which represents a virtual hard disk drive (HDD). It may contain what is found on a physical HDD, such as disk partitions and a file system, which in turn can contain files and folders. It is typically used as the hard disk of a virtual machine`. So we may find more interesting contents in the VHD files. There are two vhd files, one is 37M, and the other is 5.1 G. The larger one seems to be attractive to us. But it will be inconvenient to download the whole vhd file. According to the discussions in the forum, the author has said that you don't have to download the vhd file. Try to mount the vhd file to kai:
 
 ```
 guestmount --add /mnt/backups/WindowsImageBackup/L4mpje-PC/Backup\ 2019-02-22\ 124351/9b9cfbc4-369e-11e9-a17c-806e6f6e6963.vhd --inspector --ro /mnt/vhd
 ```
 
-The operation may cost some time if the network is not very stable. Then, the vhd file in mounted succefully. It seems to be a OS disk. There seem nothing special. Security Account Manager(SAM) is the database file in Windows which stores user passwords. Try to access the SAM files, `samdump2` can be utilized to dump the hash.
+The operation may cost some time if the network is not very stable. Then, the vhd file in mounted successfully. It seems to be an OS disk. There seem nothing special. Security Account Manager(SAM) is the database file in Windows which stores user passwords. Try to access the SAM files, `samdump2` can be utilized to dump the hash.
 
 ![E40w6g.png](https://s2.ax1x.com/2019/05/13/E40w6g.png)
 
 ![E4syKU.png](https://s2.ax1x.com/2019/05/13/E4syKU.png)
 
-From the dumped hash, the hash of L4mpje seem to be usefule. We can access [HashKiller](https://hashkiller.co.uk/Cracker) to crack the hash.
+From the dumped hash, the hash of L4mpje seems to be useful. We can access [HashKiller](https://hashkiller.co.uk/Cracker) to crack the hash.
 
 ![E4yEin.png](https://s2.ax1x.com/2019/05/13/E4yEin.png)
 
@@ -150,17 +152,17 @@ We cracked it! As we know the box opens ssh service, so try to access ssh with t
 
 ## Privilege escalation
 
-After login with user L4mpje, we find that we have a relatively limited premission. PrivEsc is often vulnerable to some specific software vulnerability. It is significant to see the program files of the box.
+After login with user L4mpje, we find that we have relatively limited permission. PrivEsc is often vulnerable to some specific software vulnerability. It is significant to see the program files of the box.
 
 ![E4chPs.png](https://s2.ax1x.com/2019/05/13/E4chPs.png)
 
-We can find an interesting folder `mRemoteNG`. [It](https://github.com/mRemoteNG/mRemoteNG) is a open source remote connections management tool. But there is a problem that the connections user information can be obtained by the config files. For this box, someone has created a tool to crack the password in this config file. The config file is store is the AppData folder.
+We can find an interesting folder `mRemoteNG`. [It](https://github.com/mRemoteNG/mRemoteNG) is an open source remote connections management tool. But there is a problem that the connections user information can be obtained by the config files. For this box, someone has created a tool to crack the password in this config file. The config file is store is the AppData folder.
 
 ![E4g4Te.png](https://s2.ax1x.com/2019/05/13/E4g4Te.png)
 
 ![E42wct.png](https://s2.ax1x.com/2019/05/13/E42wct.png)
 
-It seems that the password of Administrator is stored in the xml file. Someone has created [mremoteng-decrypt](https://github.com/kmahyyg/mremoteng-decrypt) to crack the password. It is so covinient thanks to his awesome work.
+It seems that the password of Administrator is stored in the XML file. Someone has created [mremoteng-decrypt](https://github.com/kmahyyg/mremoteng-decrypt) to crack the password. It is so convenient thanks to his awesome work.
 
 ```
 java -jar decipher_mremoteng.jar "aEWNFV5uGcjUHF0uS17QTdT9kVqtKCPeoC0Nw5dmaPFjNQ2kt/zO5xDqE4HdVmHAowVRdC7emf7lWWA10dQKiw=="

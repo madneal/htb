@@ -1,0 +1,26 @@
+# Nmap 7.70 scan initiated Sat May 18 01:25:42 2019 as: nmap -sT -p- --min-rate 1500 -oN ports 10.10.10.25
+Nmap scan report for 10.10.10.25
+Host is up (0.23s latency).
+Not shown: 65516 filtered ports
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+53/tcp   closed domain
+80/tcp   closed http
+110/tcp  closed pop3
+113/tcp  closed ident
+143/tcp  closed imap
+199/tcp  closed smux
+256/tcp  closed fw1-secureremote
+554/tcp  closed rtsp
+587/tcp  closed submission
+993/tcp  closed imaps
+1025/tcp closed NFS-or-IIS
+1720/tcp closed h323q931
+1723/tcp closed pptp
+3389/tcp closed ms-wbt-server
+8080/tcp closed http-proxy
+8888/tcp closed sun-answerbook
+
+# Nmap done at Sat May 18 01:27:10 2019 -- 1 IP address (1 host up) scanned in 88.38 seconds

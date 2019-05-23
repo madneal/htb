@@ -1,0 +1,43 @@
+# Nmap 7.70 scan initiated Wed May 22 13:37:55 2019 as: nmap -A -oN services 10.10.10.55
+Nmap scan report for 10.10.10.55
+Host is up (0.60s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 e2:d7:ca:0e:b7:cb:0a:51:f7:2e:75:ea:02:24:17:74 (RSA)
+|   256 e8:f1:c0:d3:7d:9b:43:73:ad:37:3b:cb:e1:64:8e:e9 (ECDSA)
+|_  256 6d:e9:26:ad:86:02:2d:68:e1:eb:ad:66:a0:60:17:b8 (ED25519)
+8009/tcp open  ajp13   Apache Jserv (Protocol v1.3)
+| ajp-methods: 
+|   Supported methods: GET HEAD POST PUT DELETE OPTIONS
+|   Potentially risky methods: PUT DELETE
+|_  See https://nmap.org/nsedoc/scripts/ajp-methods.html
+8080/tcp open  http    Apache Tomcat 8.5.5
+|_http-favicon: Apache Tomcat
+| http-methods: 
+|_  Potentially risky methods: PUT DELETE
+|_http-title: Apache Tomcat/8.5.5 - Error report
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=5/22%OT=22%CT=1%CU=35461%PV=Y%DS=2%DC=T%G=Y%TM=5CE5511
+OS:8%P=x86_64-pc-linux-gnu)SEQ(SP=100%GCD=2%ISR=107%TI=Z%II=I%TS=8)SEQ(SP=1
+OS:00%GCD=1%ISR=107%TI=Z%CI=I%II=I%TS=8)OPS(O1=M54BST11NW7%O2=M54BST11NW7%O
+OS:3=M54BNNT11NW7%O4=M54BST11NW7%O5=M54BST11NW7%O6=M54BST11)WIN(W1=7120%W2=
+OS:7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M54BNNSN
+OS:W7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%D
+OS:F=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O
+OS:=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W
+OS:=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%R
+OS:IPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 256/tcp)
+HOP RTT       ADDRESS
+1   701.74 ms 10.10.16.1
+2   373.68 ms 10.10.10.55
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed May 22 13:39:36 2019 -- 1 IP address (1 host up) scanned in 101.97 seconds

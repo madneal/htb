@@ -1,0 +1,6 @@
+old server details
+
+db: sa
+pass: YE%TJC%&HYbe5Nw
+
+have changed for tally

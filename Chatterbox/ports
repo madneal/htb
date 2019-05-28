@@ -1,0 +1,9 @@
+# Nmap 7.70 scan initiated Mon May 27 23:11:04 2019 as: nmap -sT -p- --min-rate 1500 -oN ports 10.10.10.74
+Nmap scan report for 10.10.10.74
+Host is up (0.29s latency).
+Not shown: 65533 filtered ports
+PORT     STATE SERVICE
+9255/tcp open  mon
+9256/tcp open  unknown
+
+# Nmap done at Mon May 27 23:14:42 2019 -- 1 IP address (1 host up) scanned in 218.25 seconds

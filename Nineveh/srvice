@@ -1,0 +1,63 @@
+# Nmap 7.70 scan initiated Tue May 28 13:10:07 2019 as: nmap -A -oN srvice 10.10.10.43
+Nmap scan report for 10.10.10.43
+Host is up (0.25s latency).
+Not shown: 998 filtered ports
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http     Apache httpd 2.4.18 ((Ubuntu))
+|_http-title: Site doesn't have a title (text/html).
+443/tcp open  ssl/http Apache httpd 2.4.18 ((Ubuntu))
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: 400 Bad Request
+| ssl-cert: Subject: commonName=nineveh.htb/organizationName=HackTheBox Ltd/stateOrProvinceName=Athens/countryName=GR
+| Not valid before: 2017-07-01T15:03:30
+|_Not valid after:  2018-07-01T15:03:30
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|   http/1.1
+|_  http/1.1
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 3.10 - 4.11 (92%), Linux 3.2 - 4.9 (92%), Linux 3.18 (90%), Crestron XPanel control system (90%), Linux 3.16 (89%), ASUS RT-N56U WAP (Linux 3.4) (87%), Linux 3.1 (87%), Linux 3.2 (87%), HP P2000 G3 NAS device (87%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (87%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT       ADDRESS
+1   254.84 ms 10.10.14.1
+2   253.03 ms 10.10.10.43
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May 28 13:12:16 2019 -- 1 IP address (1 host up) scanned in 129.47 seconds

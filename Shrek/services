@@ -1,0 +1,40 @@
+# Nmap 7.70 scan initiated Tue Jun  4 20:46:21 2019 as: nmap -A -oN services 10.10.10.47
+Nmap scan report for 10.10.10.47
+Host is up (0.29s latency).
+Not shown: 997 closed ports
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.3
+22/tcp open  ssh     OpenSSH 7.5 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 2d:a7:95:95:5d:dd:75:ca:bc:de:36:2c:33:f6:47:ef (RSA)
+|   256 b5:1f:0b:9f:83:b3:6c:3b:6b:8b:71:f4:ee:56:a8:83 (ECDSA)
+|_  256 1f:13:b7:36:8d:cd:46:6c:29:6d:be:e4:ab:9c:24:5b (ED25519)
+80/tcp open  http    Apache httpd 2.4.27 ((Unix))
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.27 (Unix)
+|_http-title: Home
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=6/4%OT=21%CT=1%CU=38685%PV=Y%DS=2%DC=T%G=Y%TM=5CF71104
+OS:%P=x86_64-pc-linux-gnu)SEQ(SP=103%GCD=1%ISR=108%TI=Z%CI=I%II=I%TS=8)SEQ(
+OS:SP=103%GCD=1%ISR=108%TI=Z%II=I%TS=8)SEQ(SP=103%GCD=1%ISR=107%TI=Z%CI=I%T
+OS:S=8)OPS(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=
+OS:M54DST11NW7%O6=M54DST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7
+OS:120)ECN(R=Y%DF=Y%T=40%W=7210%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A
+OS:=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%
+OS:Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=
+OS:A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=
+OS:Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%
+OS:T=40%CD=S)
+
+Network Distance: 2 hops
+Service Info: OS: Unix
+
+TRACEROUTE (using port 8888/tcp)
+HOP RTT       ADDRESS
+1   573.01 ms 10.10.14.1
+2   573.13 ms 10.10.10.47
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jun  4 20:47:00 2019 -- 1 IP address (1 host up) scanned in 38.96 seconds

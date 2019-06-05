@@ -1,0 +1,4 @@
+<details>
+    <subnet_mask>255.255.255.192</subnet_mask>
+    <test></test>
+</details>

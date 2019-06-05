@@ -1,0 +1,22 @@
+# Nmap 7.70 scan initiated Tue Jun  4 20:44:03 2019 as: nmap -sT -p- --min-rate 1500 -oN ports 10.10.10.47
+Nmap scan report for 10.10.10.47
+Host is up (0.24s latency).
+Not shown: 65520 closed ports
+PORT      STATE    SERVICE
+21/tcp    open     ftp
+22/tcp    open     ssh
+80/tcp    open     http
+8072/tcp  filtered unknown
+13198/tcp filtered unknown
+25320/tcp filtered unknown
+27846/tcp filtered unknown
+28340/tcp filtered unknown
+34511/tcp filtered unknown
+40295/tcp filtered unknown
+45336/tcp filtered unknown
+46126/tcp filtered unknown
+48478/tcp filtered unknown
+54535/tcp filtered unknown
+58810/tcp filtered unknown
+
+# Nmap done at Tue Jun  4 20:45:16 2019 -- 1 IP address (1 host up) scanned in 73.81 seconds

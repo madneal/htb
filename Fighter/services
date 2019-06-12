@@ -1,0 +1,11 @@
+# Nmap 7.70 scan initiated Wed Jun 12 12:55:48 2019 as: nmap -sC -sV -oN services 10.10.10.72
+Nmap scan report for 10.10.10.72
+Host is up (0.23s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Microsoft IIS httpd 8.5
+|_http-server-header: Microsoft-IIS/8.5
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jun 12 12:56:42 2019 -- 1 IP address (1 host up) scanned in 53.55 seconds

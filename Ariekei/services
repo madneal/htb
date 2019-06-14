@@ -1,0 +1,22 @@
+# Nmap 7.70 scan initiated Fri Jun 14 13:06:53 2019 as: nmap -sC -sV -p22,443 -oN services 10.10.10.65
+Nmap scan report for 10.10.10.65
+Host is up (0.27s latency).
+
+PORT    STATE SERVICE   VERSION
+22/tcp  open  ssh       OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 a7:5b:ae:65:93:ce:fb:dd:f9:6a:7f:de:50:67:f6:ec (RSA)
+|   256 64:2c:a6:5e:96:ca:fb:10:05:82:36:ba:f0:c9:92:ef (ECDSA)
+|_  256 51:9f:87:64:be:99:35:2a:80:a6:a2:25:eb:e0:95:9f (ED25519)
+443/tcp open  ssl/https nginx/1.10.2
+|_http-server-header: nginx/1.10.2
+|_http-title: 400 The plain HTTP request was sent to HTTPS port
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+| tls-nextprotoneg: 
+|_  http/1.1
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jun 14 13:08:39 2019 -- 1 IP address (1 host up) scanned in 106.06 seconds

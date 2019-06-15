@@ -1,0 +1,12 @@
+# Nmap 7.70 scan initiated Sat Jun 15 06:04:05 2019 as: nmap -sT -p 21,80,135,139,445 -sC -sC -oN services 10.10.10.116
+Nmap scan report for 10.10.10.116
+Host is up (0.38s latency).
+
+PORT    STATE    SERVICE
+21/tcp  filtered ftp
+80/tcp  filtered http
+135/tcp filtered msrpc
+139/tcp filtered netbios-ssn
+445/tcp filtered microsoft-ds
+
+# Nmap done at Sat Jun 15 06:04:11 2019 -- 1 IP address (1 host up) scanned in 5.77 seconds

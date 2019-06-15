@@ -1,0 +1,127 @@
+# Nmap 7.70 scan initiated Sat Jun 15 03:17:28 2019 as: nmap -sU -sC --top-ports 20 -oN top-20-udp-ports 10.10.10.116
+Nmap scan report for 10.10.10.116
+Host is up (0.30s latency).
+
+PORT      STATE         SERVICE
+53/udp    open|filtered domain
+67/udp    open|filtered dhcps
+68/udp    open|filtered dhcpc
+69/udp    open|filtered tftp
+123/udp   open|filtered ntp
+135/udp   open|filtered msrpc
+137/udp   open|filtered netbios-ns
+138/udp   open|filtered netbios-dgm
+139/udp   open|filtered netbios-ssn
+161/udp   open          snmp
+| snmp-netstat: 
+|   TCP  0.0.0.0:21           0.0.0.0:0
+|   TCP  0.0.0.0:80           0.0.0.0:0
+|   TCP  0.0.0.0:135          0.0.0.0:0
+|   TCP  0.0.0.0:445          0.0.0.0:0
+|   TCP  0.0.0.0:49664        0.0.0.0:0
+|   TCP  0.0.0.0:49665        0.0.0.0:0
+|   TCP  0.0.0.0:49666        0.0.0.0:0
+|   TCP  0.0.0.0:49667        0.0.0.0:0
+|   TCP  0.0.0.0:49668        0.0.0.0:0
+|   TCP  0.0.0.0:49669        0.0.0.0:0
+|   TCP  0.0.0.0:49670        0.0.0.0:0
+|   TCP  10.10.10.116:139     0.0.0.0:0
+|   UDP  0.0.0.0:123          *:*
+|   UDP  0.0.0.0:161          *:*
+|   UDP  0.0.0.0:500          *:*
+|   UDP  0.0.0.0:4500         *:*
+|   UDP  0.0.0.0:5050         *:*
+|   UDP  0.0.0.0:5353         *:*
+|   UDP  0.0.0.0:5355         *:*
+|   UDP  10.10.10.116:137     *:*
+|   UDP  10.10.10.116:138     *:*
+|   UDP  10.10.10.116:1900    *:*
+|   UDP  10.10.10.116:53451   *:*
+|   UDP  127.0.0.1:1900       *:*
+|_  UDP  127.0.0.1:53452      *:*
+| snmp-processes: 
+|   1: 
+| 
+|   4: 
+| 
+|   316: 
+| 
+|   360: 
+| 
+|   396: 
+| 
+|   480: 
+| 
+|   496: 
+| 
+|   576: 
+| 
+|   588: 
+| 
+|_  596: 
+| snmp-sysdescr: Hardware: AMD64 Family 23 Model 1 Stepping 2 AT/AT COMPATIBLE - Software: Windows Version 6.3 (Build 15063 Multiprocessor Free)
+|_  System uptime: 23m49.81s (142981 timeticks)
+| snmp-win32-services: 
+|   CNG Key Isolation
+|   COM+ Event System
+|   CoreMessaging
+|   DHCP Client
+|   DNS Client
+|   Data Usage
+|   Geolocation Service
+|   Group Policy Client
+|   IP Helper
+|   IPsec Policy Agent
+|   Plug and Play
+|   Power
+|   Print Spooler
+|   SNMP Service
+|   SSDP Discovery
+|   Security Center
+|   Server
+|   Storage Service
+|   Superfetch
+|   Task Scheduler
+|   Themes
+|   Time Broker
+|   TokenBroker
+|   User Manager
+|   VMware Tools
+|   Volume Shadow Copy
+|   Windows Audio
+|   Windows Event Log
+|   Windows Firewall
+|   Windows Search
+|   Windows Time
+|_  Workstation
+| snmp-win32-software: 
+|   Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.6161; 2018-10-12T20:10:30
+|   Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.6161; 2018-10-12T20:10:22
+|_  VMware Tools; 2018-10-12T20:11:02
+| snmp-win32-users: 
+|   Administrator
+|   DefaultAccount
+|   Destitute
+|_  Guest
+162/udp   open|filtered snmptrap
+445/udp   open|filtered microsoft-ds
+500/udp   open          isakmp
+| ike-version: 
+|   vendor_id: Microsoft Windows 8
+|   attributes: 
+|     MS NT5 ISAKMPOAKLEY
+|     RFC 3947 NAT-T
+|     draft-ietf-ipsec-nat-t-ike-02\n
+|     IKE FRAGMENTATION
+|     MS-Negotiation Discovery Capable
+|_    IKE CGA version 1
+514/udp   open|filtered syslog
+520/udp   open|filtered route
+631/udp   open|filtered ipp
+1434/udp  open|filtered ms-sql-m
+1900/udp  open|filtered upnp
+4500/udp  open|filtered nat-t-ike
+49152/udp open|filtered unknown
+Service Info: OS: Windows 8; CPE: cpe:/o:microsoft:windows:8, cpe:/o:microsoft:windows
+
+# Nmap done at Sat Jun 15 03:18:10 2019 -- 1 IP address (1 host up) scanned in 41.96 seconds

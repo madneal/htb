@@ -1,0 +1,11 @@
+body {
+  padding-top: 3.5rem;
+}
+
+.bg-dark {
+  background-color: #1869b6 !important;
+}
+
+.jumbotron {
+  background-color: #fccb00 !important;
+}

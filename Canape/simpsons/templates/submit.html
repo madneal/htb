@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Submit A Quote</h1>
+        </div>
+    </div>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {% if success %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Success!</strong> Thank you for your suggestion!
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endif %}
+            {% if error %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Error!</strong> Hmmm, there was an error. Please try again. Maybe we don't recognize that character...
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endif %}
+            <form action="{{ url_for('submit') }}" method=post class=submit>
+                <div class="form-group">
+                    <label for="character">Character</label>
+                    <textarea rows="1" name="character" class="form-control" id="character" placeholder="Homer"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="quote">Quote</label>
+                    <textarea class="form-control" placeholder="Doh!" name="quote" id="quote" rows="3"></textarea>
+                </div>
+                <input type="submit" class="btn btn-primary" value=Submit>
+            </form>
+        </div>
+    </div>
+  </div>
+{% endblock %}

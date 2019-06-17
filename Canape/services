@@ -1,0 +1,7 @@
+# Nmap 7.70 scan initiated Sun Jun 16 23:25:20 2019 as: nmap -sC -sV -Pn -oN services 10.10.10.70
+Nmap scan report for 10.10.10.70
+Host is up.
+All 1000 scanned ports on 10.10.10.70 are filtered
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jun 16 23:29:04 2019 -- 1 IP address (1 host up) scanned in 224.16 seconds

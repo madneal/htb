@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3">The Best of Simpsons Quotes</h1>
+    </div>
+</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="entries">
+            {% for entry in entries %}
+                <li><strong>{{ entry.title }}</strong>: <i>{{ entry.text|safe }}</i></li>
+            {% else %}
+                <li><em>Unbelievable. No entries here so far</em></li>
+            {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endblock %}

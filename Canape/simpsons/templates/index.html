@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Home</h1>
+            <p>Welcome to the future home page of the most amazing Simpsons fansite ever!! For now I've included some of my favorite quotes, and given you the ability to submit your own!</p>
+        </div>
+    </div>
+    <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-4">
+        <h2>Best Quotes</h2>
+        <p>CouchDB-powered quotes database. That means your quotes are coming at your faster than ever!</p>
+        <p><a class="btn btn-secondary" href="{{ url_for('quotes') }}" role="button">View Quotes &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+        <h2>More Quotes!!</h2>
+        <p>Submit your own quotes! We'll review them and add them if they're good!</p>
+        <p><a class="btn btn-secondary" href="{{ url_for('submit') }}" role="button">Submit Quote &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+        <h2>More to come</h2>
+        <p>We're constantly adding more features. Stay tuned for more information.</p>
+        </div>
+    </div>
+    </div> <!-- /container -->
+{% endblock %}

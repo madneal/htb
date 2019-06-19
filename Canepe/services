@@ -1,9 +1,0 @@
-# Nmap 7.70 scan initiated Sun Jun 16 14:23:51 2019 as: nmap -sC -sV -oN services 10.10.10.70
-Nmap scan report for 10.10.10.70
-Host is up (0.34s latency).
-Not shown: 999 filtered ports
-PORT   STATE SERVICE    VERSION
-80/tcp open  tcpwrapped
-
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Jun 16 14:25:00 2019 -- 1 IP address (1 host up) scanned in 68.57 seconds

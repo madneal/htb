@@ -1,0 +1,77 @@
+# Nmap 7.70 scan initiated Sat Jun 22 05:57:54 2019 as: nmap -sC -sV -oN services 10.10.10.124
+Nmap scan report for 10.10.10.124
+Host is up (0.30s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE   VERSION
+22/tcp   open  ssh?
+80/tcp   open  http      nginx
+443/tcp  open  ssl/https ClownWare Proxy
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 22 Jun 2019 05:58:51 GMT
+|     Content-Type: text/html; charset=UTF-8
+|     Connection: close
+|     Server: ClownWare Proxy
+|     <!DOCTYPE html>
+|     <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+|     <!--[if IE 7]> <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+|     <!--[if IE 8]> <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+|     <!--[if gt IE 8]><!-->
+|     <html class="js" style="opacity: 1; visibility: visible;" lang="en-US"><!--<![endif]--><head>
+|     <title>Direct IP access not allowed | ClownWare</title>
+|     <meta charset="UTF-8">
+|     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+|     <meta name="robots" content="noindex, nofollow">
+|     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+|     <link rel="stylesheet" id="cf_styles-css" href="index_files
+|   HTTPOptions: 
+|     HTTP/1.1 405 Not Allowed
+|     Date: Sat, 22 Jun 2019 05:58:53 GMT
+|     Content-Type: text/html
+|     Content-Length: 166
+|     Connection: close
+|     Server: ClownWare Proxy
+|     <html>
+|     <head><title>405 Not Allowed</title></head>
+|     <body bgcolor="white">
+|     <center><h1>405 Not Allowed</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|_    </html>
+|_http-server-header: ClownWare Proxy
+| ssl-cert: Subject: commonName=ClownWare.htb/organizationName=ClownWare Ltd/stateOrProvinceName=LON/countryName=UK
+| Subject Alternative Name: DNS:clownware.htb, DNS:sni147831.clownware.htb, DNS:*.clownware.htb, DNS:proxy.clownware.htb, DNS:console.flujab.htb, DNS:sys.flujab.htb, DNS:smtp.flujab.htb, DNS:vaccine4flu.htb, DNS:bestmedsupply.htb, DNS:custoomercare.megabank.htb, DNS:flowerzrus.htb, DNS:chocolateriver.htb, DNS:meetspinz.htb, DNS:rubberlove.htb, DNS:freeflujab.htb, DNS:flujab.htb
+| Not valid before: 2018-11-28T14:57:03
+|_Not valid after:  2023-11-27T14:57:03
+8080/tcp open  ssl/http  nginx
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=6/22%Time=5D0DC3AC%P=x86_64-pc-linux-gnu
+SF:%r(GetRequest,E1E,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2022\x20Jun
+SF:\x202019\x2005:58:51\x20GMT\r\nContent-Type:\x20text/html;\x20charset=U
+SF:TF-8\r\nConnection:\x20close\r\nServer:\x20ClownWare\x20Proxy\r\n\r\n<!
+SF:DOCTYPE\x20html>\n<!--\[if\x20lt\x20IE\x207\]>\x20<html\x20class=\"no-j
+SF:s\x20ie6\x20oldie\"\x20lang=\"en-US\">\x20<!\[endif\]-->\n<!--\[if\x20I
+SF:E\x207\]>\x20\x20\x20\x20<html\x20class=\"no-js\x20ie7\x20oldie\"\x20la
+SF:ng=\"en-US\">\x20<!\[endif\]-->\n<!--\[if\x20IE\x208\]>\x20\x20\x20\x20
+SF:<html\x20class=\"no-js\x20ie8\x20oldie\"\x20lang=\"en-US\">\x20<!\[endi
+SF:f\]-->\n<!--\[if\x20gt\x20IE\x208\]><!-->\n<html\x20class=\"js\"\x20sty
+SF:le=\"opacity:\x201;\x20visibility:\x20visible;\"\x20lang=\"en-US\"><!--
+SF:<!\[endif\]--><head>\n<title>Direct\x20IP\x20access\x20not\x20allowed\x
+SF:20\|\x20ClownWare</title>\n<meta\x20charset=\"UTF-8\">\n<meta\x20http-e
+SF:quiv=\"Content-Type\"\x20content=\"text/html;\x20charset=UTF-8\">\n<met
+SF:a\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=Edge,chrome=1\">\n<
+SF:meta\x20name=\"robots\"\x20content=\"noindex,\x20nofollow\">\n<meta\x20
+SF:name=\"viewport\"\x20content=\"width=device-width,initial-scale=1,maxim
+SF:um-scale=1\">\n<link\x20rel=\"stylesheet\"\x20id=\"cf_styles-css\"\x20h
+SF:ref=\"index_files")%r(HTTPOptions,141,"HTTP/1\.1\x20405\x20Not\x20Allow
+SF:ed\r\nDate:\x20Sat,\x2022\x20Jun\x202019\x2005:58:53\x20GMT\r\nContent-
+SF:Type:\x20text/html\r\nContent-Length:\x20166\r\nConnection:\x20close\r\
+SF:nServer:\x20ClownWare\x20Proxy\r\n\r\n<html>\r\n<head><title>405\x20Not
+SF:\x20Allowed</title></head>\r\n<body\x20bgcolor=\"white\">\r\n<center><h
+SF:1>405\x20Not\x20Allowed</h1></center>\r\n<hr><center>nginx</center>\r\n
+SF:</body>\r\n</html>\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jun 22 06:01:23 2019 -- 1 IP address (1 host up) scanned in 208.95 seconds

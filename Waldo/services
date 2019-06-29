@@ -1,0 +1,19 @@
+# Nmap 7.70 scan initiated Sat Jun 29 06:18:13 2019 as: nmap -sC -sV -p22,80,8888 -oN services 10.10.10.87
+Nmap scan report for 10.10.10.87
+Host is up (0.32s latency).
+
+PORT     STATE    SERVICE        VERSION
+22/tcp   open     ssh            OpenSSH 7.5 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 c4:ff:81:aa:ac:df:66:9e:da:e1:c8:78:00:ab:32:9e (RSA)
+|   256 b3:e7:54:6a:16:bd:c9:29:1f:4a:8c:cd:4c:01:24:27 (ECDSA)
+|_  256 38:64:ac:57:56:44:d5:69:de:74:a8:88:dc:a0:b4:fd (ED25519)
+80/tcp   open     http           nginx 1.12.2
+|_http-server-header: nginx/1.12.2
+| http-title: List Manager
+|_Requested resource was /list.html
+|_http-trane-info: Problem with XML parsing of /evox/about
+8888/tcp filtered sun-answerbook
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jun 29 06:18:34 2019 -- 1 IP address (1 host up) scanned in 20.80 seconds

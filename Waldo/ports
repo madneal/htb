@@ -1,0 +1,10 @@
+# Nmap 7.70 scan initiated Sat Jun 29 06:15:52 2019 as: nmap -sT -p- --min-rate 1500 -oN ports 10.10.10.87
+Nmap scan report for 10.10.10.87
+Host is up (0.27s latency).
+Not shown: 65532 closed ports
+PORT     STATE    SERVICE
+22/tcp   open     ssh
+80/tcp   open     http
+8888/tcp filtered sun-answerbook
+
+# Nmap done at Sat Jun 29 06:16:51 2019 -- 1 IP address (1 host up) scanned in 58.35 seconds

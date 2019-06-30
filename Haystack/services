@@ -1,0 +1,19 @@
+# Nmap 7.70 scan initiated Sun Jun 30 01:13:05 2019 as: nmap -sC -sV -p22,80,9200 -oN services 10.10.10.115
+Nmap scan report for 10.10.10.115
+Host is up (0.38s latency).
+
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 2a:8d:e2:92:8b:14:b6:3f:e4:2f:3a:47:43:23:8b:2b (RSA)
+|   256 e7:5a:3a:97:8e:8e:72:87:69:a3:0d:d1:00:bc:1f:09 (ECDSA)
+|_  256 01:d2:59:b2:66:0a:97:49:20:5f:1c:84:eb:81:ed:95 (ED25519)
+80/tcp   open  http    nginx 1.12.2
+|_http-server-header: nginx/1.12.2
+|_http-title: Site doesn't have a title (text/html).
+9200/tcp open  http    nginx 1.12.2
+|_http-server-header: nginx/1.12.2
+|_http-title: 502 Bad Gateway
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jun 30 01:13:36 2019 -- 1 IP address (1 host up) scanned in 30.83 seconds

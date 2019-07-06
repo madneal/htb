@@ -1,0 +1,14 @@
+# Nmap 7.70 scan initiated Thu Jun  6 07:34:29 2019 as: nmap -sC -sV -p80 -oN services 10.10.10.81
+Nmap scan report for 10.10.10.81
+Host is up (0.61s latency).
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Microsoft IIS httpd 10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: Did not follow redirect to http://forum.bart.htb/
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jun  6 07:35:22 2019 -- 1 IP address (1 host up) scanned in 53.40 seconds

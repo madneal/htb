@@ -1,0 +1,14 @@
+# Nmap 7.70 scan initiated Wed Jul  3 13:17:46 2019 as: nmap -p47001 --script vuln -oN vulns 10.10.10.125
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.10.10.125
+Host is up (0.30s latency).
+
+PORT      STATE SERVICE
+47001/tcp open  winrm
+
+# Nmap done at Wed Jul  3 13:18:21 2019 -- 1 IP address (1 host up) scanned in 35.18 seconds

@@ -1,0 +1,78 @@
+# Nmap 7.70 scan initiated Wed Jul  3 13:08:25 2019 as: nmap -sC -sV -p135,139,445,1433,5985,47001,49664-49671 -oN services 10.10.10.125
+Nmap scan report for 10.10.10.125
+Host is up (0.29s latency).
+
+PORT      STATE SERVICE       VERSION
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds?
+1433/tcp  open  ms-sql-s      Microsoft SQL Server  14.00.1000.00
+| ms-sql-ntlm-info: 
+|   Target_Name: HTB
+|   NetBIOS_Domain_Name: HTB
+|   NetBIOS_Computer_Name: QUERIER
+|   DNS_Domain_Name: HTB.LOCAL
+|   DNS_Computer_Name: QUERIER.HTB.LOCAL
+|   DNS_Tree_Name: HTB.LOCAL
+|_  Product_Version: 10.0.17763
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Not valid before: 2019-07-03T06:42:10
+|_Not valid after:  2049-07-03T06:42:10
+|_ssl-date: 2019-07-03T12:09:28+00:00; -1h00m24s from scanner time.
+5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+47001/tcp open  winrm?
+| fingerprint-strings: 
+|   JavaRMI: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/html; charset=us-ascii
+|     Server: Microsoft-HTTPAPI/2.0
+|     Date: Wed, 03 Jul 2019 12:08:09 GMT
+|     Connection: close
+|     Content-Length: 326
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+|     <HTML><HEAD><TITLE>Bad Request</TITLE>
+|     <META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+|     <BODY><h2>Bad Request - Invalid Verb</h2>
+|     <hr><p>HTTP Error 400. The request verb is invalid.</p>
+|_    </BODY></HTML>
+49664/tcp open  msrpc         Microsoft Windows RPC
+49665/tcp open  unknown
+49666/tcp open  unknown
+49667/tcp open  msrpc         Microsoft Windows RPC
+49668/tcp open  tcpwrapped
+49669/tcp open  tcpwrapped
+49670/tcp open  unknown
+49671/tcp open  msrpc         Microsoft Windows RPC
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port47001-TCP:V=7.70%I=7%D=7/3%Time=5D1CA8D1%P=x86_64-pc-linux-gnu%r(Ja
+SF:vaRMI,1F9,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/
+SF:html;\x20charset=us-ascii\r\nServer:\x20Microsoft-HTTPAPI/2\.0\r\nDate:
+SF:\x20Wed,\x2003\x20Jul\x202019\x2012:08:09\x20GMT\r\nConnection:\x20clos
+SF:e\r\nContent-Length:\x20326\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//
+SF:W3C//DTD\x20HTML\x204\.01//EN\"\"http://www\.w3\.org/TR/html4/strict\.d
+SF:td\">\r\n<HTML><HEAD><TITLE>Bad\x20Request</TITLE>\r\n<META\x20HTTP-EQU
+SF:IV=\"Content-Type\"\x20Content=\"text/html;\x20charset=us-ascii\"></HEA
+SF:D>\r\n<BODY><h2>Bad\x20Request\x20-\x20Invalid\x20Verb</h2>\r\n<hr><p>H
+SF:TTP\x20Error\x20400\.\x20The\x20request\x20verb\x20is\x20invalid\.</p>\
+SF:r\n</BODY></HTML>\r\n");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: -1h00m23s, deviation: 0s, median: -1h00m24s
+| ms-sql-info: 
+|   10.10.10.125:1433: 
+|     Version: 
+|       name: Microsoft SQL Server 
+|       number: 14.00.1000.00
+|       Product: Microsoft SQL Server 
+|_    TCP port: 1433
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-07-03 12:09:27
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jul  3 13:10:05 2019 -- 1 IP address (1 host up) scanned in 100.32 seconds

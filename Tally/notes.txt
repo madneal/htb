@@ -1,8 +1,0 @@
-
-done
-
-install Sharepoint, replace Orchard CMS
-
-to do
-
-uninstall SQL Server 2016

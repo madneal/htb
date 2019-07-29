@@ -1,1 +1,1 @@
-pass: spanish.is.key
+pass: spanish.is.keyuser: security 

@@ -9,7 +9,7 @@ with open("quotes.json") as f:
     result[id] = obj["_source"]["quote"]
   for i in sorted(result.keys()):
     print(i)
-    txt = txt + result[i] + "\n"
+    txt = txt + result[i] + "\n\n"
 with open("result.md", "w") as f1:
   f1.write(txt)
 #print(result)

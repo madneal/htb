@@ -4,6 +4,10 @@
 
 ## Introduction
 
+Target: 10.10.10.115(Linux)
+
+Kali: 10.10.16.61
+
 HayStack is an easy box in hack the box. But it does isn't easy at all. It's annoying to find the user and password in the messy Spanish. For the root, you should have a basic understanding of ELK. Hence, the box is quite fresh in htb.
 
 ## Information Enumeration

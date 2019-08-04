@@ -1,5 +1,7 @@
 # HayStack
 
+![eyER9x.png](https://s2.ax1x.com/2019/08/04/eyER9x.png)
+
 ## Introduction
 
 HayStack is an easy box in hack the box. But it does isn't easy at all. It's annoying to find the user and password in the messy Spanish. For the root, you should have a basic understanding of ELK. Hence, the box is quite fresh in htb.

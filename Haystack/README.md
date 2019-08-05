@@ -162,7 +162,7 @@ Wait for a while, then we are kibana.
 
 [![erlWZT.png](https://s2.ax1x.com/2019/08/03/erlWZT.png)](https://imgchr.com/i/erlWZT)
 
-But we are still not root! Don't be upset. Let's move on. If we look at the logstash in the machine carefully, we will find something interesting. We find the group `kibana` has write permission of conf.d of logstash.
+But we are still not root! Don't be upset. Let's move on. If we look at the logstash in the machine carefully, we will find something interesting. We find the user group `kibana` has write permission of `conf.d` of logstash.
 
 ```
 ls -lah
@@ -179,7 +179,7 @@ drwxrwxr-x.  2 root   kibana   62 jun 24 08:12 conf.d
 -rw-------.  1 kibana kibana 1,7K dic 10  2018 startup.option
 ```
 
-`conf.d` is the config directory of logstash consists of three files in general. Take a deep look into the directory, you'll find an interesting thing. There is a command executes in output.conf. If you have basic knowledge of logstash, you should know the function of the three files. `input.conf` is used to config the data source. `filter.conf` is used to process the data, which is usually combined with grok. `output.conf` is used to output the processed data. We can find there is an exec in the `output.conf`.
+`conf.d` is the config directory of logstash consists of three files in general. Take a deep look into the directory, you'll find an interesting thing. There is a command executes in `output.conf`. If you have basic knowledge of logstash, you should know the function of the three files. `input.conf` is used to config the data source. `filter.conf` is used to process the data, which is usually combined with grok. `output.conf` is used to output the processed data. We can find there is an `exec` in the `output.conf`.
 
 So the exploit is very clear. Create a file in `/opt/kibana/` whose name begins with `logstah_`. And make sure the content in the file can be parsed by grok correctly. Then the command can be executed successfully. The most important part is how to create the content to be parsed to correct `comando`. So you should know how to use grok. Grok is utilized to recognize specific fields by the regular expression. [Grok Debugger] is a useful tool to test grok online.
 

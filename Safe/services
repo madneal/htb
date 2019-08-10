@@ -1,0 +1,83 @@
+# Nmap 7.70 scan initiated Sun Aug  4 04:11:38 2019 as: nmap -sC -sV -oN services -p22,80,1337 10.10.10.147
+Nmap scan report for 10.10.10.147
+Host is up (0.39s latency).
+
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.4p1 Debian 10+deb9u6 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 6d:7c:81:3d:6a:3d:f9:5f:2e:1f:6a:97:e5:00:ba:de (RSA)
+|   256 99:7e:1e:22:76:72:da:3c:c9:61:7d:74:d7:80:33:d2 (ECDSA)
+|_  256 6a:6b:c3:8e:4b:28:f7:60:85:b1:62:ff:54:bc:d8:d6 (ED25519)
+80/tcp   open  http    Apache httpd 2.4.25 ((Debian))
+|_http-server-header: Apache/2.4.25 (Debian)
+|_http-title: Apache2 Debian Default Page: It works
+1337/tcp open  waste?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP: 
+|     00:11:30 up 4 min, 0 users, load average: 0.00, 0.00, 0.00
+|   DNSVersionBindReqTCP: 
+|     00:11:24 up 4 min, 0 users, load average: 0.00, 0.00, 0.00
+|   GenericLines: 
+|     00:11:08 up 3 min, 0 users, load average: 0.00, 0.00, 0.00
+|     What do you want me to echo back?
+|   GetRequest: 
+|     00:11:15 up 3 min, 0 users, load average: 0.00, 0.00, 0.00
+|     What do you want me to echo back? GET / HTTP/1.0
+|   HTTPOptions: 
+|     00:11:16 up 3 min, 0 users, load average: 0.00, 0.00, 0.00
+|     What do you want me to echo back? OPTIONS / HTTP/1.0
+|   Help: 
+|     00:11:35 up 4 min, 0 users, load average: 0.00, 0.00, 0.00
+|     What do you want me to echo back? HELP
+|   Kerberos: 
+|     00:11:39 up 4 min, 0 users, load average: 0.00, 0.00, 0.00
+|     What do you want me to echo back?
+|   NULL: 
+|     00:11:08 up 3 min, 0 users, load average: 0.00, 0.00, 0.00
+|   RPCCheck: 
+|     00:11:18 up 3 min, 0 users, load average: 0.00, 0.00, 0.00
+|   RTSPRequest: 
+|     00:11:17 up 3 min, 0 users, load average: 0.00, 0.00, 0.00
+|     What do you want me to echo back? OPTIONS / RTSP/1.0
+|   SSLSessionReq: 
+|     00:11:36 up 4 min, 0 users, load average: 0.00, 0.00, 0.00
+|     What do you want me to echo back?
+|   TLSSessionReq: 
+|     00:11:37 up 4 min, 0 users, load average: 0.00, 0.00, 0.00
+|_    What do you want me to echo back?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port1337-TCP:V=7.70%I=7%D=8/4%Time=5D465B02%P=x86_64-pc-linux-gnu%r(NUL
+SF:L,3E,"\x2000:11:08\x20up\x203\x20min,\x20\x200\x20users,\x20\x20load\x2
+SF:0average:\x200\.00,\x200\.00,\x200\.00\n")%r(GenericLines,63,"\x2000:11
+SF::08\x20up\x203\x20min,\x20\x200\x20users,\x20\x20load\x20average:\x200\
+SF:.00,\x200\.00,\x200\.00\n\nWhat\x20do\x20you\x20want\x20me\x20to\x20ech
+SF:o\x20back\?\x20\r\n")%r(GetRequest,71,"\x2000:11:15\x20up\x203\x20min,\
+SF:x20\x200\x20users,\x20\x20load\x20average:\x200\.00,\x200\.00,\x200\.00
+SF:\n\nWhat\x20do\x20you\x20want\x20me\x20to\x20echo\x20back\?\x20GET\x20/
+SF:\x20HTTP/1\.0\r\n")%r(HTTPOptions,75,"\x2000:11:16\x20up\x203\x20min,\x
+SF:20\x200\x20users,\x20\x20load\x20average:\x200\.00,\x200\.00,\x200\.00\
+SF:n\nWhat\x20do\x20you\x20want\x20me\x20to\x20echo\x20back\?\x20OPTIONS\x
+SF:20/\x20HTTP/1\.0\r\n")%r(RTSPRequest,75,"\x2000:11:17\x20up\x203\x20min
+SF:,\x20\x200\x20users,\x20\x20load\x20average:\x200\.00,\x200\.00,\x200\.
+SF:00\n\nWhat\x20do\x20you\x20want\x20me\x20to\x20echo\x20back\?\x20OPTION
+SF:S\x20/\x20RTSP/1\.0\r\n")%r(RPCCheck,3E,"\x2000:11:18\x20up\x203\x20min
+SF:,\x20\x200\x20users,\x20\x20load\x20average:\x200\.00,\x200\.00,\x200\.
+SF:00\n")%r(DNSVersionBindReqTCP,3E,"\x2000:11:24\x20up\x204\x20min,\x20\x
+SF:200\x20users,\x20\x20load\x20average:\x200\.00,\x200\.00,\x200\.00\n")%
+SF:r(DNSStatusRequestTCP,3E,"\x2000:11:30\x20up\x204\x20min,\x20\x200\x20u
+SF:sers,\x20\x20load\x20average:\x200\.00,\x200\.00,\x200\.00\n")%r(Help,6
+SF:7,"\x2000:11:35\x20up\x204\x20min,\x20\x200\x20users,\x20\x20load\x20av
+SF:erage:\x200\.00,\x200\.00,\x200\.00\n\nWhat\x20do\x20you\x20want\x20me\
+SF:x20to\x20echo\x20back\?\x20HELP\r\n")%r(SSLSessionReq,64,"\x2000:11:36\
+SF:x20up\x204\x20min,\x20\x200\x20users,\x20\x20load\x20average:\x200\.00,
+SF:\x200\.00,\x200\.00\n\nWhat\x20do\x20you\x20want\x20me\x20to\x20echo\x2
+SF:0back\?\x20\x16\x03\n")%r(TLSSessionReq,64,"\x2000:11:37\x20up\x204\x20
+SF:min,\x20\x200\x20users,\x20\x20load\x20average:\x200\.00,\x200\.00,\x20
+SF:0\.00\n\nWhat\x20do\x20you\x20want\x20me\x20to\x20echo\x20back\?\x20\x1
+SF:6\x03\n")%r(Kerberos,62,"\x2000:11:39\x20up\x204\x20min,\x20\x200\x20us
+SF:ers,\x20\x20load\x20average:\x200\.00,\x200\.00,\x200\.00\n\nWhat\x20do
+SF:\x20you\x20want\x20me\x20to\x20echo\x20back\?\x20\n");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Aug  4 04:13:46 2019 -- 1 IP address (1 host up) scanned in 128.59 seconds

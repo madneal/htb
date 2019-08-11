@@ -1,0 +1,35 @@
+# Nmap 7.70 scan initiated Sat Aug 10 03:53:37 2019 as: nmap -sC -sV -p21,22,80,3000,8000 -oN services 10.10.10.137
+Nmap scan report for 10.10.10.137
+Host is up (0.36s latency).
+
+PORT     STATE SERVICE VERSION
+21/tcp   open  ftp     vsftpd 3.0.3+ (ext.1)
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_drwxr-xr-x    2 0        0             512 Apr 14 12:35 webapp
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 10.10.16.61
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session upload bandwidth limit
+|      No session download bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 3
+|      vsFTPd 3.0.3+ (ext.1) - secure, fast, stable
+|_End of status
+22/tcp   open  ssh?
+80/tcp   open  http    Apache httpd 2.4.38 ((FreeBSD) PHP/7.3.3)
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.38 (FreeBSD) PHP/7.3.3
+|_http-title: Luke
+3000/tcp open  http    Node.js Express framework
+|_http-title: Site doesn't have a title (application/json; charset=utf-8).
+8000/tcp open  http    Ajenti http control panel
+|_http-title: Ajenti
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Aug 10 03:56:47 2019 -- 1 IP address (1 host up) scanned in 189.77 seconds

@@ -1,0 +1,106 @@
+# Nmap 7.70 scan initiated Wed Aug 28 11:27:49 2019 as: nmap -sC -sV -p135,445,5985,8080,49667 -oN services 10.10.10.132
+Nmap scan report for 10.10.10.132
+Host is up (0.50s latency).
+
+PORT      STATE SERVICE       VERSION
+135/tcp   open  msrpc         Microsoft Windows RPC
+445/tcp   open  microsoft-ds?
+5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+8080/tcp  open  http-proxy    -
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Set-Cookie: JSESSIONID=D65719EFE854870F85DAD8E746B298C6; Path=/; HttpOnly
+|     Cache-Control: private
+|     Expires: Thu, 01 Jan 1970 01:00:00 GMT
+|     Content-Type: text/html;charset=UTF-8
+|     Vary: Accept-Encoding
+|     Date: Wed, 28 Aug 2019 11:27:17 GMT
+|     Connection: close
+|     Server: -
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+|     <script language='JavaScript' type="text/javascript" src='/scripts/Login.js?9309'></script>
+|     <script language='JavaScript' type="text/javascript" src='/scripts/jquery-1.8.3.min.js'></script>
+|     <link href="/style/loginstyle.css?9309" type="text/css" rel="stylesheet"/>
+|     <link href="/style/new-classes.css?9309" type="text/css" rel="stylesheet">
+|     <link href="/style/new-classes-sdp.css?9309" type="text/css" rel="stylesheet">
+|     <link href="/style/conflict-fix.css?9309" type="text/css" rel="stylesheet">
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Set-Cookie: JSESSIONID=6C202BD6BBA8470EA7AD547DAE99C13B; Path=/; HttpOnly
+|     Cache-Control: private
+|     Expires: Thu, 01 Jan 1970 01:00:00 GMT
+|     Content-Type: text/html;charset=UTF-8
+|     Vary: Accept-Encoding
+|     Date: Wed, 28 Aug 2019 11:27:19 GMT
+|     Connection: close
+|     Server: -
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+|     <script language='JavaScript' type="text/javascript" src='/scripts/Login.js?9309'></script>
+|     <script language='JavaScript' type="text/javascript" src='/scripts/jquery-1.8.3.min.js'></script>
+|     <link href="/style/loginstyle.css?9309" type="text/css" rel="stylesheet"/>
+|     <link href="/style/new-classes.css?9309" type="text/css" rel="stylesheet">
+|     <link href="/style/new-classes-sdp.css?9309" type="text/css" rel="stylesheet">
+|_    <link href="/style/conflict-fix.css?9309" type="text/css" rel="stylesheet">
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-server-header: -
+|_http-title: ManageEngine ServiceDesk Plus
+49667/tcp open  msrpc         Microsoft Windows RPC
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.70%I=7%D=8/28%Time=5D666540%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,152C,"HTTP/1\.1\x20200\x20OK\r\nSet-Cookie:\x20JSESSIONID=D657
+SF:19EFE854870F85DAD8E746B298C6;\x20Path=/;\x20HttpOnly\r\nCache-Control:\
+SF:x20private\r\nExpires:\x20Thu,\x2001\x20Jan\x201970\x2001:00:00\x20GMT\
+SF:r\nContent-Type:\x20text/html;charset=UTF-8\r\nVary:\x20Accept-Encoding
+SF:\r\nDate:\x20Wed,\x2028\x20Aug\x202019\x2011:27:17\x20GMT\r\nConnection
+SF::\x20close\r\nServer:\x20-\r\n\r\n<!DOCTYPE\x20html>\n<html>\n<head>\n<
+SF:meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=Edge\">\n\n\n\n\
+SF:r\n\n\x20\x20\x20\x20<script\x20language='JavaScript'\x20type=\"text/ja
+SF:vascript\"\x20src='/scripts/Login\.js\?9309'></script>\n\x20\x20\x20\x2
+SF:0<script\x20language='JavaScript'\x20type=\"text/javascript\"\x20src='/
+SF:scripts/jquery-1\.8\.3\.min\.js'></script>\n\x20\x20\x20\x20\n\x20\x20\
+SF:x20\x20<link\x20href=\"/style/loginstyle\.css\?9309\"\x20type=\"text/cs
+SF:s\"\x20rel=\"stylesheet\"/>\n\x20\x20\x20\x20<link\x20href=\"/style/new
+SF:-classes\.css\?9309\"\x20type=\"text/css\"\x20rel=\"stylesheet\">\n\x20
+SF:\x20\x20\x20<link\x20href=\"/style/new-classes-sdp\.css\?9309\"\x20type
+SF:=\"text/css\"\x20rel=\"stylesheet\">\n\x20\x20\x20\x20<link\x20href=\"/
+SF:style/conflict-fix\.css\?9309\"\x20type=\"text/css\"\x20rel=\"styleshee
+SF:t\">")%r(HTTPOptions,152C,"HTTP/1\.1\x20200\x20OK\r\nSet-Cookie:\x20JSE
+SF:SSIONID=6C202BD6BBA8470EA7AD547DAE99C13B;\x20Path=/;\x20HttpOnly\r\nCac
+SF:he-Control:\x20private\r\nExpires:\x20Thu,\x2001\x20Jan\x201970\x2001:0
+SF:0:00\x20GMT\r\nContent-Type:\x20text/html;charset=UTF-8\r\nVary:\x20Acc
+SF:ept-Encoding\r\nDate:\x20Wed,\x2028\x20Aug\x202019\x2011:27:19\x20GMT\r
+SF:\nConnection:\x20close\r\nServer:\x20-\r\n\r\n<!DOCTYPE\x20html>\n<html
+SF:>\n<head>\n<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=Edge
+SF:\">\n\n\n\n\r\n\n\x20\x20\x20\x20<script\x20language='JavaScript'\x20ty
+SF:pe=\"text/javascript\"\x20src='/scripts/Login\.js\?9309'></script>\n\x2
+SF:0\x20\x20\x20<script\x20language='JavaScript'\x20type=\"text/javascript
+SF:\"\x20src='/scripts/jquery-1\.8\.3\.min\.js'></script>\n\x20\x20\x20\x2
+SF:0\n\x20\x20\x20\x20<link\x20href=\"/style/loginstyle\.css\?9309\"\x20ty
+SF:pe=\"text/css\"\x20rel=\"stylesheet\"/>\n\x20\x20\x20\x20<link\x20href=
+SF:\"/style/new-classes\.css\?9309\"\x20type=\"text/css\"\x20rel=\"stylesh
+SF:eet\">\n\x20\x20\x20\x20<link\x20href=\"/style/new-classes-sdp\.css\?93
+SF:09\"\x20type=\"text/css\"\x20rel=\"stylesheet\">\n\x20\x20\x20\x20<link
+SF:\x20href=\"/style/conflict-fix\.css\?9309\"\x20type=\"text/css\"\x20rel
+SF:=\"stylesheet\">");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: -43s, deviation: 0s, median: -43s
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-08-28 11:29:18
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Aug 28 11:30:38 2019 -- 1 IP address (1 host up) scanned in 168.44 seconds

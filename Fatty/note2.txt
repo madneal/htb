@@ -1,0 +1,11 @@
+Dear members, 
+
+we are currently experimenting with new java layouts. The new client uses a static layout. If your
+are using a tiling window manager or only have a limited screen size, try to resize the client window
+until you see the login from.
+
+Furthermore, for compatibility reasons we still rely on Java 8. Since our company workstations ship Java 11
+per default, you may need to install it manually.
+
+Best regards, 
+qtc

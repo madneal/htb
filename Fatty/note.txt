@@ -1,0 +1,11 @@
+Dear members, 
+
+because of some security issues we moved the port of our fatty java server from 8000 to the hidden and undocumented port 1337. 
+Furthermore, we created two new instances of the server on port 1338 and 1339. They offer exactly the same server and it would be nice
+if you use different servers from day to day to balance the server load. 
+
+We were too lazy to fix the default port in the '.jar' file, but since you are all senior java developers you should be capable of 
+doing it yourself ;)
+
+Best regards,
+qtc

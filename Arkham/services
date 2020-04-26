@@ -1,0 +1,32 @@
+# Nmap 7.70 scan initiated Thu Apr 23 07:00:53 2020 as: nmap -sC -sV -p80,135,139,445,8080,49666,49667 -oN services 10.10.10.130
+Nmap scan report for 10.10.10.130
+Host is up (0.23s latency).
+
+PORT      STATE SERVICE       VERSION
+80/tcp    open  http          Microsoft IIS httpd 10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: IIS Windows Server
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds?
+8080/tcp  open  http          Apache Tomcat 8.5.37
+| http-methods: 
+|_  Potentially risky methods: PUT DELETE
+|_http-title: Mask Inc.
+49666/tcp open  msrpc         Microsoft Windows RPC
+49667/tcp open  msrpc         Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 2m55s, deviation: 0s, median: 2m55s
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-04-23 07:05:03
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Apr 23 07:02:46 2020 -- 1 IP address (1 host up) scanned in 112.12 seconds

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
+version="1.2">
+<managed-bean>
+<managed-bean-name>helloWorldJSFManagedBean</managed-bean-name>
+<managed-bean-class>jsfHelloWorldBean.HelloWorldJSFManagedBean</managed-bean-class>
+<managed-bean-scope>session</managed-bean-scope>
+</managed-bean>
+<navigation-rule>
+<display-name>UserForm</display-name>
+<from-view-id>/userForm.jsp</from-view-id>
+<navigation-case>
+<description>welcome page hello word jsf example</description>
+<from-outcome>welcomePage</from-outcome>
+<to-view-id>/welcomeToHelloWorldJSF.jsp</to-view-id>
+</navigation-case>
+</navigation-rule>
+</faces-config>

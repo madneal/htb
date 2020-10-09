@@ -1,0 +1,33 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+                http://www.springframework.org/schema/beans     
+                spring-beans-3.0.xsd">
+
+<!-- Here we have an constructor based injection, where Spring injects required arguments inside the
+	 constructor function. -->
+   <bean id="connectionContext" class = "htb.fatty.shared.connection.ConnectionContext">
+      <constructor-arg index="0" value = "server.fatty.htb"/>
+      <constructor-arg index="1" value = "1337"/>
+   </bean>
+   
+<!-- The next to beans use setter injection. For this kind of injection one needs to define an default
+constructor for the object (no arguments) and one needs to define setter methods for the properties. -->
+   <bean id="trustedFatty" class = "htb.fatty.shared.connection.TrustedFatty">
+      <property name = "keystorePath" value = "fatty.p12"/>
+   </bean>
+   
+   <bean id="secretHolder" class = "htb.fatty.shared.connection.SecretHolder">
+      <property name = "secret" value = "clarabibiclarabibiclarabibi"/>
+   </bean>
+   
+<!--  For out final bean we use now again constructor injection. Notice that we use now ref instead of val -->
+   <bean id="connection" class = "htb.fatty.client.connection.Connection">
+      <constructor-arg index = "0" ref = "connectionContext"/>
+      <constructor-arg index = "1" ref = "trustedFatty"/>
+      <constructor-arg index = "2" ref = "secretHolder"/>
+   </bean>
+
+</beans>
